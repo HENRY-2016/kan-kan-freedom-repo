@@ -1,40 +1,16 @@
 
 
 
-// var all_names_url = "http://127.0.0.1:5000/";
+// var all_names_url = "http://127.0.0.1:4444/";
 var all_names_url =  "http://172.105.158.108:4444/"
 
 
-
-function check_agency_staffs_status ()
-{
-    // Load_agency_staffs () ;
-    if (navigator.onLine){Load_agency_staffs ();}
-    else {ERROR = "Staffs Not Loaded Connect to Network "; alert (ERROR)}
-}
-
-
-function Load_agency_staffs ()
-{
-    let staff_names_req = new XMLHttpRequest ();
-    staff_names_req.open('post' ,all_names_url + 'agency_staff_names',true);
-    staff_names_req.onload = function ()
-        {
-            let names = JSON.parse(this.responseText);
-            let html_select_input = document.getElementById("agency-staff-names");
-            for (index in names)
-                {html_select_input.options[html_select_input.options.length] = new Option(names[index],index);}
-        }
-    let staff_names = document.getElementById('agency-staff-names');
-    staff_names_req.send(staff_names);
-}
-
 function check_sadolin_staffs_status (html_id)
 {
-    Load_sadolin_staffs (html_id);
+    // Load_sadolin_staffs (html_id);
     
-    // if (navigator.onLine){Load_sadolin_staffs (html_id);}
-    // else {ERROR = "Staffs Not Loaded Connect to Network "; alert (ERROR)}
+    if (navigator.onLine){Load_sadolin_staffs (html_id);}
+    else {ERROR = "Staffs Not Loaded Connect to Network "; alert (ERROR)}
 }
 
 function Load_sadolin_staffs (html_id)
@@ -54,8 +30,8 @@ function Load_sadolin_staffs (html_id)
 
 function view_keracolor_names_status (html_id)
 {
-    View_keracolor_names (html_id) ;
-    // if (navigator.onLine){View_keracolor_names (html_id);} 
+    // View_keracolor_names (html_id) ;
+    if (navigator.onLine){View_keracolor_names (html_id);} 
 }
 
 function View_keracolor_names (html_id)
@@ -77,8 +53,8 @@ function View_keracolor_names (html_id)
 //================================>>>>
 function check_bases_status (html_id)
 {
-    Load_bases (html_id);
-    // if (navigator.onLine){Load_bases (html_id);}
+    // Load_bases (html_id);
+    if (navigator.onLine){Load_bases (html_id);}
 }
 
 function Load_bases (html_id)
@@ -99,8 +75,8 @@ function Load_bases (html_id)
 //================================>>>>
 function check_thinner_names_status ()
 {
-    Load_thinner_names () ;
-    // if (navigator.onLine){Load_thinner_names ();}
+    // Load_thinner_names () ;
+    if (navigator.onLine){Load_thinner_names ();}
 }
 
 function Load_thinner_names ()
@@ -169,8 +145,8 @@ function Load_super_names ()
 
 function check_weather_names_status ()
 {
-    Load_weather_names () ;
-    // if (navigator.onLine){Load_weather_names ();}
+    // Load_weather_names () ;
+    if (navigator.onLine){Load_weather_names ();}
 }
 
 function Load_weather_names ()
@@ -192,8 +168,8 @@ function Load_weather_names ()
 
 function check_roodmarking_names_status ()
 {
-    Load_roodmarking_names () ;
-    // if (navigator.onLine){Load_roodmarking_names ();}
+    // Load_roodmarking_names () ;
+    if (navigator.onLine){Load_roodmarking_names ();}
 }
 
 function Load_roodmarking_names ()
@@ -215,8 +191,8 @@ function Load_roodmarking_names ()
 
 function check_Roofguard_names_status ()
 {
-    Load_Roofguard_names () ;
-    // if (navigator.onLine){Load_Roofguard_names ();}
+    // Load_Roofguard_names () ;
+    if (navigator.onLine){Load_Roofguard_names ();}
 }
 
 function Load_Roofguard_names ()
@@ -238,8 +214,8 @@ function Load_Roofguard_names ()
 
 function check_emulsion_names_status ()
 {
-    Load_emulsion_names () ;
-    // if (navigator.onLine){Load_emulsion_names ();}
+    // Load_emulsion_names () ;
+    if (navigator.onLine){Load_emulsion_names ();}
 }
 
 function Load_emulsion_names ()
@@ -256,8 +232,59 @@ function Load_emulsion_names ()
     let emulsion_names = document.getElementById('emulsion-names');
     emulsion_names_req.send(emulsion_names);
 }
+// ================================>>>>
+function check_matt_names_status ()
+{
+    // Load_matt_names () ;
+    if (navigator.onLine){Load_matt_names ();}
+}
+
+function Load_matt_names ()
+{
+    let matt_names_req = new XMLHttpRequest ();
+    matt_names_req.open('post',all_names_url+'matt_names',true);
+    matt_names_req.onload = function ()
+        {
+            let names = JSON.parse(this.responseText) ;
+            let html_select_input = document.getElementById("matt-names");
+            for (index in names)
+                {html_select_input.options[html_select_input.options.length] = new Option(names[index],index);}
+        }
+    let matt_names = document.getElementById('matt-names');
+    matt_names_req.send(matt_names);
+}
 
 //================================>>>>
+
+function View_primer_names  ()
+{
+    // Load_primer_names () ;
+    if (navigator.onLine){Load_primer_names ();}
+}
+
+function check_primer_status ()
+{
+    // Load_primer_names () ;
+    if (navigator.onLine){Load_primer_names ();}
+}
+function Load_primer_names ()
+{
+    let primers_names_req = new XMLHttpRequest ();
+    primers_names_req.open('post',all_names_url+'primer_names',true);
+    primers_names_req.onload = function ()
+        {
+            let names = JSON.parse(this.responseText) ;
+            let html_select_input = document.getElementById("primers-names");
+            for (index in names)
+                {html_select_input.options[html_select_input.options.length] = new Option(names[index],index);}
+        }
+    let primers_names = document.getElementById('primers-names');
+    primers_names_req.send(primers_names);
+}
+//================================>>>>
+
+//================================>>>>
+
 
 function check_budget_names_status ()
 {
@@ -348,28 +375,6 @@ function View_roodmarking_names (html_id)
 }
 
 
-// function view_weather_names_status (html_id)
-// {
-//     View_weather_names (html_id) ;
-//     // if (navigator.onLine){View_weather_names (html_id);}
-// }
-
-// function View_weather_names (html_id)
-// {
-//     let weather_names_req = new XMLHttpRequest ();
-//     weather_names_req.open('post',all_names_url+'weather_names',true);
-//     weather_names_req.onload = function ()
-//         {
-//             let names = JSON.parse(this.responseText) ;
-//             let html_select_input = document.getElementById(html_id);
-//             for (index in names)
-//                 {html_select_input.options[html_select_input.options.length] = new Option(names[index],index);}
-//         }
-//     let weather_names = document.getElementById(html_id);
-//     weather_names_req.send(weather_names);
-// }
-
-
 function view_silk_names_status (html_id)
 {
     // View_silk_names (html_id) ;
@@ -438,8 +443,8 @@ function View_super_names (html_id)
 
 function view_bases_status (html_id)
 {
-    View_bases (html_id) ;
-    // if (navigator.onLine){View_bases (html_id);}
+    // View_bases (html_id) ;
+    if (navigator.onLine){View_bases (html_id);}
 }
 
 function View_bases (html_id)

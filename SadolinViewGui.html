@@ -10,28 +10,62 @@
 <link rel="stylesheet" href="static/css/main.css">
 
 </head>
-<body class="main_body">
-	<center>
-		<img src="static/imgs/sadolin/log.png" class="type-img" ><br> 
-			<button onclick="Load_sadolin_view_thinner ()" class="clour_types_btn entries_page_fonts">Thinner</button><br><br>
-			<button onclick="Load_sadolin_view_undercoat ()" class="clour_types_btn entries_page_fonts"> Undercoat</button><br><br>
-			<button onclick="Load_sadolin_view_rood_marking()" class="clour_types_btn entries_page_fonts"> Rood Marking</button><br><br>
-			<button onclick="Load_sadolin_view_wallguard ()" class="clour_types_btn entries_page_fonts"> Wall Guard</button><br><br>
-			<button onclick="Load_sadolin_view_roofguard ()" class="clour_types_btn entries_page_fonts"> Roof Guard</button><br><br>
-			<button onclick="Load_sadolin_view_rainshild ()" class="clour_types_btn entries_page_fonts"> Rainshild</button><br><br>
-			<button onclick="Load_sadolin_view_dampshild()" class="clour_types_btn entries_page_fonts"> Dampshild</button><br><br>
-			<button onclick="Load_sadolin_view_clear_varnish ()" class="clour_types_btn entries_page_fonts">Clear Varnish</button><br><br>
-			<button onclick="Load_sadolin_view_colour_varnish ()" class="clour_types_btn entries_page_fonts"> Colour Varnish</button><br><br>
-			<button onclick="Load_sadolin_view_emulsion ()" class="clour_types_btn entries_page_fonts"> Budget Emulsion</button><br><br>
-			<button onclick="Load_sadolin_view_bg_stock ()" class="clour_types_btn entries_page_fonts">Budget Gloss</button><br><br>
-			<button onclick="Load_sadolin_view_ceilling ()" class="clour_types_btn entries_page_fonts">Ceilling</button><br><br>
-			<button onclick="Load_sadolin_view_matt ()" class="clour_types_btn entries_page_fonts"> Matt Vinyl</button><br><br>
-			<button onclick="Load_sadolin_view_silk ()" class="clour_types_btn entries_page_fonts"> Silk Vinyl</button><br><br>
-			<button onclick="Load_sadolin_view_silk_base ()" class="clour_types_btn entries_page_fonts">V / s bases</button><br><br>
-			<button onclick="Load_sadolin_view_super ()" class="clour_types_btn entries_page_fonts"> Super Gloss</button><br><br>
-			<button onclick="Load_sadolin_view_super_base ()" class="clour_types_btn entries_page_fonts">S / g bases</button><br><br>
-			<button onclick="Load_sadolin_view_weather_guard ()" class="clour_types_btn entries_page_fonts ">Weather Guard</button><br><br>
-			<button onclick="Load_sadolin_view_weather_base ()" class="clour_types_btn entries_page_fonts">W / g bases</button><br><br>
+<body class="main_body" onload="SadolinViewHideAllChildDiv ()">
+	<center><br>
+		<img src="static/imgs/sadolin/log.png" class="type-img" ><br><br> 
+
+			<button onclick="ShowCustom ()" class="color-types-btn entries_page_fonts"> Custom  </button><br><br>
+			<div id="custom">
+				<button onclick="Load_sadolin_view_brush ()" class="clour_types_btn_view_page entries_page_fonts">Brush</button><br><br>
+				<button onclick="Load_sadolin_view_masking ()" class="clour_types_btn_view_page entries_page_fonts">Masking</button><br><br>
+				<button onclick="Load_sadolin_view_whitting ()" class="clour_types_btn_view_page entries_page_fonts">Whitting</button><br><br>
+				<button onclick="Load_sadolin_view_cement ()" class="clour_types_btn_view_page entries_page_fonts">Cement</button><br><br>
+				<button onclick="Load_sadolin_view_roller ()" class="clour_types_btn_view_page entries_page_fonts">Rollers</button><br><br>
+				<button onclick="Load_sadolin_view_sandpaper ()" class="clour_types_btn_view_page entries_page_fonts">SandPaper</button><br><br>
+				<button onclick="Load_sadolin_view_stainner ()" class="clour_types_btn_view_page entries_page_fonts">Stainners</button><br><br>
+			</div>
+			<button onclick="ShowOthersPaint ()" class="color-types-btn entries_page_fonts"> Others </button><br><br>
+			<div id="others">
+				<button onclick="Load_sadolin_view_thinner ()" class="clour_types_btn_view_page entries_page_fonts">Thinner</button><br><br>
+				<button onclick="Load_sadolin_view_primer ()" class="clour_types_btn_view_page entries_page_fonts">Primer</button><br><br>
+				<button onclick="Load_sadolin_view_colourant ()" class="clour_types_btn_view_page entries_page_fonts">Colourants</button><br><br>
+			</div>
+			<button onclick="ShowGlossPaint ()" class="color-types-btn entries_page_fonts"> Gloss Paint </button><br><br>
+			<div id="gloss-paint">
+				<button onclick="Load_sadolin_view_bg_stock ()" class="clour_types_btn_view_page entries_page_fonts">Budget Gloss</button><br><br>
+				<button onclick="Load_sadolin_view_super ()" class="clour_types_btn_view_page entries_page_fonts"> Super Gloss</button><br><br>
+				<button onclick="Load_sadolin_view_super_base ()" class="clour_types_btn_view_page entries_page_fonts">S / g bases</button><br><br>
+			</div>
+			<button onclick="ShowWaterPaint ()" class="color-types-btn entries_page_fonts"> Water Paint </button><br><br>
+			<div id="water-paint">
+				<button onclick="Load_sadolin_view_silk ()" class="clour_types_btn_view_page entries_page_fonts"> Silk Vinyl</button><br><br>
+				<button onclick="Load_sadolin_view_silk_base ()" class="clour_types_btn_view_page entries_page_fonts">V / s bases</button><br><br>
+				<button onclick="Load_sadolin_view_weather_guard ()" class="clour_types_btn_view_page entries_page_fonts ">Weather Guard</button><br><br>
+				<button onclick="Load_sadolin_view_weather_base ()" class="clour_types_btn_view_page entries_page_fonts">W / g bases</button><br><br>
+				<button onclick="Load_sadolin_view_wallguard ()" class="clour_types_btn_view_page entries_page_fonts"> Wall Guard</button><br><br>
+			</div>
+			<button onclick="ShowCeillingPaint ()" class="color-types-btn entries_page_fonts"> Ceilling Paint </button><br><br>
+			<div id="ceilling-paint">
+				<button onclick="Load_sadolin_view_ceilling ()" class="clour_types_btn_view_page entries_page_fonts">Ceilling</button><br><br>
+				<button onclick="Load_sadolin_view_matt ()" class="clour_types_btn_view_page entries_page_fonts"> Matt Vinyl</button><br><br>
+			</div>
+			<button onclick="ShowVarnishPaint ()" class="color-types-btn entries_page_fonts"> Varnish Paint </button><br><br>
+			<div id="varnish-paint">
+				<button onclick="Load_sadolin_view_clear_varnish ()" class="clour_types_btn_view_page entries_page_fonts">Clear Varnish</button><br><br>
+				<button onclick="Load_sadolin_view_colour_varnish ()" class="clour_types_btn_view_page entries_page_fonts"> Colour Varnish</button><br><br>
+			</div>
+			<button onclick="ShowEmulsionPaint ()" class="color-types-btn entries_page_fonts"> Emulsion Paint </button><br><br>
+			<div id="emulsion-paint">
+				<button onclick="Load_sadolin_view_undercoat ()" class="clour_types_btn_view_page entries_page_fonts"> Undercoat</button><br><br>
+				<button onclick="Load_sadolin_view_emulsion ()" class="clour_types_btn_view_page entries_page_fonts"> Budget Emulsion</button><br><br>
+			</div>
+			<button onclick="ShowProtectionPaint ()" class="color-types-btn entries_page_fonts"> Protection Paint </button><br><br>
+			<div id="protection-paint">
+				<button onclick="Load_sadolin_view_roofguard ()" class="clour_types_btn_view_page entries_page_fonts"> Roofguard</button><br><br>
+				<button onclick="Load_sadolin_view_rainshild ()" class="clour_types_btn_view_page entries_page_fonts"> Rainshild</button><br><br>
+				<button onclick="Load_sadolin_view_dampshild()" class="clour_types_btn_view_page entries_page_fonts"> Dampshild</button><br><br>
+				<button onclick="Load_sadolin_view_rood_marking()" class="clour_types_btn_view_page entries_page_fonts"> Rood Marking</button><br><br>
+			</div>
 		<button class="home-btn" onclick="Load_home_page ()">Home</button>	
 	</center>
 </body>

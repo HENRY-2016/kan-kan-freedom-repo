@@ -80,6 +80,19 @@ function Load_sadolin_view_dampshild ()	{window.location="SadolinViewDampshild.h
 function Load_sadolin_view_clear_varnish ()	{window.location="SadolinViewClearVarnish.html"}
 function Load_sadolin_view_colour_varnish () {window.location="ViewColourVarnish.html"}
 function Load_sadolin_view_ceilling ()	{window.location="SadolinViewCeilling.html"}
+function Load_sadolin_view_colourant (){window.location="SadolinViewColourant.html"}
+function Load_sadolin_view_primer (){window.location="SadolinViewPrimer.html"}
+
+
+// --------------------------
+function Load_sadolin_view_brush (){window.location="CustomViewBrush.html"}
+function Load_sadolin_view_masking (){window.location="CustomViewMasking.html"}
+function Load_sadolin_view_whitting (){window.location="CustomViewWhitting.html"}
+function Load_sadolin_view_cement (){window.location="CustomViewCement.html"}
+function Load_sadolin_view_roller (){window.location="CustomViewRoller.html"}
+function Load_sadolin_view_sandpaper (){window.location="CustomViewSandpaper.html"}
+function Load_sadolin_view_stainner (){window.location="CustomViewStainner.html"}
+
 
 function Show_Industrial_View_Switch_Socket ()
 {
@@ -136,18 +149,125 @@ function Hide_All_Chint_Switchs_Socket_Divs ()
 /*
 +++++++++++++++++++++++++ ++
 +                          +
-+   SADOLIN ENTRIES PAGE   +
++   SADOLIN VIEW PAGE   +
 +                          + 
 ++++++++++++++++++++++++++++
 */
 
-// function Submit_Weather_Guard_Data ()
-// {
-//     WeatherguardForm = document.getElementById("weather-guard-form");
-//     WeatherguardForm.submit();
-//     WeatherguardForm.reset();
-//     return false;
-// }
+function SadolinViewHideAllChildDiv ()
+{
+    document.getElementById("custom").style.display = "none";
+    document.getElementById("others").style.display = "none";
+    document.getElementById("protection-paint").style.display = "none";
+    document.getElementById("varnish-paint").style.display = "none";   
+    document.getElementById("emulsion-paint").style.display = "none";   
+    document.getElementById("ceilling-paint").style.display = "none";   
+    document.getElementById("gloss-paint").style.display = "none";   
+    document.getElementById("water-paint").style.display = "none";   
+}
+
+function ShowCustom ()
+{
+    document.getElementById("others").style.display = "none";
+    document.getElementById("protection-paint").style.display = "none";
+    document.getElementById("varnish-paint").style.display = "none";   
+    document.getElementById("emulsion-paint").style.display = "none";   
+    document.getElementById("ceilling-paint").style.display = "none";   
+    document.getElementById("gloss-paint").style.display = "none";   
+    document.getElementById("water-paint").style.display = "none";   
+    document.getElementById("custom").style.display = "block";
+
+}
+function ShowOthersPaint ()
+{
+    document.getElementById("custom").style.display = "none";
+    document.getElementById("protection-paint").style.display = "none";   
+    document.getElementById("varnish-paint").style.display = "none";   
+    document.getElementById("emulsion-paint").style.display = "none";   
+    document.getElementById("ceilling-paint").style.display = "none";   
+    document.getElementById("gloss-paint").style.display = "none";   
+    document.getElementById("water-paint").style.display = "none";   
+    document.getElementById("others").style.display = "block";
+}
+
+function ShowProtectionPaint ()
+{
+    document.getElementById("custom").style.display = "none";
+    document.getElementById("varnish-paint").style.display = "none";   
+    document.getElementById("emulsion-paint").style.display = "none";   
+    document.getElementById("ceilling-paint").style.display = "none";   
+    document.getElementById("gloss-paint").style.display = "none";   
+    document.getElementById("water-paint").style.display = "none";   
+    document.getElementById("others").style.display = "none";
+    document.getElementById("protection-paint").style.display = "block";
+}
+
+function ShowVarnishPaint ()
+{
+    document.getElementById("custom").style.display = "none";
+    document.getElementById("emulsion-paint").style.display = "none";   
+    document.getElementById("ceilling-paint").style.display = "none";   
+    document.getElementById("gloss-paint").style.display = "none";   
+    document.getElementById("water-paint").style.display = "none";   
+    document.getElementById("others").style.display = "none";
+    document.getElementById("protection-paint").style.display = "none";
+    document.getElementById("varnish-paint").style.display = "block";   
+}
+function ShowEmulsionPaint ()
+{
+    document.getElementById("custom").style.display = "none";
+    document.getElementById("ceilling-paint").style.display = "none";   
+    document.getElementById("gloss-paint").style.display = "none";   
+    document.getElementById("water-paint").style.display = "none";   
+    document.getElementById("others").style.display = "none";
+    document.getElementById("protection-paint").style.display = "none";
+    document.getElementById("varnish-paint").style.display = "none";   
+    document.getElementById("emulsion-paint").style.display = "block";   
+}
+function ShowCeillingPaint ()
+{
+    document.getElementById("custom").style.display = "none";
+    document.getElementById("gloss-paint").style.display = "none";   
+    document.getElementById("water-paint").style.display = "none";   
+    document.getElementById("others").style.display = "none";
+    document.getElementById("protection-paint").style.display = "none";
+    document.getElementById("varnish-paint").style.display = "none";   
+    document.getElementById("emulsion-paint").style.display = "none";   
+    document.getElementById("ceilling-paint").style.display = "block";   
+}
+
+function ShowGlossPaint ()
+{
+    document.getElementById("custom").style.display = "none";
+    document.getElementById("water-paint").style.display = "none";   
+    document.getElementById("others").style.display = "none";
+    document.getElementById("protection-paint").style.display = "none";
+    document.getElementById("varnish-paint").style.display = "none";   
+    document.getElementById("emulsion-paint").style.display = "none";   
+    document.getElementById("ceilling-paint").style.display = "none";   
+    document.getElementById("gloss-paint").style.display = "block";   
+}
+
+function ShowWaterPaint ()
+{
+    document.getElementById("custom").style.display = "none";
+    document.getElementById("others").style.display = "none";
+    document.getElementById("protection-paint").style.display = "none";
+    document.getElementById("varnish-paint").style.display = "none";   
+    document.getElementById("emulsion-paint").style.display = "none";   
+    document.getElementById("ceilling-paint").style.display = "none";   
+    document.getElementById("gloss-paint").style.display = "none";   
+    document.getElementById("water-paint").style.display = "block";   
+}
+
+
+/*
++++++++++++++++++++++++++ ++
++                          +
++   SADOLIN ENTRIES PAGE   +
++                          + 
+++++++++++++++++++++++++++++
+*/
 
 function Clear_Weather_Guard_Form_Data (){setTimeout(document.getElementById("weather-guard-form").reset(), 1000);}
 function hide_all_divs ()
@@ -155,313 +275,620 @@ function hide_all_divs ()
         
         document.getElementById("budget-emulsion-id").style.display = "none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+    
+        // Tabs ...
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Silk-Vinyl-Names-Tab").style.display="none";
+        document.getElementById("Matt-Vinyl-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Super-Glose-Names-Tab").style.display="none";
+        document.getElementById("Weather-Guard-Names-Tab").style.display="none";
+        document.getElementById("Weather-Guard-Base-Tab").style.display="none";
+        document.getElementById("Clear-Varnish-Tab").style.display = "none";
+        document.getElementById("Colour-Varnish-Tab").style.display = "none";
+        document.getElementById("Rainshild-Tab").style.display = "none";
+        document.getElementById("Dampshild-Tab").style.display = "none";
+
+        document.getElementById("Brush-Tab").style.display = "none";
+        document.getElementById("Masking-Tab").style.display = "none";
+        document.getElementById("Whitting-Tab").style.display = "none";
+        document.getElementById("Cement-Tab").style.display = "none";
+        document.getElementById("Rollers-Tab").style.display = "none";
+        document.getElementById("Sandpaper-Tab").style.display = "none";
+        document.getElementById("Stainner-Tab").style.display = "none";
+        document.getElementById("Colourant-Tab").style.display = "none";
+
+
     }
-    function show_undercoat_div ()
+
+    // Tabs.....
+function Show_Brush_Tab ()
+{
+    document.getElementById("Masking-Tab").style.display = "none";    
+    document.getElementById("Brush-Tab").style.display = "block";
+}
+    
+function Show_Masking_Tab ()
+{
+    document.getElementById("Brush-Tab").style.display = "none";
+    document.getElementById("Masking-Tab").style.display = "block";    
+}
+
+function Show_Whitting_Tab ()
+{
+    document.getElementById("Cement-Tab").style.display = "none";    
+    document.getElementById("Whitting-Tab").style.display = "block";
+}
+    
+function Show_Cement_Tab ()
+{
+    document.getElementById("Whitting-Tab").style.display = "none";
+    document.getElementById("Cement-Tab").style.display = "block";    
+}
+function Show_Rollers_Tab ()
+{
+    document.getElementById("Sandpaper-Tab").style.display = "none";    
+    document.getElementById("Rollers-Tab").style.display = "block";
+}
+    
+function Show_Sandpaper_Tab ()
+{
+    document.getElementById("Rollers-Tab").style.display = "none";
+    document.getElementById("Sandpaper-Tab").style.display = "block";    
+}
+function Show_Stainner_Tab ()
+{
+    document.getElementById("Colourant-Tab").style.display = "none";    
+    document.getElementById("Stainner-Tab").style.display = "block";
+}
+    
+function Show_Colourant_Tab ()
+{
+    document.getElementById("Stainner-Tab").style.display = "none";
+    document.getElementById("Colourant-Tab").style.display = "block";    
+}
+
+function Show_Clear_Varnish_Tab () 
+{
+    document.getElementById("Colour-Varnish-Tab").style.display="none";
+    document.getElementById("Clear-Varnish-Tab").style.display="block";
+}
+
+function Show_Rainshild_Tab () 
+{
+    document.getElementById("Dampshild-Tab").style.display="none";
+    document.getElementById("Rainshild-Tab").style.display="block";
+}
+
+function Show_Dampshild_Tab () 
+{
+    document.getElementById("Rainshild-Tab").style.display="none";
+    document.getElementById("Dampshild-Tab").style.display="block";
+}
+
+
+function Show_Colour_Varnish_Tab () 
+{
+    document.getElementById("Clear-Varnish-Tab").style.display="none";
+    document.getElementById("Colour-Varnish-Tab").style.display="block";
+}
+
+function Show_Silk_Vinyl_Names_Tab () 
+{
+    document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+    document.getElementById("Silk-Vinyl-Names-Tab").style.display="block";
+}
+
+function Show_Silk_Vinyl_Base_Tab ()
+{
+    document.getElementById("Silk-Vinyl-Names-Tab").style.display="none";
+    document.getElementById("Silk-Vinyl-Base-Tab").style.display="block";
+}
+
+function Show_Ceilling_Emulsion_Tab () 
+{
+    document.getElementById("Matt-Vinyl-Tab").style.display="none";
+    document.getElementById("Ceilling-Emulsion-Tab").style.display="block";
+}
+
+function Show_Matt_Vinyl_Tab () 
+{
+    document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
+    document.getElementById("Matt-Vinyl-Tab").style.display="block";
+}
+
+function Show_Super_Gloss_Names_Tab () 
+{
+    document.getElementById("Super-Glose-Base-Tab").style.display="none";
+    document.getElementById("Super-Glose-Names-Tab").style.display="block";
+}
+function Show_Super_Gloss_Base_Tab ()
+{
+    document.getElementById("Super-Glose-Names-Tab").style.display="none";
+    document.getElementById("Super-Glose-Base-Tab").style.display="block";
+}
+function Show_Weather_Guard_Names_Tab () 
+{
+    document.getElementById("Weather-Guard-Base-Tab").style.display="none";
+    document.getElementById("Weather-Guard-Names-Tab").style.display="block";
+}
+function Show_Weather_Guard_Base_Tab ()
+{
+    document.getElementById("Weather-Guard-Names-Tab").style.display="none";
+    document.getElementById("Weather-Guard-Base-Tab").style.display="block";
+}
+function Show_AAA_Root_Div ()
+{
+
+    document.getElementById("BBB-Root-Div").style.display = "none";
+    document.getElementById("CCC-Root-Div").style.display = "none";
+    document.getElementById("DDD-Root-Div").style.display = "none";
+
+    document.getElementById("thinner_id").style.display="none";
+    document.getElementById("road_marking_id").style.display="none";
+    document.getElementById("roof_guard_id").style.display="none";
+    document.getElementById("wall_guard_id").style.display="none";
+    document.getElementById("Shild-Root-Div").style.display="none";
+    document.getElementById("Dampshild-Tab").style.display="none";
+    document.getElementById("Varnish-Root-Div").style.display="none";
+    document.getElementById("Colour-Varnish-Tab").style.display="none";
+    document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
+    document.getElementById("budget-emulsion-id").style.display = "none";
+    document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+    document.getElementById("budget_gloss_id").style.display="none";
+    document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+    document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
+    document.getElementById("Super-Gloss-Root-Div").style.display="none";
+    document.getElementById("Super-Glose-Base-Tab").style.display="none";
+    document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+    document.getElementById("undercoat_id").style.display="none";
+    document.getElementById("primers_id").style.display="none";
+    document.getElementById("AAA-Root-Div").style.display = "block";
+}
+function Close_AAA_Root_Div () {document.getElementById("AAA-Root-Div").style.display="none";}
+
+function Show_BBB_Root_Div ()
+{
+
+    document.getElementById("CCC-Root-Div").style.display = "none";
+    document.getElementById("DDD-Root-Div").style.display = "none";
+
+    document.getElementById("thinner_id").style.display="none";
+    document.getElementById("road_marking_id").style.display="none";
+    document.getElementById("roof_guard_id").style.display="none";
+    document.getElementById("wall_guard_id").style.display="none";
+    document.getElementById("Shild-Root-Div").style.display="none";
+    document.getElementById("Dampshild-Tab").style.display="none";
+    document.getElementById("Varnish-Root-Div").style.display="none";
+    document.getElementById("Colour-Varnish-Tab").style.display="none";
+    document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
+    document.getElementById("budget-emulsion-id").style.display = "none";
+    document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+    document.getElementById("budget_gloss_id").style.display="none";
+    document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+    document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
+    document.getElementById("Super-Gloss-Root-Div").style.display="none";
+    document.getElementById("Super-Glose-Base-Tab").style.display="none";
+    document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+    document.getElementById("undercoat_id").style.display="none";
+    document.getElementById("primers_id").style.display="none";
+    document.getElementById("AAA-Root-Div").style.display = "none";
+    document.getElementById("BBB-Root-Div").style.display = "block";
+}
+function Close_BBB_Root_Div () {document.getElementById("BBB-Root-Div").style.display="none";}
+function Show_CCC_Root_Div ()
+{
+
+    document.getElementById("DDD-Root-Div").style.display = "none";
+
+    document.getElementById("thinner_id").style.display="none";
+    document.getElementById("road_marking_id").style.display="none";
+    document.getElementById("roof_guard_id").style.display="none";
+    document.getElementById("wall_guard_id").style.display="none";
+    document.getElementById("Shild-Root-Div").style.display="none";
+    document.getElementById("Dampshild-Tab").style.display="none";
+    document.getElementById("Varnish-Root-Div").style.display="none";
+    document.getElementById("Colour-Varnish-Tab").style.display="none";
+    document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
+    document.getElementById("budget-emulsion-id").style.display = "none";
+    document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+    document.getElementById("budget_gloss_id").style.display="none";
+    document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+    document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
+    document.getElementById("Super-Gloss-Root-Div").style.display="none";
+    document.getElementById("Super-Glose-Base-Tab").style.display="none";
+    document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+    document.getElementById("undercoat_id").style.display="none";
+    document.getElementById("primers_id").style.display="none";
+    document.getElementById("AAA-Root-Div").style.display = "none";
+    document.getElementById("BBB-Root-Div").style.display = "none";
+    document.getElementById("CCC-Root-Div").style.display = "block";
+}
+function Close_CCC_Root_Div () {document.getElementById("CCC-Root-Div").style.display="none";}
+function Show_DDD_Root_Div ()
+{
+    document.getElementById("thinner_id").style.display="none";
+    document.getElementById("road_marking_id").style.display="none";
+    document.getElementById("roof_guard_id").style.display="none";
+    document.getElementById("wall_guard_id").style.display="none";
+    document.getElementById("Shild-Root-Div").style.display="none";
+    document.getElementById("Dampshild-Tab").style.display="none";
+    document.getElementById("Varnish-Root-Div").style.display="none";
+    document.getElementById("Colour-Varnish-Tab").style.display="none";
+    document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
+    document.getElementById("budget-emulsion-id").style.display = "none";
+    document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+    document.getElementById("budget_gloss_id").style.display="none";
+    document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+    document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
+    document.getElementById("Super-Gloss-Root-Div").style.display="none";
+    document.getElementById("Super-Glose-Base-Tab").style.display="none";
+    document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+    document.getElementById("undercoat_id").style.display="none";
+    document.getElementById("primers_id").style.display="none";
+    document.getElementById("AAA-Root-Div").style.display = "none";
+    document.getElementById("BBB-Root-Div").style.display = "none";
+    document.getElementById("CCC-Root-Div").style.display = "none";
+    document.getElementById("DDD-Root-Div").style.display = "block";
+}
+function Close_DDD_Root_Div () {document.getElementById("DDD-Root-Div").style.display="none";}
+
+function Show_Primer_Div ()
+{
+
+    document.getElementById("AAA-Root-Div").style.display = "none";
+    document.getElementById("BBB-Root-Div").style.display = "none";
+    document.getElementById("CCC-Root-Div").style.display = "none";
+    document.getElementById("DDD-Root-Div").style.display = "none";
+
+    document.getElementById("thinner_id").style.display="none";
+    document.getElementById("road_marking_id").style.display="none";
+    document.getElementById("roof_guard_id").style.display="none";
+    document.getElementById("wall_guard_id").style.display="none";
+    document.getElementById("Shild-Root-Div").style.display="none";
+    document.getElementById("Dampshild-Tab").style.display="none";
+    document.getElementById("Varnish-Root-Div").style.display="none";
+    document.getElementById("Colour-Varnish-Tab").style.display="none";
+    document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
+    document.getElementById("budget-emulsion-id").style.display = "none";
+    document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+    document.getElementById("budget_gloss_id").style.display="none";
+    document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+    document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
+    document.getElementById("Super-Gloss-Root-Div").style.display="none";
+    document.getElementById("Super-Glose-Base-Tab").style.display="none";
+    document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+    document.getElementById("undercoat_id").style.display="none";
+    document.getElementById("primers_id").style.display="block";
+}
+function Close_Primer_Div () {document.getElementById("primers_id").style.display="none";}
+
+
+
+function show_undercoat_div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="block";
     }
-function close_undercoat_div ()
-    {document.getElementById("undercoat_id").style.display="none";}
+function close_undercoat_div () {document.getElementById("undercoat_id").style.display="none";}
+
 
 function show_emulsion_div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+        document.getElementById("Weather-Guard-Base-Tab").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "block";
 
     }
-function close_emulsion_div ()
-    {document.getElementById("budget-emulsion-id").style.display = "none";}
+function close_emulsion_div (){document.getElementById("budget-emulsion-id").style.display = "none";}
 
 
-    function show_budget_gloss_div ()
+function show_budget_gloss_div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+        document.getElementById("Weather-Guard-Base-Tab").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("budget_gloss_id").style.display="block";
-    }function close_budget_gloss_div (){document.getElementById("budget_gloss_id").style.display="none";}
+    }
+function close_budget_gloss_div (){document.getElementById("budget_gloss_id").style.display="none";}
 
-function show_matt_vinyl_div ()
+function show_Ceilling_Paint_Root_Div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="block";
-    }function close_matt_vinyl_div (){document.getElementById("matt-vinyl-id").style.display="none";}
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="block";
+    }function Close_Ceilling_Paint_Root_Div (){document.getElementById("Ceilling-Paint-Root-Div").style.display="none";}
 
-function show_silk_vinyl_div ()
+function Show_Silk_Vinyl_Root_Div ()
 {
+
+    document.getElementById("primers_id").style.display = "none";
+    document.getElementById("AAA-Root-Div").style.display = "none";
+    document.getElementById("BBB-Root-Div").style.display = "none";
+    document.getElementById("CCC-Root-Div").style.display = "none";
+    document.getElementById("DDD-Root-Div").style.display = "none";
+
     document.getElementById("thinner_id").style.display="none";
     document.getElementById("road_marking_id").style.display="none";
     document.getElementById("roof_guard_id").style.display="none";
     document.getElementById("wall_guard_id").style.display="none";
-    document.getElementById("rain_shild_id").style.display="none";
-    document.getElementById("dampshild_id").style.display="none";
-    document.getElementById("clear_varnish_id").style.display="none";
-    document.getElementById("colour_varnish_id").style.display="none";
-    document.getElementById("ceilling_id").style.display="none";
+    document.getElementById("Shild-Root-Div").style.display="none";
+    document.getElementById("Dampshild-Tab").style.display="none";
+    document.getElementById("Varnish-Root-Div").style.display="none";
+    document.getElementById("Colour-Varnish-Tab").style.display="none";
+    document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
     document.getElementById("budget-emulsion-id").style.display = "none";
-    document.getElementById("silk-vinyl-base-id").style.display="none";
-    document.getElementById("matt-vinyl-id").style.display="none";
+    // document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+    document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
     document.getElementById("budget_gloss_id").style.display="none";
-    document.getElementById("super_gloss_id").style.display="none";
-    document.getElementById("super-base-id").style.display="none";
+    document.getElementById("Super-Gloss-Root-Div").style.display="none";
+    document.getElementById("Super-Glose-Base-Tab").style.display="none";
     document.getElementById("undercoat_id").style.display="none";
-    document.getElementById("weather_gaurd_id").style.display="none";
-    document.getElementById("weather-base-id").style.display="none";
-    document.getElementById("silk_vinyl_id").style.display="block";
-}function close_silk_vinyl_div (){document.getElementById("silk_vinyl_id").style.display="none";}
+    document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+    document.getElementById("Weather-Guard-Base-Tab").style.display="none";
+    document.getElementById("Silk-Vinyl-Root-Div").style.display="block";
+}function Close_Silk_Vinyl_Root_Div (){document.getElementById("Silk-Vinyl-Root-Div").style.display="none";}
 
 function show_silk_vinyl_base_div ()
 {
+
+    document.getElementById("primers_id").style.display = "none";
+    document.getElementById("AAA-Root-Div").style.display = "none";
+    document.getElementById("BBB-Root-Div").style.display = "none";
+    document.getElementById("CCC-Root-Div").style.display = "none";
+    document.getElementById("DDD-Root-Div").style.display = "none";
+
     document.getElementById("thinner_id").style.display="none";
     document.getElementById("road_marking_id").style.display="none";
     document.getElementById("roof_guard_id").style.display="none";
     document.getElementById("wall_guard_id").style.display="none";
-    document.getElementById("rain_shild_id").style.display="none";
-    document.getElementById("dampshild_id").style.display="none";
-    document.getElementById("clear_varnish_id").style.display="none";
-    document.getElementById("colour_varnish_id").style.display="none";
-    document.getElementById("ceilling_id").style.display="none";
+    document.getElementById("Shild-Root-Div").style.display="none";
+    document.getElementById("Dampshild-Tab").style.display="none";
+    document.getElementById("Varnish-Root-Div").style.display="none";
+    document.getElementById("Colour-Varnish-Tab").style.display="none";
+    document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
     document.getElementById("budget-emulsion-id").style.display = "none";
     document.getElementById("budget_gloss_id").style.display="none";
-    document.getElementById("matt-vinyl-id").style.display="none";
-    document.getElementById("super_gloss_id").style.display="none";
-    document.getElementById("super-base-id").style.display="none";
+    document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
+    document.getElementById("Super-Gloss-Root-Div").style.display="none";
+    document.getElementById("Super-Glose-Base-Tab").style.display="none";
     document.getElementById("undercoat_id").style.display="none";
-    document.getElementById("weather_gaurd_id").style.display="none";
-    document.getElementById("weather-base-id").style.display="none";
-    document.getElementById("silk_vinyl_id").style.display="none";
-    document.getElementById("silk-vinyl-base-id").style.display="block";
-}function close_silk_vinyl_base_div (){document.getElementById("silk-vinyl-base-id").style.display="none";}
+    document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+    document.getElementById("Weather-Guard-Base-Tab").style.display="none";
+    document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+    document.getElementById("Silk-Vinyl-Base-Tab").style.display="block";
+}
+function close_silk_vinyl_base_div (){document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";}
 
-function show_super_gloss_div ()
+function Show_Super_Gloss_Root_Div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
+        // document.getElementById("Weather-Guard-Base-Tab").style.display="none";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="block";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="block";
     }
-function close_super_gloss_div (){document.getElementById("super_gloss_id").style.display="none";}
+function close_super_gloss_div (){document.getElementById("Super-Gloss-Root-Div").style.display="none";}
 
-function show_super_base_div ()
+function Show_Weather_Guard_Root_Div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("undercoat_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super-base-id").style.display="block";
-    }
-function close_super_base_div (){document.getElementById("super-base-id").style.display="none";}
-
-
-function show_weather_gaurd_div ()
-    {
-        document.getElementById("thinner_id").style.display="none";
-        document.getElementById("road_marking_id").style.display="none";
-        document.getElementById("roof_guard_id").style.display="none";
-        document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
-        document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="block";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Weather-Guard-Base-Tab").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="block";
     }
-function close_weather_gaurd_div ()
-    {document.getElementById("weather_gaurd_id").style.display="none";}
+function Close_Weather_Gaurd_Root_Div () {document.getElementById("Weather-Gaurd-Root-Div").style.display="none";}
 
-function show_weather_base_div ()
-    {
-         document.getElementById("thinner_id").style.display="none";
-        document.getElementById("road_marking_id").style.display="none";
-        document.getElementById("roof_guard_id").style.display="none";
-        document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
-        document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("undercoat_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("weather-base-id").style.display="block";
-    }
-function close_weather_base_div ()
-    {document.getElementById("weather-base-id").style.display="none";}
 
 
 function show_thinner_div ()
     {
-        document.getElementById("weather_gaurd_id").style.display="none";
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Weather-Guard-Base-Tab").style.display="none";
         document.getElementById("thinner_id").style.display="block";
     }
-function close_thinner_div ()
-    {document.getElementById("thinner_id").style.display="none";}
+function close_thinner_div () {document.getElementById("thinner_id").style.display="none";}
 
 function show_road_marking_div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Weather-Guard-Base-Tab").style.display="none";
         document.getElementById("road_marking_id").style.display="block";
     }
 function close_road_marking_div ()
@@ -469,24 +896,31 @@ function close_road_marking_div ()
 
 function show_roof_guard_div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Weather-Guard-Base-Tab").style.display="none";
         document.getElementById("roof_guard_id").style.display="block";
     }
 function close_roof_guard_div ()
@@ -494,153 +928,126 @@ function close_roof_guard_div ()
 
 function show_wall_guard_div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Weather-Guard-Base-Tab").style.display="none";
         document.getElementById("wall_guard_id").style.display="block";
     }
-function close_wall_guard_div ()
-    {document.getElementById("wall_guard_id").style.display="none";}
+function close_wall_guard_div () {document.getElementById("wall_guard_id").style.display="none";}
 
-function show_clear_varnish_div ()
+function Show_Varnish_Root_Div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="block";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="block";
     }
-function close_clear_varnish_div ()
-    {document.getElementById("clear_varnish_id").style.display="none";}
+function Close_Varnish_Root_Div (){document.getElementById("Varnish-Root-Div").style.display="none";}
 
-function show_colour_varnish_div ()
+
+function Show_Shild_Root_Div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
-        document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("roof_guard_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
-        document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
-        document.getElementById("undercoat_id").style.display="none";
-        document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="block";
-    }
-function close_colour_varnish_div ()
-    {document.getElementById("colour_varnish_id").style.display="none";}
-
-function show_ceilling_div ()
-    {
-        document.getElementById("thinner_id").style.display="none";
-        document.getElementById("road_marking_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
-        document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("roof_guard_id").style.display="none";
-        document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
-        document.getElementById("undercoat_id").style.display="none";
-        document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
-        document.getElementById("ceilling_id").style.display="block";
-    }
-function close_ceilling_div ()
-    {document.getElementById("ceilling_id").style.display="none";}
-
-function show_rain_shild_div ()
-    {
-        document.getElementById("thinner_id").style.display="none";
-        document.getElementById("road_marking_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
-        document.getElementById("dampshild_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="block";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Weather-Guard-Base-Tab").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="block";
     }
-function close_rain_shild_div ()
-    {document.getElementById("rain_shild_id").style.display="none";}
+function Close_Shild_Root_Div (){document.getElementById("Shild-Root-Div").style.display="none";}
 
 function show_dampshild_div ()
     {
+
+        document.getElementById("primers_id").style.display = "none";
+        document.getElementById("AAA-Root-Div").style.display = "none";
+        document.getElementById("BBB-Root-Div").style.display = "none";
+        document.getElementById("CCC-Root-Div").style.display = "none";
+        document.getElementById("DDD-Root-Div").style.display = "none";
+
         document.getElementById("thinner_id").style.display="none";
         document.getElementById("road_marking_id").style.display="none";
-        document.getElementById("weather_gaurd_id").style.display="none";
+        document.getElementById("Weather-Gaurd-Root-Div").style.display="none";
         document.getElementById("wall_guard_id").style.display="none";
-        document.getElementById("rain_shild_id").style.display="none";
+        document.getElementById("Shild-Root-Div").style.display="none";
         document.getElementById("roof_guard_id").style.display="none";
-        document.getElementById("clear_varnish_id").style.display="none";
-        document.getElementById("colour_varnish_id").style.display="none";
-        document.getElementById("ceilling_id").style.display="none";
+        document.getElementById("Varnish-Root-Div").style.display="none";
+        document.getElementById("Colour-Varnish-Tab").style.display="none";
+        document.getElementById("Ceilling-Emulsion-Tab").style.display="none";
         document.getElementById("budget-emulsion-id").style.display = "none";
-        document.getElementById("silk-vinyl-base-id").style.display="none";
-        document.getElementById("matt-vinyl-id").style.display="none";
+        document.getElementById("Silk-Vinyl-Base-Tab").style.display="none";
+        document.getElementById("Ceilling-Paint-Root-Div").style.display="none";
         document.getElementById("undercoat_id").style.display="none";
         document.getElementById("budget_gloss_id").style.display="none";
-        document.getElementById("silk_vinyl_id").style.display="none";
-        document.getElementById("super_gloss_id").style.display="none";
-        document.getElementById("super-base-id").style.display="none";
-        document.getElementById("weather-base-id").style.display="none";
-        document.getElementById("dampshild_id").style.display="block";
+        document.getElementById("Silk-Vinyl-Root-Div").style.display="none";
+        document.getElementById("Super-Gloss-Root-Div").style.display="none";
+        document.getElementById("Super-Glose-Base-Tab").style.display="none";
+        document.getElementById("Weather-Guard-Base-Tab").style.display="none";
+        document.getElementById("Dampshild-Tab").style.display="block";
     }
 function close_dampshild_div ()
-    {document.getElementById("dampshild_id").style.display="none";}
+    {document.getElementById("Dampshild-Tab").style.display="none";}
 
 
 
