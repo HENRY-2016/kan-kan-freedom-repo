@@ -1,16 +1,13 @@
 
-
-
-
 <html>
     <head>
         <meta charset="utf-8">
-        <title>kan kan | View Stainner</title>
+        <title>View | Brush </title>
     
         <script src="static/js/sadolin/main.js"></script>
         <script src="static/js/sadolin/names.js" ></script>
-        <script src="static/js/sadolin/stainner_stock_received.js"></script>
-        <script src="static/js/sadolin/stainner_stock_flow.js"></script> 
+        <script src="static/js/sadolin/brush_stock_received.js"></script>
+        <script src="static/js/sadolin/brush_stock_flow.js"></script> 
     
     <script>
         
@@ -42,7 +39,7 @@
     <body onload="Set_Up_Every_Thing ()" class="main_body">
         <center>
             <img src="static/imgs/sadolin/log.png" class="type-img" ><br><br>
-            <button class="color-types-btn entries_page_fonts"> Stainner  Stock </button><br><br>
+            <button class="color-types-btn entries_page_fonts"> brush Stock </button><br><br>
         <!--
         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         @
@@ -69,21 +66,12 @@
                 <div id="stock-received-by-name-div">
     
                 <form class="sadolin_form" id="stock-received-view-by-name-form">
-                    <select  class="sadolin_view_form_input" name="stainner_name" onchange="fetch_stock_received_name_data ()">
-                        <option value="Colour">Colour</option>
-						<option value="AXX">AXX</option>
-							<option value="KX">KX</option>
-							<option value="V">V</option>
-							<option value="R">R</option>
-							<option value="F">F</option>
-							<option value="I">I</option>
-							<option value="C">C</option>
-							<option value="L">L</option>
-							<option value="T">T</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-							<option value="B" >B</option>
+                    <select  class="sadolin_view_form_input" name="brush_name" onchange="fetch_stock_received_name_data ()">
+                    <option value="Name">Name</option>
+                    <option value="Baby brush">Baby brush</option>
+                    <option value="Acorn brush" >Acorn brush</option>
                     </select>
+
                 </form>
                 <button class="agency-show-btn entries_page_fonts"></button>
                 <div id="stock-received-loader-name" class="loader"></div>
@@ -133,20 +121,10 @@
                         <table>
                             <td>
                                 <label> Name</label><br>
-                                <select  class="sadolin_view_form_input" name="stainner_name" >
-                                    <option value="Colour">Colour</option>
-                                    <option value="AXX">AXX</option>
-                                        <option value="KX">KX</option>
-                                        <option value="V">V</option>
-                                        <option value="R">R</option>
-                                        <option value="F">F</option>
-                                        <option value="I">I</option>
-                                        <option value="C">C</option>
-                                        <option value="L">L</option>
-                                        <option value="T">T</option>
-                                        <option value="D">D</option>
-                                        <option value="E">E</option>
-                                        <option value="B" >B</option>
+                                <select  class="sadolin_view_form_input" name="brush_name" >
+                                    <option value="Name">Name</option>
+							    <option value="Baby brush">Baby brush</option>
+							    <option value="Acorn brush" >Acorn brush</option>
                                 </select>
                             </td>
     
@@ -215,20 +193,10 @@
                                         <tr>
                                             <td>
                                                 <label> Name </label><br>
-                                                    <select  class="sadolin_view_form_input" name="stainner_name">
-                                                    <option value="Colour">Colour</option>
-                                                    <option value="AXX">AXX</option>
-                                                        <option value="KX">KX</option>
-                                                        <option value="V">V</option>
-                                                        <option value="R">R</option>
-                                                        <option value="F">F</option>
-                                                        <option value="I">I</option>
-                                                        <option value="C">C</option>
-                                                        <option value="L">L</option>
-                                                        <option value="T">T</option>
-                                                        <option value="D">D</option>
-                                                        <option value="E">E</option>
-                                                        <option value="B" >B</option>
+                                                    <select  class="sadolin_view_form_input" name="brush_name">
+                                                        <option value="Name">Name</option>
+                                                        <option value="Baby brush">Baby brush</option>
+                                                        <option value="Acorn brush" >Acorn brush</option>
                                                     </select>
                                             </td>
                                     </table>
@@ -264,20 +232,10 @@
                             <div id="stock-received-last-week-by-name-grand-child-div" >	 
                             <form class="sadolin_form" id="stock-view-by-name-form">
                             <label>Name</label>
-                            <select class="sadolin_view_form_input" name="stainner_name" onchange=" fetch_stock_received_last_week_name_data ()" >
-                                <option value="Colour">Colour</option>
-                                <option value="AXX">AXX</option>
-                                <option value="KX">KX</option>
-                                <option value="V">V</option>
-                                <option value="R">R</option>
-                                <option value="F">F</option>
-                                <option value="I">I</option>
-                                <option value="C">C</option>
-                                <option value="L">L</option>
-                                <option value="T">T</option>
-                                <option value="D">D</option>
-                                <option value="E">E</option>
-                                <option value="B" >B</option>
+                            <select class="sadolin_view_form_input" name="brush_name" onchange=" fetch_stock_received_last_week_name_data ()" >
+                                <option value="Name">Name</option>
+							    <option value="Baby brush">Baby brush</option>
+							    <option value="Acorn brush" >Acorn brush</option>
                             </select>
                                 </form>
                                 <button class="agency-show-btn entries_page_fonts" ></button><br><br>
@@ -306,20 +264,10 @@
                         <div id="stock-received-this-month-by-name-grand-child-div">
                             <form class="sadolin_form" id="stock-view-by-name-form">
                                 <label>Name</label>
-                                <select class="sadolin_view_form_input" name="stainner_name" onchange="fetch_stock_received_this_month_name_data () " >
-                                    <option value="Colour">Colour</option>
-                                    <option value="AXX">AXX</option>
-                                    <option value="KX">KX</option>
-                                    <option value="V">V</option>
-                                    <option value="R">R</option>
-                                    <option value="F">F</option>
-                                    <option value="I">I</option>
-                                    <option value="C">C</option>
-                                    <option value="L">L</option>
-                                    <option value="T">T</option>
-                                    <option value="D">D</option>
-                                    <option value="E">E</option>
-                                    <option value="B" >B</option>
+                                <select class="sadolin_view_form_input" name="brush_name" onchange="fetch_stock_received_this_month_name_data () " >
+                                    <option value="Name">Name</option>
+                                    <option value="Baby brush">Baby brush</option>
+                                    <option value="Acorn brush" >Acorn brush</option>
                                 </select>
                             </form>
                             <button  class="agency-show-btn entries_page_fonts"  ></button>
@@ -348,19 +296,9 @@
                             <form class="sadolin_form" id="stock-view-by-name-form">
                                 <label>Name</label>
                                 <select  class="sadolin_view_form_input" name="paint_name" onchange="fetch_stock_received_last_month_name_data ()  " >
-                                    <option value="Colour">Colour</option>
-                                    <option value="AXX">AXX</option>
-                                    <option value="KX">KX</option>
-                                    <option value="V">V</option>
-                                    <option value="R">R</option>
-                                    <option value="F">F</option>
-                                    <option value="I">I</option>
-                                    <option value="C">C</option>
-                                    <option value="L">L</option>
-                                    <option value="T">T</option>
-                                    <option value="D">D</option>
-                                    <option value="E">E</option>
-                                    <option value="B" >B</option>
+                                    <option value="Name">Name</option>
+                                    <option value="Baby brush">Baby brush</option>
+                                    <option value="Acorn brush" >Acorn brush</option>
                                 </select>
                             </form>
                             <button class="agency-show-btn entries_page_fonts"  ></button>
@@ -373,7 +311,7 @@
                 </div>
     
                 <button onclick="Close_Stock_Received_Root_Div ()" class="view-btns-children  entries_page_fonts">Close Stock</button> <br><br>
-            </div> <!-- stainner-root-div -->
+            </div> <!-- brush-root-div -->
     
         
         
@@ -422,20 +360,10 @@
                         <div id="stock-flow-by-name-div">
     
                         <form class="sadolin_form" id="stock-flow-view-by-name-form">
-                            <select  class="sadolin_view_form_input" name="stainner_name" onchange="fetch_stock_flow_name_data ()" >
-                                    <option value="Colour">Colour</option>
-                                    <option value="AXX">AXX</option>
-                                    <option value="KX">KX</option>
-                                    <option value="V">V</option>
-                                    <option value="R">R</option>
-                                    <option value="F">F</option>
-                                    <option value="I">I</option>
-                                    <option value="C">C</option>
-                                    <option value="L">L</option>
-                                    <option value="T">T</option>
-                                    <option value="D">D</option>
-                                    <option value="E">E</option>
-                                    <option value="B" >B</option>
+                            <select  class="sadolin_view_form_input" name="brush_name" onchange="fetch_stock_flow_name_data ()" >
+                                <option value="Name">Name</option>
+                                <option value="Baby brush">Baby brush</option>
+                                <option value="Acorn brush" >Acorn brush</option>
                             </select>
                         </form>
                         <button class="agency-show-btn entries_page_fonts"></button>
@@ -486,20 +414,10 @@
                                 <table>
                                     <td>
                                         <label> Name</label><br>
-                                        <select  class="sadolin_view_form_input" name="stainner_name" >
-                                                <option value="Colour">Colour</option>
-                                                <option value="AXX">AXX</option>
-                                                <option value="KX">KX</option>
-                                                <option value="V">V</option>
-                                                <option value="R">R</option>
-                                                <option value="F">F</option>
-                                                <option value="I">I</option>
-                                                <option value="C">C</option>
-                                                <option value="L">L</option>
-                                                <option value="T">T</option>
-                                                <option value="D">D</option>
-                                                <option value="E">E</option>
-                                                <option value="B" >B</option>
+                                        <select  class="sadolin_view_form_input" name="brush_name" >
+                                            <option value="Name">Name</option>
+                                            <option value="Baby brush">Baby brush</option>
+                                            <option value="Acorn brush" >Acorn brush</option>
                                         </select>
                                     </td>
     
@@ -568,21 +486,11 @@
                                             <tr>
                                                 <td>
                                                     <label> Name </label><br>
-                                                        <select  class="sadolin_view_form_input" name="stainner_name">
-                                                                <option value="Colour">Colour</option>
-                                                                <option value="AXX">AXX</option>
-                                                                <option value="KX">KX</option>
-                                                                <option value="V">V</option>
-                                                                <option value="R">R</option>
-                                                                <option value="F">F</option>
-                                                                <option value="I">I</option>
-                                                                <option value="C">C</option>
-                                                                <option value="L">L</option>
-                                                                <option value="T">T</option>
-                                                                <option value="D">D</option>
-                                                                <option value="E">E</option>
-                                                                <option value="B" >B</option>
-                                                        </select>
+                                                <select  class="sadolin_view_form_input" name="brush_name">
+                                                    <option value="Name">Name</option>
+                                                    <option value="Baby brush">Baby brush</option>
+                                                    <option value="Acorn brush" >Acorn brush</option>
+                                                </select>
                                                 </td>
                                         </table>
                                     </form> 
@@ -616,20 +524,10 @@
                                     <div id="stock-flow-last-week-by-name-grand-child-div" >	 
                                     <form class="sadolin_form" id="stock-flow-last-week-name-form">
                                     <label>Name</label>
-                                        <select  class="sadolin_view_form_input" name="stainner_name" onchange=" fetch_stock_flow_last_week_name_data ()" >
-                                                <option value="Colour">Colour</option>
-                                                <option value="AXX">AXX</option>
-                                                <option value="KX">KX</option>
-                                                <option value="V">V</option>
-                                                <option value="R">R</option>
-                                                <option value="F">F</option>
-                                                <option value="I">I</option>
-                                                <option value="C">C</option>
-                                                <option value="L">L</option>
-                                                <option value="T">T</option>
-                                                <option value="D">D</option>
-                                                <option value="E">E</option>
-                                                <option value="B" >B</option>
+                                        <select  class="sadolin_view_form_input" name="brush_name" onchange=" fetch_stock_flow_last_week_name_data ()" >
+                                            <option value="Name">Name</option>
+                                            <option value="Baby brush">Baby brush</option>
+                                            <option value="Acorn brush" >Acorn brush</option>
                                         </select>
                                     </form>
                                     <button class="agency-show-btn entries_page_fonts" ></button><br><br>
@@ -658,20 +556,10 @@
                                 <div id="stock-flow-this-month-by-name-grand-child-div">
                                     <form class="sadolin_form" id="stock-flow-this-month-name-form">
                                         <label>Name</label>
-                                        <select class="sadolin_view_form_input" name="stainner_name" onchange="fetch_stock_flow_this_month_name_data () " >
-                                                <option value="Colour">Colour</option>
-                                                <option value="AXX">AXX</option>
-                                                <option value="KX">KX</option>
-                                                <option value="V">V</option>
-                                                <option value="R">R</option>
-                                                <option value="F">F</option>
-                                                <option value="I">I</option>
-                                                <option value="C">C</option>
-                                                <option value="L">L</option>
-                                                <option value="T">T</option>
-                                                <option value="D">D</option>
-                                                <option value="E">E</option>
-                                                <option value="B" >B</option>
+                                        <select class="sadolin_view_form_input" name="brush_name" onchange="fetch_stock_flow_this_month_name_data () " >
+                                            <option value="Name">Name</option>
+                                            <option value="Baby brush">Baby brush</option>
+                                            <option value="Acorn brush" >Acorn brush</option>
                                         </select>
                                     </form>
                                     <button  class="agency-show-btn entries_page_fonts"  ></button>
@@ -701,20 +589,10 @@
                                 <div id="stock-flow-last-month-by-name-grand-child-div">
                                     <form class="sadolin_form" id="stock-flow-last-month-by-name-form">
                                         <label>Name</label>
-                                        <select class="sadolin_view_form_input" name="stainner_name" onchange="fetch_stock_flow_last_month_name_data ()  " >
-                                                <option value="Colour">Colour</option>
-                                                <option value="AXX">AXX</option>
-                                                <option value="KX">KX</option>
-                                                <option value="V">V</option>
-                                                <option value="R">R</option>
-                                                <option value="F">F</option>
-                                                <option value="I">I</option>
-                                                <option value="C">C</option>
-                                                <option value="L">L</option>
-                                                <option value="T">T</option>
-                                                <option value="D">D</option>
-                                                <option value="E">E</option>
-                                                <option value="B" >B</option>
+                                        <select class="sadolin_view_form_input" name="brush_name" onchange="fetch_stock_flow_last_month_name_data ()  " >
+                                            <option value="Name">Name</option>
+                                            <option value="Baby brush">Baby brush</option>
+                                            <option value="Acorn brush" >Acorn brush</option>
                                         </select>
                                     </form>
                                     <button class="agency-show-btn entries_page_fonts"  ></button>
@@ -766,20 +644,10 @@
                         <div id="stock-status-view-by-name-div">
                         <form class="sadolin_form" id="stock-status-by-name-form">
                             <label>Name</label>
-                            <select class="sadolin_view_form_input" name="stainner_name" onchange=" fetch_stock_status_name_data ()">
-                                    <option value="Colour">Colour</option>
-                                    <option value="AXX">AXX</option>
-                                    <option value="KX">KX</option>
-                                    <option value="V">V</option>
-                                    <option value="R">R</option>
-                                    <option value="F">F</option>
-                                    <option value="I">I</option>
-                                    <option value="C">C</option>
-                                    <option value="L">L</option>
-                                    <option value="T">T</option>
-                                    <option value="D">D</option>
-                                    <option value="E">E</option>
-                                    <option value="B" >B</option>
+                            <select class="sadolin_view_form_input" name="brush_name" onchange=" fetch_stock_status_name_data ()">
+                                <option value="Name">Name</option>
+							<option value="Baby brush">Baby brush</option>
+							<option value="Acorn brush" >Acorn brush</option>
                             </select>
                         </form>
     

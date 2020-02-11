@@ -976,14 +976,13 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================================= -->
 <!-- ========================================================= -->
 <!-- ========================================== -->
-<button onclick="init_ceilling_div ()" class="clour_types_btn entries_page_fonts"> Ceilling Paint</button><br>
+<button onclick="show_Ceilling_Paint_Root_Div ()" class="clour_types_btn entries_page_fonts"> Ceilling Paint</button><br>
 	<div id="Ceilling-Paint-Root-Div">
 		<div><br>
 			<button onclick="Init_Matt_Vinyl_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Matt</button>
 			<button onclick="Init_Ceilling_Emulsion_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Ceilling</button>
 		</div><br><!--  close tab div -->
 		<div id="Matt-Vinyl-Tab">
-			<!-- <form  name="matt-form" class="sadolin_form" action="http://127.0.0.1:4444/matt_record_used_paint" method="POST"> -->
 			<form name="matt-form" action="http://172.105.158.108:4444/matt_record_used_paint"  method="POST" class="sadolin_form">
 				<img src="static/imgs/sadolin/matt.png"  class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
@@ -1069,7 +1068,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================================= -->
 <!-- ========================================================= -->
 <!-- ========================================== -->
-<button onclick="init_silk_vinyl_div ()" class="clour_types_btn entries_page_fonts"> Silk Vinyl</button><br>
+<button onclick="Show_Silk_Vinyl_Root_Div ()" class="clour_types_btn entries_page_fonts"> Silk Vinyl</button><br>
 <div id="Silk-Vinyl-Root-Div">
 	<div><br>
 		<button onclick="Init_Silk_Vinyl_Names_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Names</button>
@@ -1159,7 +1158,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================================= -->
 <!-- ========================================================= -->
 <!-- ========================================== -->
-		<button onclick="init_super_glose_div ()" class="clour_types_btn entries_page_fonts"> Super Gloss</button><br>
+		<button onclick="Show_Super_Gloss_Root_Div ()" class="clour_types_btn entries_page_fonts"> Super Gloss</button><br>
 		<div id="Super-Gloss-Root-Div">
 			<div><br>
 				<button onclick="Init_Super_Gloss_Names_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Names</button>
@@ -1250,14 +1249,13 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================================= -->
 <!-- ========================================================= -->
 <!-- ========================================== -->
-<button onclick="init_weather_guard_div ()" class="clour_types_btn entries_page_fonts"> Weather Guard</button><br>
+<button onclick="Show_Weather_Guard_Root_Div ()" class="clour_types_btn entries_page_fonts"> Weather Guard</button><br>
 			<div id="Weather-Gaurd-Root-Div">
 			<div><br>
 				<button onclick="Init_Weather_Guard_Names_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Names</button>
 				<button onclick="Init_Weather_Guard_Base_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Bases</button>
 			</div><br><!--  close tab div -->
 			<div id="Weather-Guard-Names-Tab">
-			<!-- <form name="weather-guard-name-form" class="sadolin_form" action="http://127.0.0.1:4444/weather_guard_record_used_paint" method="POST"> -->
 			<form  name="weather-guard-name-form" class="sadolin_form" action="http://172.105.158.108:4444/weather_guard_record_used_paint" method="POST">
 			<img src="static/imgs/sadolin/weather_guard.png"  class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>

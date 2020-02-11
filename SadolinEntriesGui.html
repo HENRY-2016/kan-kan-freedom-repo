@@ -4,9 +4,9 @@
 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 <title>kan kan | Sadolin Entries</title>
 
-<script src="static/js/names.js"></script>
-<script src="static/js/main.js"></script>
-<script src="static/js/validate.js" ></script>
+<script src="static/js/sadolin/names.js"></script>
+<script src="static/js/sadolin/main.js"></script>
+<script src="static/js/sadolin/validate.js" ></script>
 <script>
 function init_thinner_div () {show_thinner_div (); check_sadolin_staffs_status ("sadolin-thinner-staffs"); check_thinner_names_status ();}
 function init_undercoat_div () {show_undercoat_div (); check_sadolin_staffs_status ("sadolin-undercoat-staffs");}
@@ -44,8 +44,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 </head>
 <body onload="hide_all_divs ()" class="main_body">
 	<center>
-		<img src="static/imgs/sadolin/log.png" class="type-img">
-		<label class="out-let-name" >Sadolin :: Select A Type</label><br>
+		<img src="static/imgs/sadolin/log.png" class="type-img"><br><br>
 <!-- ========================================================= -->
 <!-- ========================================================= -->
 <!-- ========================================================= -->
@@ -61,7 +60,6 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 				</div><br><!--  close tab div -->
 
 				<div id="Brush-Tab">
-					<!-- <form name="brush-form" class="sadolin_form" action="http://172.105.158.108:4444/brush_record_new_stock" method="POST" > -->
 				<form name="brush-form" action="http://172.105.158.108:4444/brush_record_new_stock"  method="POST" class="sadolin_form"> 
 					<img src="static/imgs/sadolin/brush.png" class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
@@ -158,7 +156,6 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 				</div><br><!--  close tab div -->
 
 				<div id="Whitting-Tab">
-					<!-- <form name="whitting-form" class="sadolin_form" action="http://172.105.158.108:4444/whitting_record_new_stock" method="POST" > -->
 				<form name="whitting-form" action="http://172.105.158.108:4444/whitting_record_new_stock"  method="POST" class="sadolin_form"> 
 					<img src="static/imgs/sadolin/whitting.png" class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
@@ -775,7 +772,6 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 				<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 				<div id="Dampshild-Tab">
 				<form name="dampshild-form" class="sadolin_form" action="http://172.105.158.108:4444/dampshild_record_new_stock" method="POST" >
-				<!-- <form name="dampshild-form" action="http://172.105.158.108:4444/dampshild_record_new_stock"  method="POST" class="sadolin_form">  -->
 					<img src="static/imgs/sadolin/dumpshild.png" class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
 						<select id="sadolin-dampshild-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -829,7 +825,6 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			</div><br><!--  close tab div -->
 			<div id="Clear-Varnish-Tab">
 				<form name="clear-form" class="sadolin_form" action="http://172.105.158.108:4444/clear_varnish_record_new_stock" method="POST" >
-				<!-- <form name="clear-form" action="http://172.105.158.108:4444/clear_varnish_record_new_stock"  method="POST" class="sadolin_form">  -->
 						<label class="sadolin-form-title-labels" >....Entering Clear Varnish.... </label><br><br>
             	<label class="agency-form-labels" >Name ::</label><br>
 					<select id="sadolin-clear-v-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -872,7 +867,6 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<div id="Colour-Varnish-Tab">
 				<form name="colour-form" class="sadolin_form" action="http://172.105.158.108:4444/colour_varnish_record_new_stock" method="POST" >
-				<!-- <form name="colour-form" action="http://172.105.158.108:4444/colour_varnish_record_new_stock"  method="POST" class="sadolin_form">  -->
 						<label class="sadolin-form-title-labels" >....Entering Colour Varnish.... </label><br><br>
 						<label class="agency-form-labels" >Name ::</label><br>
 						<select id="sadolin-colour-v-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -923,7 +917,6 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- start sadolin budget gloss -->
 			<div id="budget-emulsion-id">
 				<form name="budget-emulsion-form" action="http://172.105.158.108:4444/emulsion_record_new_stock"  method="POST" class="sadolin_form">
-				<!-- <form name="budget-emulsion-form" action="http://172.105.158.108:4444/emulsion_record_new_stock"  method="POST" class="sadolin_form">  -->
 					<img src="static/imgs/sadolin/budget.png" class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
 						<select id="sadolin-emulsion-staffs" class="sadolin_form_input"  type="text" name="uname" autocomplete="off">
@@ -974,7 +967,6 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- start sadolin budget gloss -->
 		<div id="budget_gloss_id">
 				<form name="budget-gloss-form" action="http://172.105.158.108:4444/bg_record_new_stock"  method="POST" class="sadolin_form">
-				<!-- <form name="myform" action="http://172.105.158.108:4444/bg_record_new_stock"  method="POST" class="sadolin_form">  -->
 					<img src="static/imgs/sadolin/budget_gloss.png" class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
 						<select id="sadolin-glose-staffs" class="sadolin_form_input"  type="text" name="uname" autocomplete="off">
@@ -1331,7 +1323,6 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 					<button onclick="Init_Weather_Guard_Base_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Bases</button>
 				</div><br><!--  close tab div -->
 						<div id="Weather-Guard-Names-Tab">
-							<!-- <form name="weather-guard-name-form" class="sadolin_form" action="http://172.105.158.108:4444/weather_guard_record_new_stock" method="POST" id="weather-guard-form"> -->
 							<form name="weather-guard-name-form" class="sadolin_form" action="http://172.105.158.108:4444/weather_guard_record_new_stock" method="POST" onsubmit="Clear_Weather_Guard_Form_Data ()">
 								<img src="static/imgs/sadolin/weather_guard.png" class="type-img-entries" ><br><br>
 								<label class="agency-form-labels" >Name ::</label><br>
