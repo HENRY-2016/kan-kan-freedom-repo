@@ -1,7 +1,10 @@
 
 var seconds = 500;
 
+// CHINT FORMS
 
+
+// SADOLIN FORMS
 function SubmitBrushData (){document.forms["brush-form"].submit();setTimeout(ClearBrushForm, seconds)}
 function ClearBrushForm (){document.forms["brush-form"].reset();}
 function SubmitMaskingData (){document.forms["masking-form"].submit();setTimeout(ClearMaskingForm, seconds)}

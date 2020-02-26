@@ -62,14 +62,16 @@
                     <button onclick="close_stock_received_view_all_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                 </div>
                 <!-- .......................................... -->
-                <button  onclick="Init_stock_received_by_name_div ()" class=" view-btns-children  entries_page_fonts">By Name </button> <br><br>
-                <div id="stock-received-by-name-div">
+                <button  onclick="Init_stock_received_by_name_div ()" class=" view-btns-children  entries_page_fonts">By Size </button> <br><br>
+                <div id="stock-received-by-size-div">
     
                 <form class="sadolin_form" id="stock-received-view-by-name-form">
-                    <select  class="sadolin_view_form_input" name="sandpaper_name" onchange="fetch_stock_received_name_data ()">
-                    <option value="Name">Name</option>
-                    <option value="Baby sandpaper">Baby sandpaper</option>
-                    <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                    <select  class="sadolin_view_form_input" name="size" onchange="fetch_stock_received_name_data ()">
+                        <option value="Select size" >Select size</option>
+						<option value="60">60</option>
+						<option value="80">80</option>
+						<option value="100" >100</option>
+						<option value="120">120</option>
                     </select>
 
                 </form>
@@ -116,12 +118,12 @@
                             </div><br><br>		
                         <!-- .......................................... -->
                         <button onclick="Init_stock_received_date_name_date_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">Both</button>  
-                        <div id="stock-received-date-name-date-grand-child-div" >
+                        <div id="stock-received-date-size-date-grand-child-div" >
                         <form class="sadolin_from_to_form" id="stock-date-name-form">
                         <table>
                             <td>
                                 <label> Name</label><br>
-                                <select  class="sadolin_view_form_input" name="sandpaper_name" >
+                                <select  class="sadolin_view_form_input" name="size" >
                                     <option value="Name">Name</option>
 							    <option value="Baby sandpaper">Baby sandpaper</option>
 							    <option value="Acorn sandpaper" >Acorn sandpaper</option>
@@ -176,8 +178,8 @@
                         </div>
                         </div><br><br><br>
                         <!-- ................................................................... -->
-                        <button onclick="Init_stock_received_from_to_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
-                            <div id="stock-received-from-to-by-name-grand-child-div">
+                        <button onclick="Init_stock_received_from_to_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
+                            <div id="stock-received-from-to-by-size-grand-child-div">
                                 <form class="sadolin_from_to_form" id="from-to-name-form">
                                     <table>
                                         <tr>
@@ -192,11 +194,13 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <label> Name </label><br>
-                                                    <select  class="sadolin_view_form_input" name="sandpaper_name">
-                                                        <option value="Name">Name</option>
-                                                        <option value="Baby sandpaper">Baby sandpaper</option>
-                                                        <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                                                <label> Size </label><br>
+                                                    <select  class="sadolin_view_form_input" name="size">
+                                                        <option value="Select size" >Select size</option>
+                                                        <option value="60">60</option>
+                                                        <option value="80">80</option>
+                                                        <option value="100" >100</option>
+                                                        <option value="120">120</option>
                                                     </select>
                                             </td>
                                     </table>
@@ -228,14 +232,16 @@
                                 <button onclick="close_stock_received_last_week_all_grand_child_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                             </div><br><br>
                             <!-- ................................................... -->
-                            <button onclick="Init_stock_received_last_week_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
-                            <div id="stock-received-last-week-by-name-grand-child-div" >	 
+                            <button onclick="Init_stock_received_last_week_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
+                            <div id="stock-received-last-week-by-size-grand-child-div" >	 
                             <form class="sadolin_form" id="stock-view-by-name-form">
-                            <label>Name</label>
-                            <select class="sadolin_view_form_input" name="sandpaper_name" onchange=" fetch_stock_received_last_week_name_data ()" >
-                                <option value="Name">Name</option>
-							    <option value="Baby sandpaper">Baby sandpaper</option>
-							    <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                            <label>Size</label>
+                            <select class="sadolin_view_form_input" name="size" onchange=" fetch_stock_received_last_week_name_data ()" >
+                                <option value="Select size" >Select size</option>
+                                <option value="60">60</option>
+                                <option value="80">80</option>
+                                <option value="100" >100</option>
+                                <option value="120">120</option>
                             </select>
                                 </form>
                                 <button class="agency-show-btn entries_page_fonts" ></button><br><br>
@@ -260,14 +266,16 @@
                                 <button onclick="close_stock_received_this_month_all_grand_child_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                             </div><br><br>
                         
-                        <button onclick="Init_stock_received_this_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
-                        <div id="stock-received-this-month-by-name-grand-child-div">
+                        <button onclick="Init_stock_received_this_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
+                        <div id="stock-received-this-month-by-size-grand-child-div">
                             <form class="sadolin_form" id="stock-view-by-name-form">
-                                <label>Name</label>
-                                <select class="sadolin_view_form_input" name="sandpaper_name" onchange="fetch_stock_received_this_month_name_data () " >
-                                    <option value="Name">Name</option>
-                                    <option value="Baby sandpaper">Baby sandpaper</option>
-                                    <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                                <label>Size</label>
+                                <select class="sadolin_view_form_input" name="size" onchange="fetch_stock_received_this_month_name_data () " >
+                                    <option value="Select size" >Select size</option>
+                                    <option value="60">60</option>
+                                    <option value="80">80</option>
+                                    <option value="100" >100</option>
+                                    <option value="120">120</option>
                                 </select>
                             </form>
                             <button  class="agency-show-btn entries_page_fonts"  ></button>
@@ -291,14 +299,16 @@
                             <button onclick="close_stock_received_last_month_all_grand_child_div ()" class="close-child-btn  entries_page_fonts" >Close</button><br><br>
                         </div>
                         <!-- ................................................... -->
-                        <button onclick="Init_stock_received_last_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
-                        <div id="stock-received-last-month-name-grand-child-div">
+                        <button onclick="Init_stock_received_last_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
+                        <div id="stock-received-last-month-size-grand-child-div">
                             <form class="sadolin_form" id="stock-view-by-name-form">
-                                <label>Name</label>
+                                <label>Size</label>
                                 <select  class="sadolin_view_form_input" name="paint_name" onchange="fetch_stock_received_last_month_name_data ()  " >
-                                    <option value="Name">Name</option>
-                                    <option value="Baby sandpaper">Baby sandpaper</option>
-                                    <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                                    <option value="Select size" >Select size</option>
+                                    <option value="60">60</option>
+                                    <option value="80">80</option>
+                                    <option value="100" >100</option>
+                                    <option value="120">120</option>
                                 </select>
                             </form>
                             <button class="agency-show-btn entries_page_fonts"  ></button>
@@ -356,14 +366,16 @@
                             </div>
                             <button onclick=" close_stock_flow_view_all_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                         </div>
-                        <button  onclick=" Init_stock_flow_by_name_div ()" class=" view-btns-children  entries_page_fonts">By Name </button> <br><br>
-                        <div id="stock-flow-by-name-div">
+                        <button  onclick=" Init_stock_flow_by_name_div ()" class=" view-btns-children  entries_page_fonts">By Size </button> <br><br>
+                        <div id="stock-flow-by-size-div">
     
-                        <form class="sadolin_form" id="stock-flow-view-by-name-form">
-                            <select  class="sadolin_view_form_input" name="sandpaper_name" onchange="fetch_stock_flow_name_data ()" >
-                                <option value="Name">Name</option>
-                                <option value="Baby sandpaper">Baby sandpaper</option>
-                                <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                        <form class="sadolin_form" id="stock-flow-view-by-size-form">
+                            <select  class="sadolin_view_form_input" name="size" onchange="fetch_stock_flow_name_data ()" >
+                                <option value="Select size" >Select size</option>
+                                <option value="60">60</option>
+                                <option value="80">80</option>
+                                <option value="100" >100</option>
+                                <option value="120">120</option>
                             </select>
                         </form>
                         <button class="agency-show-btn entries_page_fonts"></button>
@@ -409,15 +421,17 @@
                                     </div><br><br>
                                     <!-- .......................................... -->
                                     <button onclick="Init_stock_flow_date_name_date_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">Both</button>  
-                                <div id="stock-flow-date-name-date-grand-child-div" >
+                                <div id="stock-flow-date-size-date-grand-child-div" >
                                 <form class="sadolin_from_to_form" id="stock-flow-date-date-name-form">
                                 <table>
                                     <td>
-                                        <label> Name</label><br>
-                                        <select  class="sadolin_view_form_input" name="sandpaper_name" >
-                                            <option value="Name">Name</option>
-                                            <option value="Baby sandpaper">Baby sandpaper</option>
-                                            <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                                        <label> Size</label><br>
+                                        <select  class="sadolin_view_form_input" name="size" >
+                                            <option value="Select size" >Select size</option>
+                                            <option value="60">60</option>
+                                            <option value="80">80</option>
+                                            <option value="100" >100</option>
+                                            <option value="120">120</option>
                                         </select>
                                     </td>
     
@@ -469,8 +483,8 @@
                                 </div>
                                 </div><br><br>
                                 <!-- ................................................................... -->
-                                <button onclick="Init_stock_flow_from_to_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
-                                <div id="stock-flow-from-to-by-name-grand-child-div">
+                                <button onclick="Init_stock_flow_from_to_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
+                                <div id="stock-flow-from-to-by-size-grand-child-div">
                                     <form class="sadolin_from_to_form" id="stock-flow-from-to-name-form">
                                         <table>
                                             <tr>
@@ -485,11 +499,13 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <label> Name </label><br>
-                                                <select  class="sadolin_view_form_input" name="sandpaper_name">
-                                                    <option value="Name">Name</option>
-                                                    <option value="Baby sandpaper">Baby sandpaper</option>
-                                                    <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                                                    <label> Size </label><br>
+                                                <select  class="sadolin_view_form_input" name="size">
+                                                    <option value="Select size" >Select size</option>
+                                                    <option value="60">60</option>
+                                                    <option value="80">80</option>
+                                                    <option value="100" >100</option>
+                                                    <option value="120">120</option>
                                                 </select>
                                                 </td>
                                         </table>
@@ -520,14 +536,16 @@
                                         <button onclick="close_stock_flow_last_week_all_child_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                                     </div><br><br>
                                     <!-- ................................................... -->
-                                    <button onclick="Init_stock_flow_last_week_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
-                                    <div id="stock-flow-last-week-by-name-grand-child-div" >	 
+                                    <button onclick="Init_stock_flow_last_week_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
+                                    <div id="stock-flow-last-week-by-size-grand-child-div" >	 
                                     <form class="sadolin_form" id="stock-flow-last-week-name-form">
-                                    <label>Name</label>
-                                        <select  class="sadolin_view_form_input" name="sandpaper_name" onchange=" fetch_stock_flow_last_week_name_data ()" >
-                                            <option value="Name">Name</option>
-                                            <option value="Baby sandpaper">Baby sandpaper</option>
-                                            <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                                    <label>SIze</label>
+                                        <select  class="sadolin_view_form_input" name="size" onchange=" fetch_stock_flow_last_week_name_data ()" >
+                                            <option value="Select size" >Select size</option>
+                                            <option value="60">60</option>
+                                            <option value="80">80</option>
+                                            <option value="100" >100</option>
+                                            <option value="120">120</option>
                                         </select>
                                     </form>
                                     <button class="agency-show-btn entries_page_fonts" ></button><br><br>
@@ -552,14 +570,16 @@
                                         <button onclick="close_stock_flow_this_month_all_grand_child_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                                     </div><br><br>
                                 <!-- ................................................... -->
-                                <button onclick="Init_stock_flow_this_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
-                                <div id="stock-flow-this-month-by-name-grand-child-div">
+                                <button onclick="Init_stock_flow_this_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
+                                <div id="stock-flow-this-month-by-size-grand-child-div">
                                     <form class="sadolin_form" id="stock-flow-this-month-name-form">
-                                        <label>Name</label>
-                                        <select class="sadolin_view_form_input" name="sandpaper_name" onchange="fetch_stock_flow_this_month_name_data () " >
-                                            <option value="Name">Name</option>
-                                            <option value="Baby sandpaper">Baby sandpaper</option>
-                                            <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                                        <label>Size</label>
+                                        <select class="sadolin_view_form_input" name="size" onchange="fetch_stock_flow_this_month_name_data () " >
+                                            <option value="Select size" >Select size</option>
+                                            <option value="60">60</option>
+                                            <option value="80">80</option>
+                                            <option value="100" >100</option>
+                                            <option value="120">120</option>
                                         </select>
                                     </form>
                                     <button  class="agency-show-btn entries_page_fonts"  ></button>
@@ -585,14 +605,16 @@
                                     <button onclick="close_stock_flow_last_month_all_grand_child_div ()" class="close-child-btn  entries_page_fonts" >Close</button><br><br>
                                 </div><br><br>
                                 <!-- ................................................... -->
-                                <button onclick="Init_stock_flow_last_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
-                                <div id="stock-flow-last-month-by-name-grand-child-div">
+                                <button onclick="Init_stock_flow_last_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
+                                <div id="stock-flow-last-month-by-size-grand-child-div">
                                     <form class="sadolin_form" id="stock-flow-last-month-by-name-form">
-                                        <label>Name</label>
-                                        <select class="sadolin_view_form_input" name="sandpaper_name" onchange="fetch_stock_flow_last_month_name_data ()  " >
-                                            <option value="Name">Name</option>
-                                            <option value="Baby sandpaper">Baby sandpaper</option>
-                                            <option value="Acorn sandpaper" >Acorn sandpaper</option>
+                                        <label>Size</label>
+                                        <select class="sadolin_view_form_input" name="size" onchange="fetch_stock_flow_last_month_name_data ()  " >
+                                            <option value="Select size" >Select size</option>
+                                            <option value="60">60</option>
+                                            <option value="80">80</option>
+                                            <option value="100" >100</option>
+                                            <option value="120">120</option>
                                         </select>
                                     </form>
                                     <button class="agency-show-btn entries_page_fonts"  ></button>
@@ -640,14 +662,16 @@
                             <button onclick="close_stock_status_view_all_div ()"  class="close-child-btn  entries_page_fonts" >Close</button><br><br>
                         </div>
                         <!-- ================================= -->
-                        <button onclick="Init_stock_status_view_by_name_div ()" class="view-btns-children entries_page_fonts">By Name</button> <br><br>
-                        <div id="stock-status-view-by-name-div">
+                        <button onclick="Init_stock_status_view_by_name_div ()" class="view-btns-children entries_page_fonts">By Size</button> <br><br>
+                        <div id="stock-status-view-by-size-div">
                         <form class="sadolin_form" id="stock-status-by-name-form">
-                            <label>Name</label>
-                            <select class="sadolin_view_form_input" name="sandpaper_name" onchange=" fetch_stock_status_name_data ()">
-                                <option value="Name">Name</option>
-							<option value="Baby sandpaper">Baby sandpaper</option>
-							<option value="Acorn sandpaper" >Acorn sandpaper</option>
+                            <label>Size</label>
+                            <select class="sadolin_view_form_input" name="size" onchange=" fetch_stock_status_name_data ()">
+                                <option value="Select size" >Select size</option>
+                                <option value="60">60</option>
+                                <option value="80">80</option>
+                                <option value="100" >100</option>
+                                <option value="120">120</option>
                             </select>
                         </form>
     

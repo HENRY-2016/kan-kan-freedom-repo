@@ -1,8 +1,8 @@
 
 
 
-// var masking_sr_url = "http://127.0.0.1:4444/";
-var masking_sr_url = "http://172.105.158.108:4444/";
+var masking_sr_url = "http://127.0.0.1:4444/";
+// var masking_sr_url = "http://172.105.158.108:4444/";
 
 
 var seconds = 1000;
@@ -78,24 +78,22 @@ function stock_view_all ()
 // ============================= view by name
 function fetch_stock_received_name_data ()
 {
-    document.getElementById("stock-received-loader-name").style.display="block";
+    document.getElementById("stock-received-loader-size").style.display="block";
     setTimeout(stock_view_by_name,loader_seconds)
 }
 function stock_view_by_name ()
 {
-    document.getElementById("stock-received-loader-name").style.display="none";
+    document.getElementById("stock-received-loader-size").style.display="none";
     let req = new XMLHttpRequest();
-    req.open('post', masking_sr_url+'masking_stock_view_by_name',true)
+    req.open('post', masking_sr_url+'masking_stock_view_by_size',true)
     req.onload = function ()
         {
             let results = JSON.parse(this.responseText);
             if (! results || !results.length)
-                {
-                    alert("No results found")
-                }
+                {alert("No results found")}
             else
                 {
-                    let tbody = document.getElementById('stock-received-view-by-name-tbody');
+                    let tbody = document.getElementById('stock-received-view-by-size-tbody');
                     tbody.innerHTML = ' ';
 
                     let td,tr;
@@ -126,9 +124,9 @@ function stock_view_by_name ()
                         }
                 }
         }
-        let stock_view_by_name = new FormData(document.getElementById('stock-received-view-by-name-form'));
+        let stock_view_by_name = new FormData(document.getElementById('stock-received-view-by-size-form'));
         req.send(stock_view_by_name);   
-        setTimeout(save_stock_view_by_name_data,seconds);     
+        setTimeout(save_stock_view_by_size_data,seconds);     
 }
 
 // ============================= view by name
@@ -754,10 +752,10 @@ function save_show_all_data ()
     let data = document.getElementById ("show-all-tbody").innerHTML;
     localStorage.setItem("masking_all", data);
 }
-function save_stock_view_by_name_data ()
+function save_stock_view_by_size_data ()
 {
-    let data = document.getElementById ("stock-received-view-by-name-tbody").innerHTML;
-    localStorage.setItem("masking_by_name", data);
+    let data = document.getElementById ("stock-received-view-by-size-tbody").innerHTML;
+    localStorage.setItem("masking_by_size", data);
 }
 
 function save_by_date_today_data ()
@@ -821,7 +819,7 @@ function save_show_last_month_by_name_data ()
 function Load_Stock_Received_Offline_Data () 
 {
     document.getElementById("show-all-tbody").innerHTML = localStorage.getItem("masking_all");
-    document.getElementById("stock-received-view-by-name-tbody").innerHTML = localStorage.getItem("masking_by_name");
+    document.getElementById("stock-received-view-by-size-tbody").innerHTML = localStorage.getItem("masking_by_size");
     document.getElementById("stock-view-by-date-today-tbody").innerHTML = localStorage.getItem("masking_date_today");
     document.getElementById("date-date-tbody").innerHTML = localStorage.getItem("masking_date_date");
     document.getElementById("date-date-name-tbody").innerHTML = localStorage.getItem("masking_date_date_name");

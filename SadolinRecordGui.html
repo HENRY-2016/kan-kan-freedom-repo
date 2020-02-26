@@ -4,9 +4,9 @@
 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 <title>kan kan | Sadolin Record</title>
 
-<script src="static/js/names.js"></script>
-<script src="static/js/main.js"></script>
-<script src="static/js//validate.js" ></script>
+<script src="static/js/sadolin/names.js"></script>
+<script src="static/js/sadolin/main.js"></script>
+<script src="static/js/sadolin/validate.js" ></script>
 <script>
 function init_thinner_div () {show_thinner_div (); check_sadolin_staffs_status ("sadolin-thinner-staffs"); check_thinner_names_status (); }
 function init_undercoat_div () {show_undercoat_div (); check_sadolin_staffs_status ("sadolin-undercoat-staffs");}
@@ -50,14 +50,13 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 
 		<button onclick="Show_AAA_Root_Div ()"  class="clour_types_btn entries_page_fonts">AAA</button><br>
 		<div id="AAA-Root-Div">
-			<div><br>
-				<button onclick="Init_Brush_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Brush</button>
-				<button onclick="Init_Masking_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Masking</button>
+			<div id="tabs-div" ><br>
+				<label onclick="Init_Brush_Tab ()" class="clour_types_btn_tabs left-tab entries_page_fonts">Brush</label>
+				<label onclick="Init_Masking_Tab ()" class="clour_types_btn_tabs right-tab entries_page_fonts">Masking</label>
 			</div><br><!--  close tab div -->
 
 			<div id="Brush-Tab">
-				<!-- <form name="brush-form" class="sadolin_form" action="http://127.0.0.1:4444/brush_record_used_paint" method="POST" > -->
-			<form  name="brush-form" action="http://172.105.158.108:4444/brush_record_used_paint"  method="POST" class="sadolin_form"> 
+			<form  name="brush-form" action="http://127.0.0.1:4444/brush_record_used_paint"  method="POST" class="sadolin_form"> 
 				<img src="static/imgs/sadolin/brush.png" class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="brush-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -101,7 +100,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<div id="Masking-Tab">
 			<!-- <form name="masking-form" class="sadolin_form" action="http://127.0.0.1:4444/masking_record_used_paint" method="POST" > -->
-			<form name="masking-form" action="http://172.105.158.108:4444/masking_record_used_paint"  method="POST" class="sadolin_form"> 
+			<form name="masking-form" action="http://127.0.0.1:4444/masking_record_used_paint"  method="POST" class="sadolin_form"> 
 				<img src="static/imgs/sadolin/masking.png" class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="masking-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -147,14 +146,13 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================== -->
 <button onclick="Show_BBB_Root_Div ()"  class="clour_types_btn entries_page_fonts">BBB</button><br>
 		<div id="BBB-Root-Div">
-			<div><br>
-				<button onclick="Init_Whitting_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Whitting</button>
-				<button onclick="Init_Cement_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Cement</button>
+			<div id="tabs-div"><br>
+				<label onclick="Init_Whitting_Tab ()" class="clour_types_btn_tabs left-tab entries_page_fonts">Whitting</label>
+				<label onclick="Init_Cement_Tab ()" class="clour_types_btn_tabs right-tab entries_page_fonts">Cement</label>
 			</div><br><!--  close tab div -->
 
 			<div id="Whitting-Tab">
-			<!-- <form name="whitting-form" class="sadolin_form" action="http://127.0.0.1:4444/whitting_record_used_paint" method="POST" > -->
-			<form name="whitting-form" action="http://172.105.158.108:4444/whitting_record_used_paint"  method="POST" class="sadolin_form"> 
+			<form name="whitting-form" action="http://127.0.0.1:4444/whitting_record_used_paint"  method="POST" class="sadolin_form"> 
 				<img src="static/imgs/sadolin/whitting.png" class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="whitting-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -178,7 +176,8 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 				<label class="agency-form-labels">Size ::</label><br>
 					<select class="sadolin_form_input" name="size">
 					<option value="Select size" >Select size</option>
-					<option value="50 kgs">50 kgs</option>
+					<option value="1 kg">1 kg</option>
+					<option value="40 kgs">40 kgs</option>
 					</select>
 					<br>
 				<label class="agency-form-labels" >User Id :: </label><br>
@@ -192,8 +191,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<div id="Cement-Tab">
-				<!-- <form name="cement-form" class="sadolin_form" action="http://127.0.0.1:4444/cement_record_used_paint" method="POST" > -->
-			<form name="cement-form" action="http://172.105.158.108:4444/cement_record_used_paint"  method="POST" class="sadolin_form"> 
+			<form name="cement-form" action="http://127.0.0.1:4444/cement_record_used_paint"  method="POST" class="sadolin_form"> 
 				<img src="static/imgs/sadolin/cement.png" class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="cement-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -240,14 +238,13 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================== -->
 <button onclick="Show_CCC_Root_Div ()"  class="clour_types_btn entries_page_fonts">CCC</button><br>
 		<div id="CCC-Root-Div">
-			<div><br>
-				<button onclick="Init_Rollers_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Rollers</button>
-				<button onclick="Init_Sandpaper_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Sand p</button>
+			<div id="tabs-div"><br>
+				<label onclick="Init_Rollers_Tab ()" class="clour_types_btn_tabs left-tab entries_page_fonts">Rollers</label>
+				<label onclick="Init_Sandpaper_Tab ()" class="clour_types_btn_tabs right-tab entries_page_fonts">Sandpaper</label>
 			</div><br><!--  close tab div -->
 
 			<div id="Rollers-Tab">
-				<!-- <form name="roller-form" class="sadolin_form" action="http://127.0.0.1:4444/rollers_record_used_paint" method="POST" > -->
-			<form name="roller-form" action="http://172.105.158.108:4444/rollers_record_used_paint"  method="POST" class="sadolin_form"> 
+			<form name="roller-form" action="http://127.0.0.1:4444/rollers_record_used_paint"  method="POST" class="sadolin_form"> 
 				<img src="static/imgs/sadolin/rollers.png" class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="rollers-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -281,8 +278,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<div id="Sandpaper-Tab">
-		<!-- <form name="sandpaper-form" class="sadolin_form" action="http://127.0.0.1:4444/sandpaper_record_used_paint" method="POST" > -->
-			<form name="sandpaper-form" action="http://172.105.158.108:4444/sandpaper_record_used_paint"  method="POST" class="sadolin_form"> 
+			<form name="sandpaper-form" action="http://127.0.0.1:4444/sandpaper_record_used_paint"  method="POST" class="sadolin_form"> 
 				<img src="static/imgs/sadolin/sandpaper.png" class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="sandpaper-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -331,14 +327,13 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================== -->
 <button onclick="Show_DDD_Root_Div ()"  class="clour_types_btn entries_page_fonts">DDD</button><br>
 		<div id="DDD-Root-Div">
-			<div><br>
-				<button onclick="Init_Stainner_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Stainner</button>
-				<button onclick="Init_Colourant_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Colourants</button>
+			<div id="tabs-div"><br>
+				<label onclick="Init_Stainner_Tab ()" class="clour_types_btn_tabs left-tab entries_page_fonts">Stainner</label>
+				<label onclick="Init_Colourant_Tab ()" class="clour_types_btn_tabs right-tab entries_page_fonts">Colourants</label>
 			</div><br><!--  close tab div -->
 
 			<div id="Stainner-Tab">
-			<!-- <form name="stainner-form" class="sadolin_form" action="http://127.0.0.1:4444/stainner_record_used_paint" method="POST" > -->
-			<form name="stainner-form" action="http://172.105.158.108:4444/stainner_record_used_paint"  method="POST" class="sadolin_form"> 
+			<form name="stainner-form" action="http://127.0.0.1:4444/stainner_record_used_paint"  method="POST" class="sadolin_form"> 
 				<img src="static/imgs/sadolin/stainner.png" class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="stainner-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -370,8 +365,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<div id="Colourant-Tab">
-				<!-- <form name="colourant-form" class="sadolin_form" action="http://127.0.0.1:4444/colourants_record_used_paint" method="POST" > -->
-			<form name="colourant-form" action="http://172.105.158.108:4444/colourants_record_used_paint"  method="POST" class="sadolin_form"> 
+			<form name="colourant-form" action="http://127.0.0.1:4444/colourants_record_used_paint"  method="POST" class="sadolin_form"> 
 				<img src="static/imgs/sadolin/colourant.png" class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="colourant-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -422,10 +416,8 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================== -->
 
 <button onclick="Init_Primer_Div ()" class="clour_types_btn entries_page_fonts">Primers</button><br>
-<!-- start sadolin roof guard types -->
 		<div id="primers_id">
-			<!-- <form name="primer-form" class="sadolin_form" action="http://127.0.0.1:4444/primer_record_used_paint" method="POST" > -->
-			<form name="primer-form" action="http://172.105.158.108:4444/primer_record_used_paint"  method="POST" class="sadolin_form"> 
+			<form name="primer-form" action="http://127.0.0.1:4444/primer_record_used_paint"  method="POST" class="sadolin_form"> 
 				<img src="static/imgs/sadolin/primers.png" class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="primer-staff" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -470,9 +462,8 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================== -->
 		<button onclick="init_thinner_div  ()" class="clour_types_btn entries_page_fonts"> Thinner</button><br>
 					<div id="thinner_id">
-						<!-- <form name="thinner-form" class="sadolin_form" action="http://127.0.0.1:4444/thinner_record_used_paint" method="POST" > -->
-						<form name="thinner-form" action="http://172.105.158.108:4444/thinner_record_used_paint"  method="POST" class="sadolin_form"> 
-								<label class="sadolin-form-title-labels" >....Recording Thinner.... </label><br><br>
+						<form name="thinner-form" action="http://127.0.0.1:4444/thinner_record_used_paint"  method="POST" class="sadolin_form"> 
+					<img src="static/imgs/sadolin/thinner.png" class="type-img-entries" ><br><br>
 								<label class="agency-form-labels" >Name ::</label><br>
 									<select id="sadolin-thinner-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
 										<option value="..Approved by.." >Approved by...</option>
@@ -517,8 +508,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 
 		<button onclick="init_undercoat_div ()" class="clour_types_btn entries_page_fonts"> Undercoat</button><br>
 			<div id="undercoat_id">
-				<!-- <form name="undercoat-form" class="sadolin_form" action="http://127.0.0.1:4444/undercoat_record_used_paint" method="POST"> -->
-				<form name="undercoat-form" action="http://172.105.158.108:4444/undercoat_record_used_paint"  method="POST" class="sadolin_form">
+				<form name="undercoat-form" action="http://127.0.0.1:4444/undercoat_record_used_paint"  method="POST" class="sadolin_form">
 					<img src="static/imgs/sadolin/undercoat.png"  class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
 						<select id="sadolin-undercoat-staffs" class="sadolin_form_input"  type="text" placeholder="select-undercoat" autocomplete="off" name="uname">
@@ -560,11 +550,9 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================================= -->
 
 			<button onclick="init_road_marking_div ()" class="clour_types_btn entries_page_fonts"> Road Marking</button><br>
-			<!-- start sadolin undercoat types -->
 						<div id="road_marking_id">
-							<!-- <form name="roodmarking-form" class="sadolin_form" action="http://127.0.0.1:4444/road_marking_record_used_paint" method="POST" > -->
-							<form name="roodmarking-form" action="http://172.105.158.108:4444/road_marking_record_used_paint"  method="POST" class="sadolin_form"> 
-									<label class="sadolin-form-title-labels" >....Recording Road Marking .... </label><br><br>
+							<form name="roodmarking-form" action="http://127.0.0.1:4444/road_marking_record_used_paint"  method="POST" class="sadolin_form"> 
+					<img src="static/imgs/sadolin/road.png" class="type-img-entries" ><br><br>
 						   <label class="agency-form-labels" >Name ::</label><br>
 								<select id="sadolin-roadmarking-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
 									<option value="..Name.." >Approved by...</option>
@@ -605,10 +593,8 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- ========================================================= -->
 			<!-- ========================================== -->
 			<button onclick="init_wall_guard_div ()" class="clour_types_btn entries_page_fonts"> Wall Guard</button><br>
-			<!-- start sadolin undercoat types -->
 						<div id="wall_guard_id">
-							<!-- <form name="wallguard-form" class="sadolin_form" action="http://127.0.0.1:4444/wall_guard_record_used_paint" method="POST" > -->
-							<form name="wallguard-form" action="http://172.105.158.108:4444/wall_guard_record_used_paint"  method="POST" class="sadolin_form"> 
+							<form name="wallguard-form" action="http://127.0.0.1:4444/wall_guard_record_used_paint"  method="POST" class="sadolin_form"> 
 								<img src="static/imgs/sadolin/wall_guard.png"  class="type-img-entries" ><br><br>
 								<label class="agency-form-labels" >Name ::</label><br>
 								<select id="sadolin-wallguard-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -651,10 +637,8 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- ========================================================= -->
 			<!-- ========================================== -->
 			<button onclick="init_roofguard_div ()" class="clour_types_btn entries_page_fonts"> Roof Guard</button><br>
-			<!-- start sadolin roof guard types -->
 						<div id="roof_guard_id">
-							<!-- <form name="roofguard-form" class="sadolin_form" action="http://127.0.0.1:4444/roof_guard_record_used_paint" method="POST" > -->
-							<form name="roofguard-form" action="http://172.105.158.108:4444/roof_guard_record_used_paint"  method="POST" class="sadolin_form"> 
+							<form name="roofguard-form" action="http://127.0.0.1:4444/roof_guard_record_used_paint"  method="POST" class="sadolin_form"> 
 							<img src="static/imgs/sadolin/roofguard.png"  class="type-img-entries" ><br><br>
 							<label class="agency-form-labels" >Name ::</label><br>
 								<select id="sadolin-roofguard-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -699,15 +683,13 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- ========================================================= -->
 			<!-- ========================================== -->
 			<button onclick="Show_Shild_Root_Div ()" class="clour_types_btn entries_page_fonts">Shild</button><br>
-			<!-- start sadolin rain shild types -->
 				<div id="Shild-Root-Div">
-					<div><br>
-						<button onclick="Init_Rainshild_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Rain s</button>
-						<button onclick="Init_Dampshild_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Damp s</button>
+					<div id="tabs-div"><br>
+						<label onclick="Init_Rainshild_Tab ()" class="clour_types_btn_tabs left-tab entries_page_fonts">Rainshild</label>
+						<label onclick="Init_Dampshild_Tab ()" class="clour_types_btn_tabs right-tab entries_page_fonts">Dampshild</label>
 					</div><br><!--  close tab div -->
 					<div id="Rainshild-Tab">
-					<!-- <form name="rainshild-form" class="sadolin_form" action="http://127.0.0.1:4444/rainshild_record_used_paint" method="POST" > -->
-					<form name="rainshild-form" action="http://172.105.158.108:4444/rainshild_record_used_paint"  method="POST" class="sadolin_form"> 
+					<form name="rainshild-form" action="http://127.0.0.1:4444/rainshild_record_used_paint"  method="POST" class="sadolin_form"> 
 						<img src="static/imgs/sadolin/rainshild.png"  class="type-img-entries" ><br><br>
 						<label class="agency-form-labels" >Name ::</label><br>
 						<select id="sadolin-rainshild-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -746,8 +728,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div id="Dampshild-Tab">
-						<!-- <form name="dumpshild-form" class="sadolin_form" action="http://127.0.0.1:4444/dampshild_record_used_paint" method="POST" > -->
-							<form name="dampshild-form" action="http://172.105.158.108:4444/dampshild_record_used_paint"  method="POST" class="sadolin_form"> 
+							<form name="dampshild-form" action="http://127.0.0.1:4444/dampshild_record_used_paint"  method="POST" class="sadolin_form"> 
 								<img src="static/imgs/sadolin/dumpshild.png"  class="type-img-entries" ><br><br>
 								<label class="agency-form-labels" >Name ::</label><br>
 									<select id="sadolin-dampshild-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -792,14 +773,13 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- ========================================== -->
 			<button onclick="Show_Varnish_Root_Div ()" class="clour_types_btn entries_page_fonts">Varnish</button><br>
 			<div id="Varnish-Root-Div">
-				<div><br>
-					<button onclick="Init_Clear_Varnish_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Clear</button>
-					<button onclick="Init_Colour_Varnish_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Colour</button>
+				<div id="tabs-div"><br>
+					<label onclick="Init_Clear_Varnish_Tab ()" class="clour_types_btn_tabs left-tab entries_page_fonts">Clear</label>
+					<label onclick="Init_Colour_Varnish_Tab ()" class="clour_types_btn_tabs right-tab entries_page_fonts">Colour</label>
 				</div><br><!--  close tab div -->
 				<div id="Clear-Varnish-Tab">
-						<!-- <form name="clear-form" class="sadolin_form" action="http://127.0.0.1:4444/clear_varnish_record_used_paint" method="POST" > -->
-						<form name="clear-form" action="http://172.105.158.108:4444/clear_varnish_record_used_paint"  method="POST" class="sadolin_form"> 
-						<label class="sadolin-form-title-labels" >....Recording Clear Varnish.... </label><br><br>
+						<form name="clear-form" action="http://127.0.0.1:4444/clear_varnish_record_used_paint"  method="POST" class="sadolin_form"> 
+					<img src="static/imgs/sadolin/clear.png" class="type-img-entries" ><br><br>
 						<label class="agency-form-labels" >Name ::</label><br>
 							<select id="sadolin-clear-v-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
 								<option value="..Name.." >Approved by...</option>
@@ -837,9 +817,8 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div id="Colour-Varnish-Tab">
-						<!-- <form name="colour-form" class="sadolin_form" action="http://127.0.0.1:4444/colour_varnish_record_used_paint" method="POST" > -->
-							<form name="colour-form" action="http://172.105.158.108:4444/colour_varnish_record_used_paint"  method="POST" class="sadolin_form"> 
-									<label class="sadolin-form-title-labels" >....Recording Colour Varnish.... </label><br><br>
+							<form name="colour-form" action="http://127.0.0.1:4444/colour_varnish_record_used_paint"  method="POST" class="sadolin_form"> 
+					<img src="static/imgs/sadolin/colour.png" class="type-img-entries" ><br><br>
 							<label class="agency-form-labels" >Name ::</label><br>
 								<select id="sadolin-colour-v-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
 									<option value="..Name.." >Approved by...</option>
@@ -889,8 +868,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 
 <button onclick="init_emulsion_div ()" class="clour_types_btn entries_page_fonts"> Budget Emulsion</button><br>
 			<div id="budget-emulsion-id">
-				<!-- <form name="budget-emulsion-form" action="http://127.0.0.1:4444/emulsion_record_used_paint"  method="POST" class="sadolin_form"> -->
-				<form name="budget-emulsion-form" action="http://172.105.158.108:4444/emulsion_record_used_paint"  method="POST" class="sadolin_form"> 
+				<form name="budget-emulsion-form" action="http://127.0.0.1:4444/emulsion_record_used_paint"  method="POST" class="sadolin_form"> 
 					<img src="static/imgs/sadolin/budget.png"  class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
 						<select id="sadolin-emulsion-staffs" class="sadolin_form_input"  type="text" placeholder="Approved by..." name="uname" autocomplete="off">
@@ -933,8 +911,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================================= -->
 <button onclick="init_budget_gloss_div ()" class="clour_types_btn entries_page_fonts"> Budget Gloss</button><br>
 		<div id="budget_gloss_id">
-				<!-- <form name="budget-gloss-form" action="http://127.0.0.1:4444/bg_record_used_paint"  method="POST" class="sadolin_form"> -->
-				<form name="budget-gloss-form" action="http://172.105.158.108:4444/bg_record_used_paint"  method="POST" class="sadolin_form">
+				<form name="budget-gloss-form" action="http://127.0.0.1:4444/bg_record_used_paint"  method="POST" class="sadolin_form">
 					<img src="static/imgs/sadolin/budget_gloss.png"  class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
 						<select id="sadolin-glose-staffs" class="sadolin_form_input"  type="text" placeholder="Approved by..." name="uname" autocomplete="off" >
@@ -978,12 +955,12 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================== -->
 <button onclick="show_Ceilling_Paint_Root_Div ()" class="clour_types_btn entries_page_fonts"> Ceilling Paint</button><br>
 	<div id="Ceilling-Paint-Root-Div">
-		<div><br>
-			<button onclick="Init_Matt_Vinyl_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Matt</button>
-			<button onclick="Init_Ceilling_Emulsion_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Ceilling</button>
+		<div id="tabs-div"><br>
+			<label onclick="Init_Matt_Vinyl_Tab ()" class="clour_types_btn_tabs left-tab entries_page_fonts">Matt</label>
+			<label onclick="Init_Ceilling_Emulsion_Tab ()" class="clour_types_btn_tabs right-tab entries_page_fonts">Ceilling</label>
 		</div><br><!--  close tab div -->
 		<div id="Matt-Vinyl-Tab">
-			<form name="matt-form" action="http://172.105.158.108:4444/matt_record_used_paint"  method="POST" class="sadolin_form">
+			<form name="matt-form" action="http://127.0.0.1:4444/matt_record_used_paint"  method="POST" class="sadolin_form">
 				<img src="static/imgs/sadolin/matt.png"  class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
 					<select id="sadolin-matt-staffs" class="sadolin_form_input"  type="text"  name="uname" placeholder="Approved by..." autocomplete="off">
@@ -1020,8 +997,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 		<div id="Ceilling-Emulsion-Tab">
-			<!-- <form name="ceilling-form" class="sadolin_form" action="http://127.0.0.1:4444/ceilling_record_used_paint" method="POST"> -->
-			<form name="ceilling-form" class="sadolin_form" action="http://172.105.158.108:4444/ceilling_record_used_paint" method="POST">
+			<form name="ceilling-form" class="sadolin_form" action="http://127.0.0.1:4444/ceilling_record_used_paint" method="POST">
 				<img src="static/imgs/sadolin/ceilling.png"  class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="sadolin-ceilling-staffs" class="sadolin_form_input"  type="text"  name="uname"  autocomplete="off">
@@ -1070,13 +1046,12 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================== -->
 <button onclick="Show_Silk_Vinyl_Root_Div ()" class="clour_types_btn entries_page_fonts"> Silk Vinyl</button><br>
 <div id="Silk-Vinyl-Root-Div">
-	<div><br>
-		<button onclick="Init_Silk_Vinyl_Names_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Names</button>
-		<button onclick="Init_Silk_Vinyl_Base_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Bases</button>
+	<div id="tabs-div"><br>
+		<label onclick="Init_Silk_Vinyl_Names_Tab ()" class="clour_types_btn_tabs left-tab entries_page_fonts">Names</label>
+		<label onclick="Init_Silk_Vinyl_Base_Tab ()" class="clour_types_btn_tabs right-tab entries_page_fonts">Bases</label>
 	</div><br><!--  close tab div -->
 	<div id="Silk-Vinyl-Names-Tab">
-		<!-- <form name="silk-vinyl-name-form" class="sadolin_form" action="http://127.0.0.1:4444/silk_record_used_paint" method="POST"> -->
-		<form name="silk-vinyl-name-form"  class="sadolin_form" action="http://172.105.158.108:4444/silk_record_used_paint" method="POST">
+		<form name="silk-vinyl-name-form"  class="sadolin_form" action="http://127.0.0.1:4444/silk_record_used_paint" method="POST">
 				<img src="static/imgs/sadolin/silk.png"  class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 				<select id="sadolin-silk-staffs" class="sadolin_form_input"  type="text" placeholder="Approved by..." autocomplete="off" name="uname">
@@ -1114,8 +1089,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 		<div id="Silk-Vinyl-Base-Tab">
-		<!-- <form name="silk-vinyl-base-form" class="sadolin_form" action="http://127.0.0.1:4444/base_silk_record_used_paint" method="POST"> -->
-			<form name="silk-vinyl-base-form" class="sadolin_form" action="http://172.105.158.108:4444/base_silk_record_used_paint" method="POST">
+			<form name="silk-vinyl-base-form" class="sadolin_form" action="http://127.0.0.1:4444/base_silk_record_used_paint" method="POST">
 				<img src="static/imgs/sadolin/silk.png"  class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="sadolin-silk-b-staffs" class="sadolin_form_input"  type="text"  name="uname" placeholder="Approved by..." autocomplete="off">
@@ -1160,13 +1134,12 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================== -->
 		<button onclick="Show_Super_Gloss_Root_Div ()" class="clour_types_btn entries_page_fonts"> Super Gloss</button><br>
 		<div id="Super-Gloss-Root-Div">
-			<div><br>
-				<button onclick="Init_Super_Gloss_Names_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Names</button>
-				<button onclick="Init_Super_Gloss_Base_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Bases</button>
+			<div id="tabs-div"><br>
+				<label onclick="Init_Super_Gloss_Names_Tab ()" class="clour_types_btn_tabs left-tab entries_page_fonts">Names</label>
+				<label onclick="Init_Super_Gloss_Base_Tab ()" class="clour_types_btn_tabs right-tab entries_page_fonts">Bases</label>
 			</div><br><!--  close tab div -->
 			<div id="Super-Glose-Names-Tab">
-			<!-- <form name="supper-gloss-name-form" class="sadolin_form" action="http://127.0.0.1:4444/super_gloss_record_used_paint" method="POST"> -->
-			<form name="brush-form" class="sadolin_form" action="http://172.105.158.108:4444/super_gloss_record_used_paint" method="POST">
+			<form name="brush-form" class="sadolin_form" action="http://127.0.0.1:4444/super_gloss_record_used_paint" method="POST">
 				<img src="static/imgs/sadolin/super_gloss.png"  class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="sadolin-super-staffs" class="sadolin_form_input"  type="text" placeholder="Approved by..." autocomplete="off" name="uname">
@@ -1203,8 +1176,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<div id="Super-Glose-Base-Tab">
-				<!-- <form name="supper-gloss-base-form" class="sadolin_form" action="http://127.0.0.1:4444/base_super_record_used_paint" method="POST"> -->
-				<form name="supper-gloss-babse-form"  class="sadolin_form" action="http://172.105.158.108:4444/base_super_record_used_paint" method="POST">
+				<form name="supper-gloss-babse-form"  class="sadolin_form" action="http://127.0.0.1:4444/base_super_record_used_paint" method="POST">
 					<img src="static/imgs/sadolin/super_gloss.png"  class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
 					<select id="sadolin-super-b-staffs" class="sadolin_form_input"  type="text"  name="uname" autocomplete="off">
@@ -1251,12 +1223,12 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 <!-- ========================================== -->
 <button onclick="Show_Weather_Guard_Root_Div ()" class="clour_types_btn entries_page_fonts"> Weather Guard</button><br>
 			<div id="Weather-Gaurd-Root-Div">
-			<div><br>
-				<button onclick="Init_Weather_Guard_Names_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Names</button>
-				<button onclick="Init_Weather_Guard_Base_Tab ()" class="clour_types_btn_tabs names-tab entries_page_fonts">Bases</button>
+			<div id="tabs-div"><br>
+				<label onclick="Init_Weather_Guard_Names_Tab ()" class="clour_types_btn_tabs left-tab entries_page_fonts">Names</label>
+				<label onclick="Init_Weather_Guard_Base_Tab ()" class="clour_types_btn_tabs right-tab entries_page_fonts">Bases</label>
 			</div><br><!--  close tab div -->
 			<div id="Weather-Guard-Names-Tab">
-			<form  name="weather-guard-name-form" class="sadolin_form" action="http://172.105.158.108:4444/weather_guard_record_used_paint" method="POST">
+			<form  name="weather-guard-name-form" class="sadolin_form" action="http://127.0.0.1:4444/weather_guard_record_used_paint" method="POST">
 			<img src="static/imgs/sadolin/weather_guard.png"  class="type-img-entries" ><br><br>
 				<label class="agency-form-labels" >Name ::</label><br>
 					<select id="sadolin-weather-staffs" class="sadolin_form_input"  type="text"  autocomplete="off" name="uname">
@@ -1294,8 +1266,7 @@ function Init_Primer_Div () {Show_Primer_Div (); check_sadolin_staffs_status ("p
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 			<div id="Weather-Guard-Base-Tab">
-				<!-- <form name="weather-guard-base-form" class="sadolin_form" action="http://127.0.0.1:4444/base_weather_record_used_paint" method="POST"> -->
-				<form name="weather-guard-base-form" class="sadolin_form" action="http://172.105.158.108:4444/base_weather_record_used_paint" method="POST">
+				<form name="weather-guard-base-form" class="sadolin_form" action="http://127.0.0.1:4444/base_weather_record_used_paint" method="POST">
 					<img src="static/imgs/sadolin/weather_guard.png"  class="type-img-entries" ><br><br>
 					<label class="agency-form-labels" >Name ::</label><br>
 					<select id="sadolin-weather-b-staffs" class="sadolin_form_input"  type="text"  name="uname" autocomplete="off">

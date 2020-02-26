@@ -7,8 +7,8 @@
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 */
 
-// var masking_sf_url = "http://127.0.0.1:4444/";   
-var masking_sf_url = "http://172.105.158.108:4444/";
+var masking_sf_url = "http://127.0.0.1:4444/";   
+// var masking_sf_url = "http://172.105.158.108:4444/";
 
 var seconds = 1000;
 var loader_seconds = 3000;
@@ -956,7 +956,7 @@ function save_stock_status_name ()
 function Load_Stock_Flow_Offline_Data () 
 {
     document.getElementById("stock-flow-all-tbody").innerHTML = localStorage.getItem("masking_stock_flow_all");
-    document.getElementById("stock-flow-view-by-name-tbody").innerHTML = localStorage.getItem("masking_stock_flow_by_name");
+    document.getElementById("stock-flow-view-by-size-tbody").innerHTML = localStorage.getItem("masking_stock_flow_by_name");
     document.getElementById("stock-flow-view-by-date-today-tbody").innerHTML = localStorage.getItem("masking_stock_flow_date_today");
     document.getElementById("stock-flow-date-date-tbody").innerHTML = localStorage.getItem("masking_stock_flow_date_date");
     document.getElementById("stock-flow-date-date-name-tbody").innerHTML = localStorage.getItem("masking_stock_flow_date_date_name");

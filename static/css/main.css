@@ -296,17 +296,23 @@ border-bottom: 2px solid black;
     height:50px;
     border-radius:18px;
 }
+#tabs-div
+{
+    margin-top: 10px;
+    /* background-color:#708090; */
+    width: 100%;
+    height: 40px;
+    border-radius:80px;
+}
 .clour_types_btn_tabs
 {
-    background-color:#708090;
     border:none;
     width:20%;
     height:35px;
-    border-radius:18px;
 }
 
-.name-tab{float: left;}
-/* .base-tab{float: right;} */
+.left-tab{ margin-top: -19px; margin-left: 40px; float: left;}
+.right-tab{ margin-top: -19px; margin-right: 60px; float: right;}
 
 .color-types-btn
 {

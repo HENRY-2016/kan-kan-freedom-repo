@@ -39,7 +39,7 @@
     <body onload="Set_Up_Every_Thing ()" class="main_body">
         <center>
             <img src="static/imgs/sadolin/log.png" class="type-img" ><br><br>
-            <button class="color-types-btn entries_page_fonts"> brush Stock </button><br><br>
+            <button class="color-types-btn entries_page_fonts"> Brush Stock </button><br><br>
         <!--
         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         @
@@ -62,23 +62,27 @@
                     <button onclick="close_stock_received_view_all_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                 </div>
                 <!-- .......................................... -->
-                <button  onclick="Init_stock_received_by_name_div ()" class=" view-btns-children  entries_page_fonts">By Name </button> <br><br>
-                <div id="stock-received-by-name-div">
+                <button  onclick="Init_stock_received_by_name_div ()" class=" view-btns-children  entries_page_fonts">By Size </button> <br><br>
+                <div id="stock-received-by-size-div">
     
-                <form class="sadolin_form" id="stock-received-view-by-name-form">
-                    <select  class="sadolin_view_form_input" name="brush_name" onchange="fetch_stock_received_name_data ()">
-                    <option value="Name">Name</option>
-                    <option value="Baby brush">Baby brush</option>
-                    <option value="Acorn brush" >Acorn brush</option>
+                <form class="sadolin_form" id="stock-received-view-by-size-form">
+                    <select  class="sadolin_view_form_input" name="size" onchange="fetch_stock_received_by_size_data ()">
+                        <option value="Select size" >Select size</option>
+						<option value="1 ">1 </option>
+						<option value="2 ">2 </option>
+						<option value="3 ">3 </option>
+						<option value="4 ">4 </option>
+						<option value="5 ">5 </option>
+						<option value="6 ">6 </option>
                     </select>
 
                 </form>
                 <button class="agency-show-btn entries_page_fonts"></button>
-                <div id="stock-received-loader-name" class="loader"></div>
-                <div id="stock-received-view-by-name-div">
+                <div id="stock-received-loader-size" class="loader"></div>
+                <div id="stock-received-view-by-size-div">
                     <center>
                     <table class=" w3-bordered user-scrolling-table">
-                        <tbody id="stock-received-view-by-name-tbody"></tbody>
+                        <tbody id="stock-received-view-by-size-tbody"></tbody>
                     </table>
                     </center>
                 </div>
@@ -121,7 +125,7 @@
                         <table>
                             <td>
                                 <label> Name</label><br>
-                                <select  class="sadolin_view_form_input" name="brush_name" >
+                                <select  class="sadolin_view_form_input" name="size" >
                                     <option value="Name">Name</option>
 							    <option value="Baby brush">Baby brush</option>
 							    <option value="Acorn brush" >Acorn brush</option>
@@ -176,7 +180,7 @@
                         </div>
                         </div><br><br><br>
                         <!-- ................................................................... -->
-                        <button onclick="Init_stock_received_from_to_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
+                        <button onclick="Init_stock_received_from_to_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
                             <div id="stock-received-from-to-by-name-grand-child-div">
                                 <form class="sadolin_from_to_form" id="from-to-name-form">
                                     <table>
@@ -192,11 +196,15 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <label> Name </label><br>
-                                                    <select  class="sadolin_view_form_input" name="brush_name">
-                                                        <option value="Name">Name</option>
-                                                        <option value="Baby brush">Baby brush</option>
-                                                        <option value="Acorn brush" >Acorn brush</option>
+                                                <label> Size</label><br>
+                                                    <select  class="sadolin_view_form_input" name="size">
+                                                        <option value="Select size" >Select size</option>
+                                                        <option value="1 ">1 </option>
+                                                        <option value="2 ">2 </option>
+                                                        <option value="3 ">3 </option>
+                                                        <option value="4 ">4 </option>
+                                                        <option value="5 ">5 </option>
+                                                        <option value="6 ">6 </option>
                                                     </select>
                                             </td>
                                     </table>
@@ -228,14 +236,18 @@
                                 <button onclick="close_stock_received_last_week_all_grand_child_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                             </div><br><br>
                             <!-- ................................................... -->
-                            <button onclick="Init_stock_received_last_week_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
+                            <button onclick="Init_stock_received_last_week_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
                             <div id="stock-received-last-week-by-name-grand-child-div" >	 
                             <form class="sadolin_form" id="stock-view-by-name-form">
-                            <label>Name</label>
-                            <select class="sadolin_view_form_input" name="brush_name" onchange=" fetch_stock_received_last_week_name_data ()" >
-                                <option value="Name">Name</option>
-							    <option value="Baby brush">Baby brush</option>
-							    <option value="Acorn brush" >Acorn brush</option>
+                            <label>Size</label>
+                            <select class="sadolin_view_form_input" name="size" onchange=" fetch_stock_received_last_week_name_data ()" >
+                                <option value="Select size" >Select size</option>
+                                <option value="1 ">1 </option>
+                                <option value="2 ">2 </option>
+                                <option value="3 ">3 </option>
+                                <option value="4 ">4 </option>
+                                <option value="5 ">5 </option>
+                                <option value="6 ">6 </option>
                             </select>
                                 </form>
                                 <button class="agency-show-btn entries_page_fonts" ></button><br><br>
@@ -260,14 +272,18 @@
                                 <button onclick="close_stock_received_this_month_all_grand_child_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                             </div><br><br>
                         
-                        <button onclick="Init_stock_received_this_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
+                        <button onclick="Init_stock_received_this_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
                         <div id="stock-received-this-month-by-name-grand-child-div">
                             <form class="sadolin_form" id="stock-view-by-name-form">
-                                <label>Name</label>
-                                <select class="sadolin_view_form_input" name="brush_name" onchange="fetch_stock_received_this_month_name_data () " >
-                                    <option value="Name">Name</option>
-                                    <option value="Baby brush">Baby brush</option>
-                                    <option value="Acorn brush" >Acorn brush</option>
+                                <label>Size</label>
+                                <select class="sadolin_view_form_input" name="size" onchange="fetch_stock_received_this_month_name_data () " >
+                                    <option value="Select size" >Select size</option>
+                                    <option value="1 ">1 </option>
+                                    <option value="2 ">2 </option>
+                                    <option value="3 ">3 </option>
+                                    <option value="4 ">4 </option>
+                                    <option value="5 ">5 </option>
+                                    <option value="6 ">6 </option>
                                 </select>
                             </form>
                             <button  class="agency-show-btn entries_page_fonts"  ></button>
@@ -291,14 +307,18 @@
                             <button onclick="close_stock_received_last_month_all_grand_child_div ()" class="close-child-btn  entries_page_fonts" >Close</button><br><br>
                         </div>
                         <!-- ................................................... -->
-                        <button onclick="Init_stock_received_last_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
+                        <button onclick="Init_stock_received_last_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
                         <div id="stock-received-last-month-name-grand-child-div">
                             <form class="sadolin_form" id="stock-view-by-name-form">
-                                <label>Name</label>
+                                <label>Size</label>
                                 <select  class="sadolin_view_form_input" name="paint_name" onchange="fetch_stock_received_last_month_name_data ()  " >
-                                    <option value="Name">Name</option>
-                                    <option value="Baby brush">Baby brush</option>
-                                    <option value="Acorn brush" >Acorn brush</option>
+                                    <option value="Select size" >Select size</option>
+                                    <option value="1 ">1 </option>
+                                    <option value="2 ">2 </option>
+                                    <option value="3 ">3 </option>
+                                    <option value="4 ">4 </option>
+                                    <option value="5 ">5 </option>
+                                    <option value="6 ">6 </option>
                                 </select>
                             </form>
                             <button class="agency-show-btn entries_page_fonts"  ></button>
@@ -356,22 +376,26 @@
                             </div>
                             <button onclick=" close_stock_flow_view_all_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                         </div>
-                        <button  onclick=" Init_stock_flow_by_name_div ()" class=" view-btns-children  entries_page_fonts">By Name </button> <br><br>
-                        <div id="stock-flow-by-name-div">
+                        <button  onclick=" Init_stock_flow_by_name_div ()" class=" view-btns-children  entries_page_fonts">By Size </button> <br><br>
+                        <div id="stock-flow-by-size-div">
     
                         <form class="sadolin_form" id="stock-flow-view-by-name-form">
-                            <select  class="sadolin_view_form_input" name="brush_name" onchange="fetch_stock_flow_name_data ()" >
-                                <option value="Name">Name</option>
-                                <option value="Baby brush">Baby brush</option>
-                                <option value="Acorn brush" >Acorn brush</option>
+                            <select  class="sadolin_view_form_input" name="size" onchange="fetch_stock_flow_size_data ()" >
+                                <option value="Select size" >Select size</option>
+                                <option value="1 ">1 </option>
+                                <option value="2 ">2 </option>
+                                <option value="3 ">3 </option>
+                                <option value="4 ">4 </option>
+                                <option value="5 ">5 </option>
+                                <option value="6 ">6 </option>
                             </select>
                         </form>
                         <button class="agency-show-btn entries_page_fonts"></button>
-                        <div id="stock-flow-loader-name" class="loader"></div>
-                        <div id="stock-flow-view-by-name-div">
+                        <div id="stock-flow-loader-size" class="loader"></div>
+                        <div id="stock-flow-view-by-size-div">
                             <center>
                             <table class=" w3-bordered user-scrolling-table">
-                                <tbody id="stock-flow-view-by-name-tbody"></tbody>
+                                <tbody id="stock-flow-view-by-size-tbody"></tbody>
                             </table>
                             </center>
                         </div>
@@ -414,7 +438,7 @@
                                 <table>
                                     <td>
                                         <label> Name</label><br>
-                                        <select  class="sadolin_view_form_input" name="brush_name" >
+                                        <select  class="sadolin_view_form_input" name="size" >
                                             <option value="Name">Name</option>
                                             <option value="Baby brush">Baby brush</option>
                                             <option value="Acorn brush" >Acorn brush</option>
@@ -469,7 +493,7 @@
                                 </div>
                                 </div><br><br>
                                 <!-- ................................................................... -->
-                                <button onclick="Init_stock_flow_from_to_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
+                                <button onclick="Init_stock_flow_from_to_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
                                 <div id="stock-flow-from-to-by-name-grand-child-div">
                                     <form class="sadolin_from_to_form" id="stock-flow-from-to-name-form">
                                         <table>
@@ -485,11 +509,15 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <label> Name </label><br>
-                                                <select  class="sadolin_view_form_input" name="brush_name">
-                                                    <option value="Name">Name</option>
-                                                    <option value="Baby brush">Baby brush</option>
-                                                    <option value="Acorn brush" >Acorn brush</option>
+                                                    <label> Size </label><br>
+                                                <select  class="sadolin_view_form_input" name="size">
+                                                    <option value="Select size" >Select size</option>
+                                                    <option value="1 ">1 </option>
+                                                    <option value="2 ">2 </option>
+                                                    <option value="3 ">3 </option>
+                                                    <option value="4 ">4 </option>
+                                                    <option value="5 ">5 </option>
+                                                    <option value="6 ">6 </option>
                                                 </select>
                                                 </td>
                                         </table>
@@ -520,14 +548,18 @@
                                         <button onclick="close_stock_flow_last_week_all_child_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                                     </div><br><br>
                                     <!-- ................................................... -->
-                                    <button onclick="Init_stock_flow_last_week_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
+                                    <button onclick="Init_stock_flow_last_week_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
                                     <div id="stock-flow-last-week-by-name-grand-child-div" >	 
                                     <form class="sadolin_form" id="stock-flow-last-week-name-form">
-                                    <label>Name</label>
-                                        <select  class="sadolin_view_form_input" name="brush_name" onchange=" fetch_stock_flow_last_week_name_data ()" >
-                                            <option value="Name">Name</option>
-                                            <option value="Baby brush">Baby brush</option>
-                                            <option value="Acorn brush" >Acorn brush</option>
+                                    <label>Size</label>
+                                        <select  class="sadolin_view_form_input" name="size" onchange=" fetch_stock_flow_last_week_name_data ()" >
+                                            <option value="Select size" >Select size</option>
+                                            <option value="1 ">1 </option>
+                                            <option value="2 ">2 </option>
+                                            <option value="3 ">3 </option>
+                                            <option value="4 ">4 </option>
+                                            <option value="5 ">5 </option>
+                                            <option value="6 ">6 </option>
                                         </select>
                                     </form>
                                     <button class="agency-show-btn entries_page_fonts" ></button><br><br>
@@ -552,14 +584,18 @@
                                         <button onclick="close_stock_flow_this_month_all_grand_child_div ()"  class="close-child-btn entries_page_fonts" >Close</button><br><br>
                                     </div><br><br>
                                 <!-- ................................................... -->
-                                <button onclick="Init_stock_flow_this_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
+                                <button onclick="Init_stock_flow_this_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
                                 <div id="stock-flow-this-month-by-name-grand-child-div">
                                     <form class="sadolin_form" id="stock-flow-this-month-name-form">
-                                        <label>Name</label>
-                                        <select class="sadolin_view_form_input" name="brush_name" onchange="fetch_stock_flow_this_month_name_data () " >
-                                            <option value="Name">Name</option>
-                                            <option value="Baby brush">Baby brush</option>
-                                            <option value="Acorn brush" >Acorn brush</option>
+                                        <label>Size</label>
+                                        <select class="sadolin_view_form_input" name="size" onchange="fetch_stock_flow_this_month_name_data () " >
+                                            <option value="Select size" >Select size</option>
+                                            <option value="1 ">1 </option>
+                                            <option value="2 ">2 </option>
+                                            <option value="3 ">3 </option>
+                                            <option value="4 ">4 </option>
+                                            <option value="5 ">5 </option>
+                                            <option value="6 ">6 </option>
                                         </select>
                                     </form>
                                     <button  class="agency-show-btn entries_page_fonts"  ></button>
@@ -585,14 +621,18 @@
                                     <button onclick="close_stock_flow_last_month_all_grand_child_div ()" class="close-child-btn  entries_page_fonts" >Close</button><br><br>
                                 </div><br><br>
                                 <!-- ................................................... -->
-                                <button onclick="Init_stock_flow_last_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Name</button>
+                                <button onclick="Init_stock_flow_last_month_by_name_grand_child_div ()" class="view-btns-grand-child   entries_page_fonts">By Size</button>
                                 <div id="stock-flow-last-month-by-name-grand-child-div">
                                     <form class="sadolin_form" id="stock-flow-last-month-by-name-form">
-                                        <label>Name</label>
-                                        <select class="sadolin_view_form_input" name="brush_name" onchange="fetch_stock_flow_last_month_name_data ()  " >
-                                            <option value="Name">Name</option>
-                                            <option value="Baby brush">Baby brush</option>
-                                            <option value="Acorn brush" >Acorn brush</option>
+                                        <label>Size</label>
+                                        <select class="sadolin_view_form_input" name="size" onchange="fetch_stock_flow_last_month_name_data ()  " >
+                                            <option value="Select size" >Select size</option>
+                                            <option value="1 ">1 </option>
+                                            <option value="2 ">2 </option>
+                                            <option value="3 ">3 </option>
+                                            <option value="4 ">4 </option>
+                                            <option value="5 ">5 </option>
+                                            <option value="6 ">6 </option>
                                         </select>
                                     </form>
                                     <button class="agency-show-btn entries_page_fonts"  ></button>
@@ -640,14 +680,18 @@
                             <button onclick="close_stock_status_view_all_div ()"  class="close-child-btn  entries_page_fonts" >Close</button><br><br>
                         </div>
                         <!-- ================================= -->
-                        <button onclick="Init_stock_status_view_by_name_div ()" class="view-btns-children entries_page_fonts">By Name</button> <br><br>
+                        <button onclick="Init_stock_status_view_by_name_div ()" class="view-btns-children entries_page_fonts">By Size</button> <br><br>
                         <div id="stock-status-view-by-name-div">
                         <form class="sadolin_form" id="stock-status-by-name-form">
-                            <label>Name</label>
-                            <select class="sadolin_view_form_input" name="brush_name" onchange=" fetch_stock_status_name_data ()">
-                                <option value="Name">Name</option>
-							<option value="Baby brush">Baby brush</option>
-							<option value="Acorn brush" >Acorn brush</option>
+                            <label>Size</label>
+                            <select class="sadolin_view_form_input" name="size" onchange=" fetch_stock_status_name_data ()">
+                                <option value="Select size" >Select size</option>
+                                <option value="1 ">1 </option>
+                                <option value="2 ">2 </option>
+                                <option value="3 ">3 </option>
+                                <option value="4 ">4 </option>
+                                <option value="5 ">5 </option>
+                                <option value="6 ">6 </option>
                             </select>
                         </form>
     

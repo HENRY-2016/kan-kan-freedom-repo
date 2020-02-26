@@ -1,8 +1,8 @@
 
 
 
-// var brush_sr_url = "http://127.0.0.1:4444/";
-var brush_sr_url = "http://172.105.158.108:4444/";
+var brush_sr_url = "http://127.0.0.1:4444/";
+// var brush_sr_url = "http://172.105.158.108:4444/";
 
 
 var seconds = 1000;
@@ -44,7 +44,7 @@ function stock_view_all ()
                         let td,tr;
                         // add table headings
                         let th_names = new Array ();
-                        th_names.push(["Uname", "Name", "Quatity", "Date"]);
+                        th_names.push(["Uname", "Name", "Size","Quatity", "Date"]);
                         let columns_to_count = th_names[0].length;
                         row = tbody.insertRow(-1); 
                         for (let looper =0; looper<columns_to_count; ++looper)
@@ -74,6 +74,62 @@ function stock_view_all ()
             req.send(div_tag);  
             setTimeout(save_show_all_data,seconds);      
     }
+
+
+    function fetch_stock_received_by_size_data ()
+    {
+        document.getElementById("stock-received-loader-size").style.display="block";
+        setTimeout(stock_view_by_size,loader_seconds)
+    }
+    
+    function stock_view_by_size ()
+    {
+        document.getElementById("stock-received-loader-size").style.display="none";
+        let req = new XMLHttpRequest();
+        req.open('post', brush_sr_url+'brush_stock_receive_view_by_size',true)
+        req.onload = function ()
+            {
+                let results = JSON.parse(this.responseText);
+                if (! results || !results.length)
+                    {alert("No results found")}
+                else
+                    {
+                        let tbody = document.getElementById('stock-received-view-by-size-tbody');
+                        tbody.innerHTML = ' ';
+    
+                        let td,tr;
+                        let th_names = new Array ();
+                        th_names.push(["Uname", "Name", "Size", "Quatity", "Date"]);
+                        let columns_to_count = th_names[0].length;
+                        row = tbody.insertRow(-1); 
+                        for (let looper =0; looper<columns_to_count; ++looper)
+                            {
+                                let headerNames = document.createElement("th");
+                                headerNames.className='js_table_headers'
+                                headerNames.innerHTML = th_names[0][looper];
+                                row.appendChild(headerNames)
+                            }
+    
+                        for (let table_row = 0; table_row < results.length; ++table_row)
+                            {
+                                tr = document.createElement('tr');
+                                tr.className='js_table_row';
+                                for (let table_data = 0; table_data< (results[table_row].length);++table_data)
+                                    {
+                                        td = document.createElement('td');
+                                        td.setAttribute("align", "center"); 
+    
+                                        td.innerHTML = results[table_row][table_data];
+                                        tr.appendChild(td)
+                                    }
+                                    tbody.appendChild(tr)
+                            }
+                    }
+            }
+            let stock_view_by_size = new FormData(document.getElementById('stock-received-view-by-size-form'));
+            req.send(stock_view_by_size);        
+            setTimeout(save_stock_view_by_size_data,seconds);
+    }
     
 // ============================= view by name
 function fetch_stock_received_name_data ()
@@ -95,12 +151,12 @@ function stock_view_by_name ()
                 }
             else
                 {
-                    let tbody = document.getElementById('stock-received-view-by-name-tbody');
+                    let tbody = document.getElementById('stock-received-view-by-size-tbody');
                     tbody.innerHTML = ' ';
 
                     let td,tr;
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name","Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size","Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -128,7 +184,7 @@ function stock_view_by_name ()
         }
         let stock_view_by_name = new FormData(document.getElementById('stock-received-view-by-name-form'));
         req.send(stock_view_by_name);   
-        setTimeout(save_stock_view_by_name_data,seconds);     
+        setTimeout(save_stock_view_by_size_data,seconds);     
 }
 
 // ============================= view by name
@@ -157,7 +213,7 @@ function stock_view_by_date_today ()
                     let td,tr;
                     // add table headings
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name","Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size","Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -209,7 +265,7 @@ function stock_view_by_date_date ()
                     tbody.innerHTML = ' ';
                     let td,tr;
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name","Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size","Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -263,7 +319,7 @@ function stock_view_by_date_name_date ()
                     tbody.innerHTML = ' ';
                     let td,tr;
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name", "Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size", "Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -317,7 +373,7 @@ function stock_from_to_all ()
                     tbody.innerHTML = ' ';
                     let td,tr;
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name","Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size","Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -370,7 +426,7 @@ function stock_from_to_name ()
                     tbody.innerHTML = ' ';
                     let td,tr;
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name", "Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size", "Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -425,7 +481,7 @@ function stock_last_week_all ()
                     tbody.innerHTML = ' ';
                     let td,tr;
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name", "Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size", "Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -480,7 +536,7 @@ function stock_last_week_name ()
                     tbody.innerHTML = ' ';
                     let td,tr;
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name","Quatity", "Date"]);
+                    th_names.push(["Uname", "Name","Size","Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -541,7 +597,7 @@ function stock_this_month_all ()
                     let td,tr;
                     // add table headings
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name","Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size","Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -601,7 +657,7 @@ function stock_this_month_name ()
                     tbody.innerHTML = ' ';
                     let td,tr;
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name","Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size","Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -658,7 +714,7 @@ function stock_last_month_all ()
                     tbody.innerHTML = ' ';
                     let td,tr;
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name", "Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size", "Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -713,7 +769,7 @@ function stock_last_month_name ()
                     tbody.innerHTML = ' ';
                     let td,tr;
                     let th_names = new Array ();
-                    th_names.push(["Uname", "Name","Quatity", "Date"]);
+                    th_names.push(["Uname", "Name", "Size","Quatity", "Date"]);
                     let columns_to_count = th_names[0].length;
                     row = tbody.insertRow(-1); 
                     for (let looper =0; looper<columns_to_count; ++looper)
@@ -754,10 +810,10 @@ function save_show_all_data ()
     let data = document.getElementById ("show-all-tbody").innerHTML;
     localStorage.setItem("brush_all", data);
 }
-function save_stock_view_by_name_data ()
+function save_stock_view_by_size_data ()
 {
-    let data = document.getElementById ("stock-received-view-by-name-tbody").innerHTML;
-    localStorage.setItem("brush_by_name", data);
+    let data = document.getElementById ("stock-received-view-by-size-tbody").innerHTML;
+    localStorage.setItem("brush_by_size", data);
 }
 
 function save_by_date_today_data ()
@@ -821,7 +877,7 @@ function save_show_last_month_by_name_data ()
 function Load_Stock_Received_Offline_Data () 
 {
     document.getElementById("show-all-tbody").innerHTML = localStorage.getItem("brush_all");
-    document.getElementById("stock-received-view-by-name-tbody").innerHTML = localStorage.getItem("brush_by_name");
+    document.getElementById("stock-received-view-by-size-tbody").innerHTML = localStorage.getItem("brush_by_size");
     document.getElementById("stock-view-by-date-today-tbody").innerHTML = localStorage.getItem("brush_date_today");
     document.getElementById("date-date-tbody").innerHTML = localStorage.getItem("brush_date_date");
     document.getElementById("date-date-name-tbody").innerHTML = localStorage.getItem("brush_date_date_name");

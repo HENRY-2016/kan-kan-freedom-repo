@@ -11,23 +11,10 @@ function Load_agency_entries () {window.location="AgencyEntriesGui.html"}
 function Load_agency_view() {window.location="AgencyViewGui.html"}
 
 
-// MAPAI PAGES
-function Load_mapei_entries () {window.location="MapeiEntriesGui.html"};
-function Load_mapei_view () {window.location="MapeiViewGui.html"};
-function Load_mapei_record () {window.location="MapeiRecordGui.html"}
-function Load_mapei_view_adesilexp7 () {window.location="MapeiViewAdesilexp7.html"}
-function Load_mapei_view_planiseal_grey () {window.location="MapeiViewPlanisealGrey.html"}
-function Load_mapei_view_planiseal_liquid () {window.location="MapeiViewPlanisealLiquid.html"}
-function Load_mapei_view_plastimul_dpm () {window.location="MapeiViewPlastimulDpm.html"}
-function Load_mapei_view_keracolor () {window.location="MapeiViewKeracolor.html"}
 
 
 
 
-// CHINT PAGES
-function Load_chint_entries () {window.location="ChintEntriesGui.html";}
-function Load_chint_record () {window.location="ChintRecordGui.html";}
-function Load_chint_view () {window.location="ChintViewGui.html";}
 
 // CHINT VIEW GUI
 function Load_Mcb1P_View () {window.location="ChintViewMcb1p.html";}
@@ -168,7 +155,9 @@ function Hid_All_Divs ()
     document.getElementById("stock-received-from-to-div").style.display ="none";
     document.getElementById("stock-received-this-month-div").style.display ="none";
     document.getElementById("stock-received-last-month-div").style.display ="none";
-    document.getElementById("stock-received-by-name-div").style.display = "none";
+    document.getElementById("stock-received-by-size-div").style.display = "none";
+    // document.getElementById("stock-received-by-name-div").style.display = "none";
+
 
 
     document.getElementById("stock-flow-view-all-div").style.display ="none";
@@ -181,7 +170,7 @@ function Hid_All_Divs ()
     document.getElementById("stock-flow-last-month-div").style.display ="none";
 
     document.getElementById("stock-status-view-all-div").style.display ="none";
-    document.getElementById("stock-status-view-by-name-div").style.display = "none";
+    document.getElementById("stock-status-view-by-size-div").style.display = "none";
 
     // GRAND CHILD DIVS
     document.getElementById("stock-received-date-today-grand-child-div").style.display="none";
@@ -191,23 +180,23 @@ function Hid_All_Divs ()
     document.getElementById("stock-received-this-month-all-grand-child-div").style.display="none";
 
     // ---------------------
-    document.getElementById("stock-received-date-name-date-grand-child-div").style.display="none";
-    document.getElementById("stock-received-from-to-by-name-grand-child-div").style.display = "none";
-    document.getElementById("stock-received-last-week-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-received-date-size-date-grand-child-div").style.display="none";
+    document.getElementById("stock-received-from-to-by-size-grand-child-div").style.display = "none";
+    document.getElementById("stock-received-last-week-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-received-last-month-by-all-grand-child-div").style.display = "none";
-    document.getElementById("stock-received-this-month-by-name-grand-child-div").style.display = "none";
-    document.getElementById("stock-received-last-month-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-received-this-month-by-size-grand-child-div").style.display = "none";
+    document.getElementById("stock-received-last-month-size-grand-child-div").style.display = "none";
 
-    document.getElementById("stock-flow-by-name-div").style.display = "none";
-    document.getElementById("stock-flow-date-name-date-grand-child-div").style.display="none";
+    document.getElementById("stock-flow-by-size-div").style.display = "none";
+    document.getElementById("stock-flow-date-size-date-grand-child-div").style.display="none";
     document.getElementById("stock-flow-from-to-all-grand-child-div").style.display = "none";
-    document.getElementById("stock-flow-from-to-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-flow-from-to-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-flow-last-week-all-child-div").style.display = "none";
-    document.getElementById("stock-flow-last-week-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-flow-last-week-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-flow-this-month-all-grand-child-div").style.display = "none";
-    document.getElementById("stock-flow-last-month-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-flow-last-month-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-flow-last-month-all-grand-child-div").style.display = "none";
-    document.getElementById("stock-flow-this-month-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-flow-this-month-by-size-grand-child-div").style.display = "none";
 
 
 
@@ -274,7 +263,7 @@ function show_stock_received_view_all_div ()
     document.getElementById("stock-received-from-to-div").style.display ="none";
     document.getElementById("stock-received-this-month-div").style.display ="none";
     document.getElementById("stock-received-last-month-div").style.display ="none";
-    document.getElementById("stock-received-by-name-div").style.display = "none";
+    document.getElementById("stock-received-by-size-div").style.display = "none";
     document.getElementById("stock-received-view-all-div").style.display ="block";
 }function close_stock_received_view_all_div () {document.getElementById("stock-received-view-all-div").style.display ="none";}
 
@@ -287,8 +276,8 @@ function show_stock_received_by_name_div ()
     document.getElementById("stock-received-from-to-div").style.display ="none";
     document.getElementById("stock-received-this-month-div").style.display ="none";
     document.getElementById("stock-received-last-month-div").style.display ="none";
-    document.getElementById("stock-received-by-name-div").style.display = "block";
-}function close_stock_received_by_name_div (){document.getElementById("stock-received-by-name-div").style.display = "none";}
+    document.getElementById("stock-received-by-size-div").style.display = "block";
+}function close_stock_received_by_name_div (){document.getElementById("stock-received-by-size-div").style.display = "none";}
 
 function show_stock_received_view_date_div ()
 {
@@ -297,7 +286,7 @@ function show_stock_received_view_date_div ()
     document.getElementById("stock-received-this-month-div").style.display ="none";
     document.getElementById("stock-received-view-all-div").style.display ="none";
     document.getElementById("stock-received-last-month-div").style.display ="none";
-    document.getElementById("stock-received-by-name-div").style.display = "none";
+    document.getElementById("stock-received-by-size-div").style.display = "none";
     
     document.getElementById("stock-received-date-div").style.display ="block";
 }
@@ -316,7 +305,7 @@ function show_stock_received_view_last_week_div ()
     document.getElementById("stock-received-this-month-div").style.display ="none";
     document.getElementById("stock-received-view-all-div").style.display ="none";
     document.getElementById("stock-received-last-month-div").style.display ="none";
-    document.getElementById("stock-received-by-name-div").style.display = "none";
+    document.getElementById("stock-received-by-size-div").style.display = "none";
     document.getElementById("stock-received-last-week-div").style.display ="block";
 }
 
@@ -327,7 +316,7 @@ function show_stock_received_from_to_week_div ()
     document.getElementById("stock-received-view-all-div").style.display ="none";
     document.getElementById("stock-received-last-month-div").style.display ="none";
     document.getElementById("stock-received-last-week-div").style.display ="none";
-    document.getElementById("stock-received-by-name-div").style.display = "none";
+    document.getElementById("stock-received-by-size-div").style.display = "none";
     document.getElementById("stock-received-from-to-div").style.display ="block";
 }
 
@@ -337,7 +326,7 @@ function show_stock_received_view_last_week_div ()
     document.getElementById("stock-received-date-div").style.display ="none";
     document.getElementById("stock-received-from-to-div").style.display ="none";
     document.getElementById("stock-received-this-month-div").style.display ="none";
-    document.getElementById("stock-received-by-name-div").style.display = "none";
+    document.getElementById("stock-received-by-size-div").style.display = "none";
     document.getElementById("stock-received-view-all-div").style.display ="none";
     document.getElementById("stock-received-last-month-div").style.display ="none";
     document.getElementById("stock-received-last-week-div").style.display ="block";
@@ -357,7 +346,7 @@ function show_stock_received_view_last_month_div ()
     document.getElementById("stock-received-date-div").style.display ="none";
     document.getElementById("stock-received-from-to-div").style.display ="none";
     document.getElementById("stock-received-this-month-div").style.display ="none";
-    document.getElementById("stock-received-by-name-div").style.display = "none";
+    document.getElementById("stock-received-by-size-div").style.display = "none";
     document.getElementById("stock-received-view-all-div").style.display ="none";
     document.getElementById("stock-received-last-week-div").style.display ="none";
     document.getElementById("stock-received-last-month-div").style.display ="block";
@@ -393,7 +382,7 @@ function show_stock_received_from_to_grand_child_div ()
     // document.getElementById("stock-received-this-month-all-grand-child-div").style.display="none";
     // document.getElementById("stock-received-last-month-all-grand-child-div").style.display="none";
     // document.getElementById("stock-received-date-today-grand-child-div").style.display="none";
-    document.getElementById("stock-received-from-to-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-received-from-to-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-received-from-to-all-grand-child-div").style.display="block";
 }
 function close_received_from_to_grand_child_div () {document.getElementById("stock-received-from-to-all-grand-child-div").style.display="none";} 
@@ -401,10 +390,10 @@ function close_received_from_to_grand_child_div () {document.getElementById("sto
 function show_stock_received_from_to_by_name_grand_child_div ()
 {
     document.getElementById("stock-received-from-to-all-grand-child-div").style.display="none";
-    document.getElementById("stock-received-from-to-by-name-grand-child-div").style.display = "block";
+    document.getElementById("stock-received-from-to-by-size-grand-child-div").style.display = "block";
 }
 
-function close_stock_received_from_to_by_name_grand_child_div (){document.getElementById("stock-received-from-to-by-name-grand-child-div").style.display = "none";}
+function close_stock_received_from_to_by_name_grand_child_div (){document.getElementById("stock-received-from-to-by-size-grand-child-div").style.display = "none";}
 function show_stock_received_last_week_all_grand_child_div ()
 {
     // document.getElementById("stock-received-date-grand-child-div").style.display = "none";
@@ -412,15 +401,15 @@ function show_stock_received_last_week_all_grand_child_div ()
     // document.getElementById("stock-received-last-month-all-grand-child-div").style.display="none";
     // document.getElementById("stock-received-date-today-grand-child-div").style.display="none";
     // document.getElementById("stock-received-from-to-all-grand-child-div").style.display="none";
-    document.getElementById("stock-received-last-week-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-received-last-week-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-received-last-week-all-grand-child-div").style.display = "block";
 }function close_stock_received_last_week_all_grand_child_div () {document.getElementById("stock-received-last-week-all-grand-child-div").style.display="none";} 
 
 function show_stock_received_last_week_by_name_grand_child_div ()
 {
     document.getElementById("stock-received-last-week-all-grand-child-div").style.display = "none";
-    document.getElementById("stock-received-last-week-by-name-grand-child-div").style.display = "block";
-}function close_stock_received_last_week_by_name_grand_child_div (){document.getElementById("stock-received-last-week-by-name-grand-child-div").style.display = "none";}
+    document.getElementById("stock-received-last-week-by-size-grand-child-div").style.display = "block";
+}function close_stock_received_last_week_by_name_grand_child_div (){document.getElementById("stock-received-last-week-by-size-grand-child-div").style.display = "none";}
 
 
 function show_stock_received_this_month_grand_child_div ()
@@ -430,14 +419,14 @@ function show_stock_received_this_month_grand_child_div ()
     document.getElementById("stock-received-date-today-grand-child-div").style.display="none";
     document.getElementById("stock-received-from-to-all-grand-child-div").style.display="none";
     document.getElementById("stock-received-last-week-all-grand-child-div").style.display = "none";
-    document.getElementById("stock-received-by-name-div").style.display = "none";
+    document.getElementById("stock-received-by-size-div").style.display = "none";
     document.getElementById("stock-received-last-month-div").style.display= "none";
     document.getElementById("stock-received-this-month-div").style.display="block";
 }function close_stock_received_this_month_grand_child_div () {document.getElementById("stock-received-this-month-div").style.display="none";} 
 
 function show_stock_received_this_month_all_grand_child_div () 
 {
-    document.getElementById("stock-received-this-month-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-received-this-month-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-received-this-month-all-grand-child-div").style.display = "block";
 }
 function close_stock_received_this_month_all_grand_child_div () {document.getElementById("stock-received-this-month-all-grand-child-div").style.display = "none";}
@@ -445,8 +434,8 @@ function close_stock_received_this_month_all_grand_child_div () {document.getEle
 function show_stock_received_this_month_by_name_grand_child_div ()
 {
     document.getElementById("stock-received-this-month-all-grand-child-div").style.display = "none";
-    document.getElementById("stock-received-this-month-by-name-grand-child-div").style.display = "block";
-}function close_stock_received_this_month_by_name_grand_child_div (){document.getElementById("stock-received-this-month-by-name-grand-child-div").style.display = "none";}
+    document.getElementById("stock-received-this-month-by-size-grand-child-div").style.display = "block";
+}function close_stock_received_this_month_by_name_grand_child_div (){document.getElementById("stock-received-this-month-by-size-grand-child-div").style.display = "none";}
 
 function show_stock_received_last_month_all_grand_child_div ()
 {
@@ -455,7 +444,7 @@ function show_stock_received_last_month_all_grand_child_div ()
     document.getElementById("stock-received-from-to-all-grand-child-div").style.display="none";
     document.getElementById("stock-received-this-month-all-grand-child-div").style.display="none";
     document.getElementById("stock-received-last-week-all-grand-child-div").style.display = "none";
-    document.getElementById("stock-received-last-month-name-grand-child-div").style.display="none";
+    document.getElementById("stock-received-last-month-size-grand-child-div").style.display="none";
     document.getElementById("stock-received-last-month-by-all-grand-child-div").style.display = "block";
 
 }function close_stock_received_last_month_all_grand_child_div () {document.getElementById("stock-received-last-month-by-all-grand-child-div").style.display="none";} 
@@ -463,8 +452,8 @@ function show_stock_received_last_month_all_grand_child_div ()
 function show_stock_received_last_month_by_name_grand_child_div  () 
 {
     document.getElementById("stock-received-last-month-by-all-grand-child-div").style.display="none";
-    document.getElementById("stock-received-last-month-name-grand-child-div").style.display = "block";
-}function close_stock_received_last_month_by_name_grand_child_div  () {document.getElementById("stock-received-last-month-name-grand-child-div").style.display = "none";}
+    document.getElementById("stock-received-last-month-size-grand-child-div").style.display = "block";
+}function close_stock_received_last_month_by_name_grand_child_div  () {document.getElementById("stock-received-last-month-size-grand-child-div").style.display = "none";}
 
 
 // STOCK FLOW
@@ -476,7 +465,7 @@ function show_stock_flow_view_all_div ()
     document.getElementById("stock-flow-from-to-div").style.display ="none";
     document.getElementById("stock-flow-this-month-div").style.display ="none";
     document.getElementById("stock-flow-last-month-div").style.display ="none";
-    document.getElementById("stock-flow-by-name-div").style.display = "none";
+    document.getElementById("stock-flow-by-size-div").style.display = "none";
     document.getElementById("stock-flow-view-all-div").style.display ="block";
 }function close_stock_flow_view_all_div () {document.getElementById("stock-flow-view-all-div").style.display ="none";}
 
@@ -489,12 +478,12 @@ function show_stock_flow_by_name_div ()
     document.getElementById("stock-flow-from-to-div").style.display ="none";
     document.getElementById("stock-flow-this-month-div").style.display ="none";
     document.getElementById("stock-flow-last-month-div").style.display ="none";
-    document.getElementById("stock-flow-by-name-div").style.display = "block";
-}function close_stock_flow_by_name_div (){document.getElementById("stock-flow-by-name-div").style.display = "none";}
+    document.getElementById("stock-flow-by-size-div").style.display = "block";
+}function close_stock_flow_by_name_div (){document.getElementById("stock-flow-by-size-div").style.display = "none";}
 
 function show_stock_flow_view_date_div ()
 {
-    document.getElementById("stock-flow-by-name-div").style.display = "none";
+    document.getElementById("stock-flow-by-size-div").style.display = "none";
     document.getElementById("stock-flow-last-week-div").style.display ="none";
     document.getElementById("stock-flow-from-to-div").style.display ="none";
     document.getElementById("stock-flow-this-month-div").style.display ="none";
@@ -512,8 +501,8 @@ function show_stock_flow_date_name_date_grand_child_div ()
 {
     document.getElementById("stock-flow-date-today-grand-child-div").style.display="none";
     document.getElementById("stock-flow-date-date-grand-child-div").style.display="none";
-    document.getElementById("stock-flow-date-name-date-grand-child-div").style.display = "block";
-}function close_stock_flow_date_name_date_grand_child_div (){document.getElementById("stock-flow-date-name-date-grand-child-div").style.display = "none";}
+    document.getElementById("stock-flow-date-size-date-grand-child-div").style.display = "block";
+}function close_stock_flow_date_name_date_grand_child_div (){document.getElementById("stock-flow-date-size-date-grand-child-div").style.display = "none";}
 
 function stock_flow_date_date_grand_child_div ()
 {
@@ -524,7 +513,7 @@ function stock_flow_date_date_grand_child_div ()
 
 function show_stock_flow_view_last_week_div ()
 {
-    document.getElementById("stock-flow-by-name-div").style.display = "none";
+    document.getElementById("stock-flow-by-size-div").style.display = "none";
     document.getElementById("stock-flow-date-div").style.display ="none";
     document.getElementById("stock-flow-from-to-div").style.display ="none";
     document.getElementById("stock-flow-this-month-div").style.display ="none";
@@ -535,7 +524,7 @@ function show_stock_flow_view_last_week_div ()
 
 function show_stock_flow_from_to_div ()
 {
-    document.getElementById("stock-flow-by-name-div").style.display = "none";
+    document.getElementById("stock-flow-by-size-div").style.display = "none";
     document.getElementById("stock-flow-date-div").style.display ="none";
     document.getElementById("stock-flow-this-month-div").style.display ="none";
     document.getElementById("stock-flow-view-all-div").style.display ="none";
@@ -546,20 +535,20 @@ function show_stock_flow_from_to_div ()
 
 function stock_flow_from_to_all_grand_child_div ()
 {
-    document.getElementById("stock-flow-from-to-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-flow-from-to-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-flow-from-to-all-grand-child-div").style.display="block";
 }function close_flow_from_to_all_grand_child_div (){document.getElementById("stock-flow-from-to-all-grand-child-div").style.display="none";}
 
 function show_stock_flow_from_to_by_name_grand_child_div ()
 {
     document.getElementById("stock-flow-from-to-all-grand-child-div").style.display="none";
-    document.getElementById("stock-flow-from-to-by-name-grand-child-div").style.display = "block";
-}function close_stock_flow_from_to_by_name_grand_child_div (){document.getElementById("stock-flow-from-to-by-name-grand-child-div").style.display = "none";}
+    document.getElementById("stock-flow-from-to-by-size-grand-child-div").style.display = "block";
+}function close_stock_flow_from_to_by_name_grand_child_div (){document.getElementById("stock-flow-from-to-by-size-grand-child-div").style.display = "none";}
 
 
 function show_stock_flow_view_last_week_div ()
 {
-    document.getElementById("stock-flow-by-name-div").style.display = "none";
+    document.getElementById("stock-flow-by-size-div").style.display = "none";
     document.getElementById("stock-flow-date-div").style.display ="none";
     document.getElementById("stock-flow-from-to-div").style.display ="none";
     document.getElementById("stock-flow-this-month-div").style.display ="none";
@@ -569,20 +558,20 @@ function show_stock_flow_view_last_week_div ()
 }
 function show_stock_flow_last_week_all_child_div ()
 {
-    document.getElementById("stock-flow-last-week-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-flow-last-week-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-flow-last-week-all-child-div").style.display = "block";
 }function close_stock_flow_last_week_all_child_div (){document.getElementById("stock-flow-last-week-all-child-div").style.display = "none";}
 
 function show_stock_flow_last_week_by_name_grand_child_div ()
 {
     document.getElementById("stock-flow-last-week-all-child-div").style.display = "none";
-    document.getElementById("stock-flow-last-week-by-name-grand-child-div").style.display = "block";
-}function close_stock_flow_last_week_by_name_grand_child_div (){document.getElementById("stock-flow-last-week-by-name-grand-child-div").style.display = "none";}
+    document.getElementById("stock-flow-last-week-by-size-grand-child-div").style.display = "block";
+}function close_stock_flow_last_week_by_name_grand_child_div (){document.getElementById("stock-flow-last-week-by-size-grand-child-div").style.display = "none";}
 
 
 function show_stock_flow_view_this_month_div ()
 {
-    document.getElementById("stock-flow-by-name-div").style.display = "none";
+    document.getElementById("stock-flow-by-size-div").style.display = "none";
     document.getElementById("stock-flow-last-week-div").style.display ="none";
     document.getElementById("stock-flow-from-to-div").style.display ="none";
     document.getElementById("stock-flow-view-all-div").style.display ="none";
@@ -593,19 +582,19 @@ function show_stock_flow_view_this_month_div ()
 
 function show_stock_flow_this_month_all_grand_child_div ()
 {
-    document.getElementById("stock-flow-this-month-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-flow-this-month-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-flow-this-month-all-grand-child-div").style.display = "block";
 }function close_stock_flow_this_month_all_grand_child_div (){document.getElementById("stock-flow-this-month-all-grand-child-div").style.display = "none";}
 
 function show_stock_flow_this_month_by_name_grand_child_div ()
 {
     document.getElementById("stock-flow-this-month-all-grand-child-div").style.display = "none";
-    document.getElementById("stock-flow-this-month-by-name-grand-child-div").style.display = "block";
-}function close_stock_flow_this_month_by_name_grand_child_div (){document.getElementById("stock-flow-this-month-by-name-grand-child-div").style.display = "none";}
+    document.getElementById("stock-flow-this-month-by-size-grand-child-div").style.display = "block";
+}function close_stock_flow_this_month_by_name_grand_child_div (){document.getElementById("stock-flow-this-month-by-size-grand-child-div").style.display = "none";}
 
 function show_stock_flow_view_last_month_div ()
 {
-    document.getElementById("stock-flow-by-name-div").style.display = "none";
+    document.getElementById("stock-flow-by-size-div").style.display = "none";
     document.getElementById("stock-flow-date-div").style.display ="none";
     document.getElementById("stock-flow-from-to-div").style.display ="none";
     document.getElementById("stock-flow-this-month-div").style.display ="none";
@@ -616,28 +605,28 @@ function show_stock_flow_view_last_month_div ()
 
 function show_stock_flow_last_month_all_grand_child_div () 
 {
-    document.getElementById("stock-flow-last-month-by-name-grand-child-div").style.display = "none";
+    document.getElementById("stock-flow-last-month-by-size-grand-child-div").style.display = "none";
     document.getElementById("stock-flow-last-month-all-grand-child-div").style.display="block";
 }function close_stock_flow_last_month_all_grand_child_div  () {document.getElementById("stock-flow-last-month-all-grand-child-div").style.display = "none";}
 
 function show_stock_flow_last_month_by_name_grand_child_div  () 
 {
     document.getElementById("stock-flow-last-month-all-grand-child-div").style.display="none";
-    document.getElementById("stock-flow-last-month-by-name-grand-child-div").style.display = "block";
-}function close_stock_flow_last_month_by_name_grand_child_div  () {document.getElementById("stock-flow-last-month-by-name-grand-child-div").style.display = "none";}
+    document.getElementById("stock-flow-last-month-by-size-grand-child-div").style.display = "block";
+}function close_stock_flow_last_month_by_name_grand_child_div  () {document.getElementById("stock-flow-last-month-by-size-grand-child-div").style.display = "none";}
 
 // STOCK STATUS 
 function show_stock_status_view_all_div ()
 {
-    document.getElementById("stock-status-view-by-name-div").style.display ="none";
+    document.getElementById("stock-status-view-by-size-div").style.display ="none";
     document.getElementById("stock-status-view-all-div").style.display ="block";
 }function close_stock_status_view_all_div (){document.getElementById("stock-status-view-all-div").style.display ="none";}
 
 function  show_stock_status_view_by_name_div ()
 {
     document.getElementById("stock-status-view-all-div").style.display ="none";
-    document.getElementById("stock-status-view-by-name-div").style.display ="block";
-}function  close_stock_status_view_by_name_div (){document.getElementById("stock-status-view-by-name-div").style.display ="none";}
+    document.getElementById("stock-status-view-by-size-div").style.display ="block";
+}function  close_stock_status_view_by_name_div (){document.getElementById("stock-status-view-by-size-div").style.display ="none";}
 
 
 function SadolinViewHideAllChildDiv ()
@@ -1546,69 +1535,6 @@ function close_dampshild_div ()
 
 
 
-    /*=======================================================================================================*/
-                                            /*
-                                               +++++++++++++++++++++++++ ++
-                                               +                          +
-                                               +   mapei_entries_page   +
-                                               +                          + 
-                                               ++++++++++++++++++++++++++++
-                                            */
-function Hide_All_Mapei_Divs ()
-{
-    document.getElementById("Planiseal-288-A-Grey-Id").style.display="none";
-    document.getElementById("Planiseal-288-B-Id").style.display="none";
-    document.getElementById("Plastimul-DPM-Id").style.display="none";
-    document.getElementById("Keracolor-Id").style.display="none";
-    document.getElementById("Adesilex-P7-Id").style.display="none";
-}
-
-
-function Show_Adesilex_P7_Id ()
-{
-    document.getElementById("Planiseal-288-A-Grey-Id").style.display="none";
-    document.getElementById("Planiseal-288-B-Id").style.display="none";
-    document.getElementById("Plastimul-DPM-Id").style.display="none";
-    document.getElementById("Keracolor-Id").style.display="none";
-    document.getElementById("Adesilex-P7-Id").style.display="block";
-
-}function Close_Adesilex_P7_Id (){document.getElementById("Adesilex-P7-Id").style.display="none";}
-
-function Show_Planiseal_288_A_Grey_Id ()
-{
-    document.getElementById("Adesilex-P7-Id").style.display="none";
-    document.getElementById("Planiseal-288-B-Id").style.display="none";
-    document.getElementById("Plastimul-DPM-Id").style.display="none";
-    document.getElementById("Keracolor-Id").style.display="none";
-    document.getElementById("Planiseal-288-A-Grey-Id").style.display="block";
-}function Close_Planiseal_288_A_Grey_Id (){document.getElementById("Planiseal-288-A-Grey-Id").style.display="none";}
-
-function Show_Planiseal_288_B_Id ()
-{
-    document.getElementById("Adesilex-P7-Id").style.display="none";
-    document.getElementById("Planiseal-288-A-Grey-Id").style.display="none";
-    document.getElementById("Plastimul-DPM-Id").style.display="none";
-    document.getElementById("Keracolor-Id").style.display="none";
-    document.getElementById("Planiseal-288-B-Id").style.display="block";
-}function Close_Planiseal_288_B_Id (){document.getElementById("Planiseal-288-B-Id").style.display="none";}
-
-function Show_Plastimul_DPM_Id ()
-{
-    document.getElementById("Adesilex-P7-Id").style.display="none";
-    document.getElementById("Planiseal-288-A-Grey-Id").style.display="none";
-    document.getElementById("Planiseal-288-B-Id").style.display="none";
-    document.getElementById("Keracolor-Id").style.display="none";
-    document.getElementById("Plastimul-DPM-Id").style.display="block";
-}function Close_Plastimul_DPM_Id (){document.getElementById("Plastimul-DPM-Id").style.display="none";}
-
-function Show_Keracolor_Id ()
-{
-    document.getElementById("Adesilex-P7-Id").style.display="none";
-    document.getElementById("Planiseal-288-A-Grey-Id").style.display="none";
-    document.getElementById("Planiseal-288-B-Id").style.display="none";
-    document.getElementById("Plastimul-DPM-Id").style.display="none";
-    document.getElementById("Keracolor-Id").style.display="block";
-}function Close_Keracolor_Id (){document.getElementById("Keracolor-Id").style.display="none";}
 
 
 
