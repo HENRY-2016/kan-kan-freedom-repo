@@ -80,52 +80,6 @@ function Load_sadolin_view_roller (){window.location="CustomViewRoller.html"}
 function Load_sadolin_view_sandpaper (){window.location="CustomViewSandpaper.html"}
 function Load_sadolin_view_stainner (){window.location="CustomViewStainner.html"}
 
-
-function Show_Industrial_View_Switch_Socket ()
-{
-    document.getElementById("Silver_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("White_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("Gold_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("Industrial_Metal_Clad_Div").style.display="block";
-}
-function Show_Gold_View_Switch_Socket ()
-{
-    document.getElementById("Silver_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("White_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("Industrial_Metal_Clad_Div").style.display="none";
-    document.getElementById("Gold_Switches_Sockets_Div").style.display = "block";
-}
-
-function Show_White_View_Switch_Socket ()
-{
-    document.getElementById("Silver_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("Industrial_Metal_Clad_Div").style.display="none";
-    document.getElementById("Gold_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("White_Switches_Sockets_Div").style.display = "block";
-}
-
-
-function Show_Silver_View_Switch_Socket ()
-{
-    document.getElementById("Industrial_Metal_Clad_Div").style.display="none";
-    document.getElementById("Gold_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("White_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("Silver_Switches_Sockets_Div").style.display = "block";
-}
-
-function Hide_All_Chint_Switchs_Socket_Divs ()
-{
-    document.getElementById("Silver_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("White_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("Gold_Switches_Sockets_Div").style.display = "none";
-    document.getElementById("Industrial_Metal_Clad_Div").style.display="none";
-}
-
-
-
-
-
-
 /*
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
                                             ==============
@@ -202,11 +156,11 @@ function Hid_All_Divs ()
 
     // LOADERS ---
     document.getElementById("stock-received-loader-all").style.display = "none";
-    document.getElementById("stock-received-loader-name").style.display = "none";
+    document.getElementById("stock-received-loader-size").style.display = "none";
     document.getElementById("stock-received-loader-date-today").style.display = "none";
-    document.getElementById("stock-received-loader-date-name-date").style.display = "none";
-    document.getElementById("received-stock-loader-last-week-name").style.display = "none";
-    document.getElementById("stock-received-loader-from-to-name").style.display = "none";
+    document.getElementById("stock-received-loader-date-size-date").style.display = "none";
+    document.getElementById("received-stock-loader-last-week-size").style.display = "none";
+    document.getElementById("stock-received-loader-from-to-size").style.display = "none";
     document.getElementById("stock-received-loader-date-date").style.display = "none";
     document.getElementById("stock-received-loader-last-week-all").style.display = "none";
     document.getElementById("stock-received-loader-from-to-all").style.display = "none";
@@ -216,14 +170,14 @@ function Hid_All_Divs ()
     document.getElementById("stock-received-loader-last-month-name").style.display = "none";
     
     document.getElementById("stock-flow-loader-all").style.display = "none";
-    document.getElementById("stock-flow-loader-name").style.display = "none";
-    document.getElementById("stock-flow-loader-from-to-name").style.display = "none";
+    document.getElementById("stock-flow-loader-size").style.display = "none";
+    document.getElementById("stock-flow-loader-from-to-size").style.display = "none";
     document.getElementById("stock-flow-loader-date-today").style.display = "none";
     document.getElementById("stock-flow-loader-date-date").style.display = "none";
-    document.getElementById("stock-flow-loader-date-name-date").style.display = "none";
+    document.getElementById("stock-flow-loader-date-size-date").style.display = "none";
     document.getElementById("stock-flow-loader-from-to-all").style.display = "none";
     document.getElementById("stock-flow-loader-last-week-all").style.display = "none";
-    document.getElementById("stock-flow-loader-last-week-name").style.display = "none";
+    document.getElementById("stock-flow-loader-last-week-size").style.display = "none";
     document.getElementById("stock-flow-loader-this-month-all").style.display = "none";
     document.getElementById("stock-flow-loader-this-month-name").style.display = "none";
     document.getElementById("stock-flow-loader-last-month-all").style.display = "none";
@@ -231,7 +185,7 @@ function Hid_All_Divs ()
 
 
     document.getElementById("stock-status-loader-all").style.display = "none";
-    document.getElementById("stock-status-loader-name").style.display = "none";
+    document.getElementById("stock-status-loader-size").style.display = "none";
 }
 
 
@@ -358,7 +312,7 @@ function show_stock_received_date_today_grand_child_div ()
     document.getElementById("stock-received-last-week-all-grand-child-div").style.display = "none";
     document.getElementById("stock-received-this-month-all-grand-child-div").style.display="none";
     // document.getElementById("stock-received-last-month-all-grand-child-div").style.display="none";
-    document.getElementById("stock-received-date-name-date-grand-child-div").style.display="none";
+    // document.getElementById("stock-received-date-name-date-grand-child-div").style.display="none";
     document.getElementById("stock-received-date-today-grand-child-div").style.display="block";
 }function close_stock_received_date_today_grand_child_div () {document.getElementById("stock-received-date-today-grand-child-div").style.display="none";} 
 
@@ -369,7 +323,7 @@ function show_stock_received_date_grand_child_div ()
     document.getElementById("stock-received-from-to-all-grand-child-div").style.display="none";
     document.getElementById("stock-received-last-week-all-grand-child-div").style.display = "none";
     document.getElementById("stock-received-this-month-all-grand-child-div").style.display="none";
-    document.getElementById("stock-received-date-name-date-grand-child-div").style.display="none";
+    document.getElementById("stock-received-date-size-date-grand-child-div").style.display="none";
     document.getElementById("stock-received-date-grand-child-div").style.display = "block";
 }
 function close_stock_received_date_grand_child_div () {document.getElementById("stock-received-date-grand-child-div").style.display="none";} 

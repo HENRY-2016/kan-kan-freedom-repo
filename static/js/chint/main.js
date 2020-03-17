@@ -25,9 +25,9 @@ function Hide_All_Chint_Divs ()
     document.getElementById("Led-Bulbs-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
@@ -43,9 +43,9 @@ function Show_White_Switches_Sockets_Id ()
     document.getElementById("MCB-2P-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("AC-Contactor-Id").style.display="none";
     document.getElementById("Main-Switch-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
@@ -68,9 +68,9 @@ function Show_Silver_Switches_Sockets_Id ()
     document.getElementById("MCB-2P-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
@@ -95,9 +95,9 @@ function Show_Gold_Switches_Sockets_Id ()
     document.getElementById("Led-Bulbs-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
@@ -119,9 +119,9 @@ function Show_Industrial_Metal_Clad_Id ()
     document.getElementById("MCB-2P-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
@@ -135,8 +135,9 @@ function Show_Industrial_Metal_Clad_Id ()
     document.getElementById("Industrial_Metal_Clad_Id").style.display="block";
 }
 function Close_Industrial_Metal_Clad_Id (){document.getElementById("Industrial_Metal_Clad_Id").style.display="none";}
-function OpenIndustrialSwicthTab (){document.getElementById("industrial-socket-tab").style.display="none";document.getElementById("industrial-swicth-tab").style.display="block";}
-function OpenIndustrialSocketTab (){document.getElementById("industrial-swicth-tab").style.display="none";document.getElementById("industrial-socket-tab").style.display="block";}
+
+// function OpenIndustrialSwicthTab (){document.getElementById("industrial-socket-tab").style.display="none";document.getElementById("industrial-swicth-tab").style.display="block";}
+// function OpenIndustrialSocketTab (){document.getElementById("industrial-swicth-tab").style.display="none";document.getElementById("industrial-socket-tab").style.display="block";}
 
 function Show_Led_Bulbs_Id ()
 {
@@ -144,9 +145,9 @@ function Show_Led_Bulbs_Id ()
     document.getElementById("MCB-2P-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
@@ -166,9 +167,9 @@ function Show_Led_Surface_Panel_Lights_Id ()
     document.getElementById("MCB-2P-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
@@ -193,9 +194,9 @@ function Show_MCB_1P_Id ()
     document.getElementById("MCB-2P-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
@@ -215,9 +216,9 @@ function Show_MCB_2P_Id ()
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
@@ -226,68 +227,68 @@ function Show_MCB_2P_Id ()
     document.getElementById("MCB-2P-Id").style.display="block";
 }function Close_MCB_2P_Id (){document.getElementById("MCB-2P-Id").style.display="none";}
 
-function Show_MCB_3P_Id ()
-{
-    document.getElementById("White_Switches_Sockets_Id").style.display="none";
-    document.getElementById("Silver_Switches_Sockets_Id").style.display="none";
-    document.getElementById("Gold_Switches_Sockets_Id").style.display="none";
-    document.getElementById("Industrial_Metal_Clad_Id").style.display="none";
-    document.getElementById("Led-Bulbs-Id").style.display="none";
-    document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
-    document.getElementById("MCB-1P-Id").style.display="none";
-    document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-1P-Id").style.display="none";
-    document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
-    document.getElementById("Led-Flood-Lights-Id").style.display="none";
-    document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
-    document.getElementById("Cabels-Id").style.display="none";
-    document.getElementById("AC-Contactor-Id").style.display="none";
-    document.getElementById("Main-Switch-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="block";
+// function Show_MCB_3P_Id ()
+// {
+//     document.getElementById("White_Switches_Sockets_Id").style.display="none";
+//     document.getElementById("Silver_Switches_Sockets_Id").style.display="none";
+//     document.getElementById("Gold_Switches_Sockets_Id").style.display="none";
+//     document.getElementById("Industrial_Metal_Clad_Id").style.display="none";
+//     document.getElementById("Led-Bulbs-Id").style.display="none";
+//     document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
+//     document.getElementById("MCB-1P-Id").style.display="none";
+//     document.getElementById("MCB-2P-Id").style.display="none";
+//     document.getElementById("MCB-1P-Id").style.display="none";
+//     document.getElementById("MCB-2P-Id").style.display="none";
+//     document.getElementById("MCB-4P-Id").style.display="none";
+//     document.getElementById("MCCB-Id").style.display="none";
+//     document.getElementById("Led-Flood-Lights-Id").style.display="none";
+//     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
+//     document.getElementById("Cabels-Id").style.display="none";
+//     document.getElementById("AC-Contactor-Id").style.display="none";
+//     document.getElementById("Main-Switch-Id").style.display="none";
+//     document.getElementById("MCB-3P-Id").style.display="block";
 
-}function Close_MCB_3P_Id (){document.getElementById("MCB-3P-Id").style.display="none";}
+// }function Close_MCB_3P_Id (){document.getElementById("MCB-3P-Id").style.display="none";}
 
-function Show_MCB_4P_Id ()
-{
-    document.getElementById("White_Switches_Sockets_Id").style.display="none";
-    document.getElementById("Silver_Switches_Sockets_Id").style.display="none";
-    document.getElementById("Gold_Switches_Sockets_Id").style.display="none";
-    document.getElementById("Industrial_Metal_Clad_Id").style.display="none";
-    document.getElementById("Led-Bulbs-Id").style.display="none";
-    document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
-    document.getElementById("MCB-1P-Id").style.display="none";
-    document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
-    document.getElementById("Led-Flood-Lights-Id").style.display="none";
-    document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
-    document.getElementById("Cabels-Id").style.display="none";
-    document.getElementById("AC-Contactor-Id").style.display="none";
-    document.getElementById("Main-Switch-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="block";
-}function Close_MCB_4P_Id (){document.getElementById("MCB-4P-Id").style.display="none";}
+// function Show_MCB_4P_Id ()
+// {
+//     document.getElementById("White_Switches_Sockets_Id").style.display="none";
+//     document.getElementById("Silver_Switches_Sockets_Id").style.display="none";
+//     document.getElementById("Gold_Switches_Sockets_Id").style.display="none";
+//     document.getElementById("Industrial_Metal_Clad_Id").style.display="none";
+//     document.getElementById("Led-Bulbs-Id").style.display="none";
+//     document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
+//     document.getElementById("MCB-1P-Id").style.display="none";
+//     document.getElementById("MCB-2P-Id").style.display="none";
+//     document.getElementById("MCB-3P-Id").style.display="none";
+//     document.getElementById("MCCB-Id").style.display="none";
+//     document.getElementById("Led-Flood-Lights-Id").style.display="none";
+//     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
+//     document.getElementById("Cabels-Id").style.display="none";
+//     document.getElementById("AC-Contactor-Id").style.display="none";
+//     document.getElementById("Main-Switch-Id").style.display="none";
+//     document.getElementById("MCB-4P-Id").style.display="block";
+// }function Close_MCB_4P_Id (){document.getElementById("MCB-4P-Id").style.display="none";}
 
-function Show_MCCB_Id ()
-{
-    document.getElementById("White_Switches_Sockets_Id").style.display="none";
-    document.getElementById("Silver_Switches_Sockets_Id").style.display="none";
-    document.getElementById("Gold_Switches_Sockets_Id").style.display="none";
-    document.getElementById("Industrial_Metal_Clad_Id").style.display="none";
-    document.getElementById("Led-Bulbs-Id").style.display="none";
-    document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
-    document.getElementById("MCB-1P-Id").style.display="none";
-    document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("Led-Flood-Lights-Id").style.display="none";
-    document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
-    document.getElementById("Cabels-Id").style.display="none";
-    document.getElementById("AC-Contactor-Id").style.display="none";
-    document.getElementById("Main-Switch-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="block";
-}function Close_MCCB_Id (){document.getElementById("MCCB-Id").style.display="none";}
+// function Show_MCCB_Id ()
+// {
+//     document.getElementById("White_Switches_Sockets_Id").style.display="none";
+//     document.getElementById("Silver_Switches_Sockets_Id").style.display="none";
+//     document.getElementById("Gold_Switches_Sockets_Id").style.display="none";
+//     document.getElementById("Industrial_Metal_Clad_Id").style.display="none";
+//     document.getElementById("Led-Bulbs-Id").style.display="none";
+//     document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
+//     document.getElementById("MCB-1P-Id").style.display="none";
+//     document.getElementById("MCB-2P-Id").style.display="none";
+//     document.getElementById("MCB-3P-Id").style.display="none";
+//     document.getElementById("MCB-4P-Id").style.display="none";
+//     document.getElementById("Led-Flood-Lights-Id").style.display="none";
+//     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
+//     document.getElementById("Cabels-Id").style.display="none";
+//     document.getElementById("AC-Contactor-Id").style.display="none";
+//     document.getElementById("Main-Switch-Id").style.display="none";
+//     document.getElementById("MCCB-Id").style.display="block";
+// }function Close_MCCB_Id (){document.getElementById("MCCB-Id").style.display="none";}
 
 function Show_AC_Contactor_Id ()
 {
@@ -299,15 +300,16 @@ function Show_AC_Contactor_Id ()
     document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
     document.getElementById("Main-Switch-Id").style.display="none";
     document.getElementById("AC-Contactor-Id").style.display="block";
-}function Close_AC_Contactor_Id (){document.getElementById("AC-Contactor-Id").style.display="none";}
+}
+function Close_AC_CONTACTOR_Id (){document.getElementById("AC-Contactor-Id").style.display="none";}
 
 function Show_Main_Switch_Id ()
 {
@@ -319,9 +321,9 @@ function Show_Main_Switch_Id ()
     document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
@@ -339,9 +341,9 @@ function Show_Led_Flood_Lights_Id ()
     document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Led-Ceiling-Lights-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
     document.getElementById("AC-Contactor-Id").style.display="none";
@@ -359,9 +361,9 @@ function Show_Led_Ceiling_Lights_Id ()
     document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("Cabels-Id").style.display="none";
     document.getElementById("AC-Contactor-Id").style.display="none";
     document.getElementById("Main-Switch-Id").style.display="none";
@@ -379,9 +381,9 @@ function Show_Cabels_Id ()
     document.getElementById("Led-Surface-Panel-Lights-Id").style.display="none";
     document.getElementById("MCB-1P-Id").style.display="none";
     document.getElementById("MCB-2P-Id").style.display="none";
-    document.getElementById("MCB-3P-Id").style.display="none";
-    document.getElementById("MCB-4P-Id").style.display="none";
-    document.getElementById("MCCB-Id").style.display="none";
+    // document.getElementById("MCB-3P-Id").style.display="none";
+    // document.getElementById("MCB-4P-Id").style.display="none";
+    // document.getElementById("MCCB-Id").style.display="none";
     document.getElementById("AC-Contactor-Id").style.display="none";
     document.getElementById("Main-Switch-Id").style.display="none";
     document.getElementById("Led-Flood-Lights-Id").style.display="none";
