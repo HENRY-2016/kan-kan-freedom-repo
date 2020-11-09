@@ -17,7 +17,7 @@ function LoadNamesColoursAndPricesFromServer ()
 	// @ comment :: this fetchs server resources through end point
 	GetProductsNames("plascon_retail_names_endpoint")
 	GetProductsPrices("plascon_retail_prices_endpoint")
-	GetPaintColours ("paint_colours_endpoint")
+	GetPaintColours ("plascon_paint_colours_endpoint")
 
 }
 function SetUpColourNames () {ShowPaintColoursOptions("colour-input-id")	}
@@ -230,8 +230,6 @@ function Check_Network_Status ()
 					<!-- <button class="next-to-payment-btn" onclick="SubmiteData ()" >creat</button> -->
 					<button class="next-to-payment-btn" onclick="document.getElementById('id01').style.display='block'" >Next</button>
 
-
-
 					
 					<div id="id01" class="w3-modal" >
 						<div class="w3-modal-content">
@@ -250,7 +248,7 @@ function Check_Network_Status ()
 											<label class="process-payments-labels" >Total :: <span id="totalspan"> </span></label><br>
 											<input class="order-inputs" type="text" placeholder="Amount"  name="paint_name" />
 										</form>
-										<button class="next-to-payment-btn" onclick="SubmiteData ()">Pay</button>
+										<button class="next-to-payment-btn" onclick="SubmiteData ('orders_retail_order_post')">Pay</button>
 									</center>
 								</div>
 							</div>

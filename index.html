@@ -1,5 +1,11 @@
 
-<!-- 192.168.43.23 -->
+<!--
+	scp -r kankan-client-server-repo/* pi@192.168.43.140://var/www/html/kankan-client-server-repo 
+	sudo systemctl restart apache2.service 
+	sudo systemctl stop apache2.service
+	sudo systemctl start apache2.service
+-->
+
 <html>
 <head>
 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
@@ -115,7 +121,7 @@ document.getElementById(DropDownId).previousElementSibling.classList.toggle("w3-
 <div id="main-body" > <!-- Begin main-body div -->
 </div>
 <center>
-	<a href="subdlogin.html" >Auto</a>
+	<a href="ViewOrders.html" >Offline</a>
 
 	
 </center>

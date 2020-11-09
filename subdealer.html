@@ -3,19 +3,23 @@
 <html>
 <head>
 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-<title>View | Sub dealer </title>
+<title>View | Sub Dealer </title>
 <script src="static/js/jquery.min.js"> </script>
 <script src="static/js/main.js"></script>
 <script src="static/js/bookings.js" ></script>
 <script src="static/js/products.js" ></script>
 <script src="static/js/requests.js" ></script>
+<script src="static/js/subdealer.js" ></script>
+<link rel="stylesheet" type="text/css" href="static/css/main.css">
+<link rel="stylesheet" type="text/css" href="static/css/w3.css" >
 <script>
 function LoadNamesColoursAndPricesFromServer ()
 {
 	// @ comment :: this fetchs server resources through end point
-	GetProductsNames("plascon_product_names_endpoint")
-	GetProductsPrices("plascon_product_prices_endpoint")
-	GetPaintColours ("paint_colours_endpoint")
+	// From bookings.js 
+	GetProductsNames("utilities_plascon_subdealer_products_names_endpoint")
+	GetProductsPrices("utilities_plascon_subdealer_prices_endpoint")
+	GetPaintColours ("utilities_plascon_paint_colours_endpoint")
 
 }
 function SetUpColourNames () {ShowPaintColoursOptions("colour-input-id")	}
@@ -30,7 +34,7 @@ function Onoline_Fatch_User_Online_Data ()
 	setTimeout( LoadNamesColoursAndPricesFromServer , 1000)
 	setTimeout(SetUpColourNames,2000)
 	setTimeout(SetupAutocompleteTypes,3000)
-	HidDivsOnload ()
+	//HidDivsOnload ()
 }
 
 function StartBackGroundCalculation ()
@@ -62,8 +66,6 @@ function Check_Network_Status ()
 }
 
 </script>
-<link rel="stylesheet" type="text/css" href="static/css/main.css">
-<link rel="stylesheet" type="text/css" href="static/css/w3.css" >
 </head>
 
 <body class="main_body" onload="Check_Network_Status ()" ononline="Onoline_Fatch_User_Online_Data ()">
@@ -179,9 +181,15 @@ document.getElementById(DropDownId).previousElementSibling.classList.toggle("w3-
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 		<button class="main-acordination-btns">Prices </button>
 		<div class="acordination-contents-area"><br>
-			<p>vv</p>
+			<center>
+				<button onclick="fetch_subdealer_names_and_prices ('plascon_subdealer_names_and_prices_endpoint','subdealer-prices-tbody','subdealer-prices-div')" class="show-btn entries_page_fonts"  >Show</button>
+					<div id="subdealer-prices-div">
+							<table class=" w3-bordered user-scrolling-table">
+								<tbody id="subdealer-prices-tbody"></tbody>
+							</table>
+					</div>
+			</center>
 		</div>
-		
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
@@ -214,15 +222,40 @@ document.getElementById(DropDownId).previousElementSibling.classList.toggle("w3-
 					<ul id="un-ordered-list-id"></ul>
 				<center>
 					<form id="customer-info-form">
-						<input  id="qty-id-1" class="order-inputs" type="text" placeholder="Customer Name"  name="paint_name" />
-						<input  id="qty-id-1" class="order-inputs" type="text" placeholder="Contacts" name="paint_name" />
-						<input id="amount-id-1"  class="order-inputs " type="date"  name="paint_name" />
-						<input id="final-total-id" class="subtotalinputs order-inputs" name="paint_name" placeholder="Final Total" type="text"/>
+						<br>
+						<input  id="name" class="order-inputs" type="text" placeholder="Customer Name will be done automatially" />
+						<input  id="contact" class="order-inputs" type="text" placeholder="Contacts will be done automatially"  />
+						<!-- <input id="amount-id-1"  class="order-inputs " type="date"  name="paint_name" /> -->
+						<input id="final-total-id" class="subtotalinputs order-inputs" placeholder="Final Total" type="text"/>
 					</form>
-					<button class="next-to-payment-btn" onclick="CreateArray ()" >creat</button>
+					<button class="next-to-payment-btn" onclick="document.getElementById('id01').style.display='block'" >Next</button>
 				</center>
 			</div>
 		</div>
+							
+		<div id="id01" class="w3-modal" >
+				<div class="w3-modal-content">
+					<div class="w3-container">
+						<br>
+						<script>
+							function close_popup_window (){document.getElementById('id01').style.display='none';document.getElementById("products-form").reset();}
+						</script>
+						<span onclick="close_popup_window ()" class=" close-x fontstyles">X</span>
+						<div id="order-inputs" class="header-order-modal">
+							<center>
+								<form id="products-form" >
+									<label class="process-payments-labels">Process Payment </label><br>
+									<label class="process-payments-labels" >Amount :: <span id="amountspan"> </span></label><br>
+									<label class="process-payments-labels" >Charges :: <span id="chargesspan"> </span></label><br>
+									<label class="process-payments-labels" >Total :: <span id="totalspan"> </span></label><br>
+									<input class="order-inputs" type="text" placeholder="Amount"  name="paint_name" />
+								</form>
+								<button class="next-to-payment-btn" onclick="SubmiteData ('orders_subdealer_order_post')">Pay</button>
+							</center>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
@@ -230,30 +263,25 @@ document.getElementById(DropDownId).previousElementSibling.classList.toggle("w3-
 		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 		<button class="main-acordination-btns">Received Orders </button>
 		<div class="acordination-contents-area"><br>
-			<button onclick="ShowOrdersReceivedViewAllDiv ()" class="grand-child-btn fontstyles">All</button><br><br>
-				<div id="orders-view-all-div">
-					<button onclick="OrdersView ('orders_view_all','orders-show-all-tbody','orders-view-all-div')" class="show-btn  entries_page_fonts"  >Show</button>
-						<!-- <div id="orders-view-all-div"> -->
-								<table class=" w3-bordered user-scrolling-table">
-									<tbody id="orders-show-all-tbody"></tbody>
-								</table>
-						<!-- </div> -->
+			<button  class="grand-child-btn fontstyles">All</button><br><br>
+				<div id="plascon-original-view-all-div">
+					<button onclick="FetchOrdersReceivedAllData ('vieworders_subdealer_orders_view_all_endpoint','plascon-appending-view-all-div','plascon-orders-received-div')" class="show-btn  entries_page_fonts"  >Show</button>
+					<div id="plascon-orders-received-div"> </div>
+					<p id="plascon-appending-view-all-div"></p>
+					<br><br>
 				</div>
 
-			<button onclick="ShowOrdersReceivedViewFromToDiv ()" class="grand-child-btn fontstyles">From To </button><br><br>
+			<!-- <button onclick="ShowOrdersReceivedViewFromToDiv ()" class="grand-child-btn fontstyles">From To </button><br><br>
 				<div id="orders-view-from-to-div" >
 					<button onclick="OrdersView ('orders_view_from_to','orders-show-from-to-tbody','orders-view-from-to-div')" class="show-btn  entries_page_fonts"  >Show</button>
-					<!-- <div id="orders-view-from-to-div"> -->
 							<table class=" w3-bordered user-scrolling-table">
 								<tbody id="orders-show-from-to-tbody"></tbody>
 							</table>
-					<!-- </div> -->
-				</div>
+				</div> -->
 		</div>
+		<button class="main-acordination-btns"> </button>
+
 </div>
-
-
-
 
 <script>
 

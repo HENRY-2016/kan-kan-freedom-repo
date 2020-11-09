@@ -231,7 +231,7 @@ console.log("=====================")
 // pas :: maria2020
 }
 
-function SubmiteData ()
+function SubmiteData ( urlendpoint)
 {
     // collecting data
     let customer_order_list;
@@ -251,7 +251,7 @@ function SubmiteData ()
                     items_list: customer_order_list
                 },
 
-                url : bookings_url + 'customer_order_post',
+                url : bookings_url + urlendpoint,
                 type : 'POST',
                 // dataType : 'json', // what type of data do we expect back from the server
                 encode : true
