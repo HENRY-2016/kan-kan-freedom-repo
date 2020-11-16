@@ -1,0 +1,322 @@
+
+
+<html>
+<head>
+<title>Subdealer Reg</title>
+<meta charset="utf-8" >
+<script src="static/js/jquery.min.js" ></script>
+<script src="static/js/main.js" ></script>
+<script src="static/js/subdealer.js" ></script>
+<link rel="stylesheet" type="text/css" href="static/css/main.css" >
+<link rel="stylesheet" type="text/css" href="static/css/w3.css">
+</head>
+<body class="main_body">
+<div id="main-header">
+        <div  id= "Navigetion" class=" w3-light-grey header">
+            <!-- ======= CLOSE ====== -->
+        <span href="javascript:void(0)" class="closebtn" onclick="CloseNavigetion()"><label class="close-navi-span"> &times;</label></span><!-- closs the navi -->
+    
+    <div id="navigetion-links-div">
+        <label class="our-products-label" > Our Products</label>
+        <div id="Drop-Down-Id">
+            <a onclick="OpenDropDown ('Plascon-Types-Id')" >Plascon</a>
+            <div id="Plascon-Types-Id" class="Drop-Down-Content w3-white w3-card-4">
+                <label onclick="Load_Plascon_Pack_View ()" class="drop-down-content-label" >Pack</label>
+                <label onclick="Load_Plascon_Gloss_View ()" class="drop-down-content-label">Gloss</label>
+                <label  onclick="Load_Plascon_Sundry_View ()" class="drop-down-content-label" >Sundry </label>
+                <label onclick="Load_Plascon_Varnish_View ()"class="drop-down-content-label" >Varnish</label>
+                <label onclick="Load_Plascon_Primers_View ()" class="drop-down-content-label" >Primers</label>
+                <label onclick="Load_Plascon_Emulsion_View ()" class="drop-down-content-label">Emulsion</label>
+                <label onclick="Load_Plascon_Thinners_View ()" class="drop-down-content-label" >Thinners</label>
+                <label onclick="Load_Plascon_Undercoat_View ()" class="drop-down-content-label" >Undercoat</label>
+                <label onclick="Load_Plascon_Aluminium_View ()" class="drop-down-content-label" >Aluminium</label>
+                <!-- <label onclick="Load_Plascon_Industrial_View ()" class="drop-down-content-label" >Industrial</label> -->
+                <label onclick="Load_Plascon_Roof_Floor_View ()" class="drop-down-content-label" >Roof & Floor</label>
+                <label onclick="Load_Plascon_Roadmarking_View ()" class="drop-down-content-label" >Roadmarking</label>
+                <label onclick="Load_Plascon_waterproofing_View ()" class="drop-down-content-label" > Water proofing</label>
+                <label onclick="Load_Plascon_Architectural_finishes_View ()" class="drop-down-content-label" >Architectural  finishes</label>
+            </div>
+    
+            <a onclick="OpenDropDown ('Plumbing-Id')" >Plumbing</a>
+            <div id="Plumbing-Id" class="Drop-Down-Content w3-white w3-card-4">
+                <label class="content-sub-title-labels" >Fittings</label>
+                <!--
+                <label class="drop-down-content-label">GI </label>
+                <label class="drop-down-content-label">PE </label>
+                <label class="drop-down-content-label">PPR </label>
+                <label class="drop-down-content-label">PVC </label> 
+                -->
+                <!-- <label class="content-sub-title-labels" >Ceremics</label> -->
+                    <!-- <label onclick="Load_Donald_View ()" class="drop-down-content-label">Toilets</label> -->
+                    <label class="drop-down-content-label">Kitchen </label>
+                    <label class="drop-down-content-label">Bathroom</label>
+    
+            </div>
+    
+            <a onclick="OpenDropDown ('Electricals-Id')" >Electricals</a>
+            <div id="Electricals-Id" class="Drop-Down-Content w3-white w3-card-4">
+                <label class="drop-down-content-label">Chint</label>
+                <label  class="drop-down-content-label">Panasonic</label>
+                <!-- 
+                    onclick="Load_Chint_View()"
+                    onclick="Load_Panasonic_View ()"
+                    -->
+            </div>
+    
+            <a onclick="OpenDropDown ('Floor-Walls-Id')" > Floor Products </a>
+            <div id="Floor-Walls-Id" class="Drop-Down-Content w3-white w3-card-4">
+                    <label class="content-sub-title-labels" >Italian Floors</label>
+                        <!-- <label class="drop-down-content-label">Glamora</label> -->
+                    <!-- <label class="content-sub-title-labels" >Floor</label> -->
+                        <label class="drop-down-content-label">Veluti Veneti</label>
+                    <label class="content-sub-title-labels" >Tiles</label>
+                        <label class="drop-down-content-label">Twyford</label>
+                        <label class="drop-down-content-label">Goodwill</label>
+            </div>
+            <a onclick="OpenDropDown ('Water-Proofing-Id')" >Water Proofing</a>
+            <div id="Water-Proofing-Id" class="Drop-Down-Content w3-white w3-card-4">
+                <label class="drop-down-content-label">Mapei</label>
+                <!-- <label class="drop-down-content-label">Dr. Fix it</label> -->
+                <!-- <label class="drop-down-content-label">Plascon</label> -->
+                <!-- <label class="drop-down-content-label">Sadolin</label> -->
+            </div>
+    
+            <!-- <a onclick="OpenDropDown ('Building-Materials-Id')" >Building Materials</a>
+            <div id="Building-Materials-Id" class="Drop-Down-Content w3-white w3-card-4">
+                <label class="drop-down-content-label">Major</label>
+                <label class="drop-down-content-label">Minor</label>
+                <label class="drop-down-content-label" >Others</label>
+            </div> -->
+        
+        <label class="our-products-label" > Others</label>
+    
+        <a onclick="Load_Subdealer_Login ()" class="drop-down-content-label" >Sub dealer</a>
+        <a onclick="Load_Painter_Login ()" class="drop-down-content-label" >Painters</a>
+        
+        </div>
+    </div>
+    
+    </div>
+    <div id="NaviDivHeader">
+        <label class="open-navigation-label" onclick="OpenNavigetion()">&#9776;</label>
+        <!-- <label class="title-label">Sub Dealer</label> -->
+    </div>
+    <script>
+    function OpenNavigetion(){document.getElementById("Navigetion").style.width = "250px"}
+    function CloseNavigetion (){document.getElementById("Navigetion").style.width = "0"}
+    function OpenDropDown (DropDownId)
+    {
+    document.getElementById(DropDownId).classList.toggle("w3-show");
+    document.getElementById(DropDownId).previousElementSibling.classList.toggle("w3-show");
+    }
+    </script>
+    
+    </div> <!-- main-header-->    
+            
+<center>
+    <table class="register-table">
+        <caption class="subdealer-caption"> Subdealer Registration Form </caption>
+        <thead>
+            <tr class="register-table-tr">
+                <td colspan="1">
+                    <label class="regester-form-labels"> 1. Attach Photos</label><br><br>
+                    <label class="regester-form-labels"> Select Option ::</label>
+
+                    <select class="paint-name order-inputs">
+                        <option value="National Id"> National Id </option>
+                        <option value="Driving Permit"> Driving Permit </option>
+                    </select>
+
+                </td>
+                <td colspan="1">
+                    <label class="regester-form-labels">Front Side</label>
+                    <p><input type="file"  accept="image/*" name="front_side_img" id="front-side-file"  onchange="DisplayUploadedImage(event,'front-side-display-pra-id')" style="display: none;"></p>
+                    <p><label class="Browse-label" for="front-side-file">Upload Image</label></p>
+                    <p><img id="front-side-display-pra-id" class="img-to-be-displayed" /></p>
+                </td>
+
+                <td colspan="1">
+                    <label class="regester-form-labels">Back Side</label>
+                    <p><input type="file"  accept="image/*" name="front_side_img" id="back-side-file"  onchange="DisplayUploadedImage(event,'back-side-display-pra-id')" style="display: none;"></p>
+                    <p><label class="Browse-label" for="back-side-file">Upload Image</label></p>
+                    <p><img id="back-side-display-pra-id" class="img-to-be-displayed"/></p>
+                </td>
+
+                <td colspan="1">
+                    <label class="regester-form-labels">Passport Photo</label>
+                    <p><input type="file"  accept="image/*" name="front_side_img" id="passport-photo-file"  onchange="DisplayUploadedImage(event,'passport-photo-display-pra-id')" style="display: none;"></p>
+                    <p><label class="Browse-label" for="passport-photo-file">Upload Image</label></p>
+                    <p><img id="passport-photo-display-pra-id" class="img-to-be-displayed" /></p>
+                </td>
+            </tr>
+        </thead>
+        <!-- ============================= End of row 1 ============================= -->
+        <tr class="register-table-tr">
+            <td class="register-table-td">
+                <label class="regester-form-labels">2. Company's / hardware</label>
+                <input placeholder="Name" class="regester-form-inputs">
+            </td>
+            <td class="register-table-td">
+                <label class="regester-form-labels">Town / Area</label>  
+                <input type="text" placeholder="Town / Area " class="regester-form-inputs">            
+            </td>
+            <td class="register-table-td">
+                <label class="regester-form-labels">Phone Number: </label>
+                <input type="text" placeholder="Contant 2" class="regester-form-inputs">
+            </td>
+            <td class="register-table-td">
+                <label class="regester-form-labels">Email address: </label>
+                <input type="text" placeholder="Email address" class="regester-form-inputs">
+            </td>
+        </tr>
+        <!-- ============================= End of  row 2 ============================= -->
+        <tr class="register-table-tr"><td></td></tr>
+        <tr class="register-table-tr" >
+            <td class="register-table-td">
+                <label class="regester-form-labels">3. Company Number:</label>
+                <input type="text" placeholder="Registation Number:" class="regester-form-inputs"></td>
+            <td class="register-table-td" >
+                <label class="regester-form-labels">Date of Registration:</label> 
+                <input type="text" placeholder="date/month/year" class="regester-form-inputs">
+            </td>
+            <td class="register-table-td" >
+                <label class="regester-form-labels">Location of Business </label>
+                <input type="text" placeholder="Road" class="regester-form-inputs">
+            </td>
+            <td class="register-table-td" >
+                <label class="regester-form-labels">Nature of business:</label> 
+                <input type="text" placeholder="Retail / Wholesaler" class="regester-form-inputs">
+            </td>
+        </tr>
+            <!-- ============================= End of  row 3 ============================= -->
+        <tr class="register-table-tr"><td></td></tr>
+        <tr class="register-table-tr" >
+            <td class="register-table-td" >
+                <label class="regester-form-labels">4. Paid up capital</label>
+                <input type="text" placeholder="Registation Number:" class="regester-form-inputs"></td>
+            <td class="register-table-td" >
+                <label class="regester-form-labels">Approximent stock</label> 
+                <input type="text" placeholder="value of stock held" class="regester-form-inputs">
+            </td>
+            <td class="register-table-td" >
+                <label class="regester-form-labels">Annual Turnover </label>
+                <input type="text" placeholder="..." class="regester-form-inputs">
+            </td>
+            <td class="register-table-td" >
+                <label class="regester-form-labels">Years in business:</label> 
+                <input type="text" placeholder="Number of months or years" class="regester-form-inputs">
+            </td>
+        </tr>
+        <!-- ============================= End of row 4 ============================= -->
+        <tr class="register-table-tr"><td></td></tr>
+            <tr class="register-table-tr">
+                <td class="register-table-td" >
+                    <label class="regester-form-labels">5. Banker's Name</label>
+                    <input type="text" placeholder="Name 1:" class="regester-form-inputs">
+                    <input type="text" placeholder="Name 2:" class="regester-form-inputs">
+                </td>
+                <td class="register-table-td" >
+                    <label class="regester-form-labels">Account No(s)</label> 
+                    <input type="text" placeholder="Number 1:" class="regester-form-inputs">
+                    <input type="text" placeholder="Number 2:" class="regester-form-inputs"></td>
+                </td>
+                <td class="register-table-td" >
+                </td>
+                <td class="register-table-td" ></td>
+        </tr>
+        <!-- ============================= End of Fourth row ============================= -->
+        <tr class="register-table-tr"><td></td></tr>
+            <tr class="register-table-tr" >
+                <td class="register-table-td" >
+                    <label class="regester-form-labels">6. Directors's Name</label>
+                    <input type="text" placeholder="(a):" class="regester-form-inputs">
+                    <input type="text" placeholder="(b):" class="regester-form-inputs">
+                    <input type="text" placeholder="(c):" class="regester-form-inputs">
+                    <input type="text" placeholder="(d):" class="regester-form-inputs">
+                </td>
+                <td class="register-table-td" >
+                    <label class="regester-form-labels">Contacts</label> 
+                    <input type="text" placeholder="(a):" class="regester-form-inputs">
+                    <input type="text" placeholder="(b):" class="regester-form-inputs">
+                    <input type="text" placeholder="(c):" class="regester-form-inputs">
+                    <input type="text" placeholder="(d):" class="regester-form-inputs">
+                </td>
+                <td class="register-table-td" >
+                    <label class="regester-form-labels">Designation</label>
+                    <input type="text" placeholder="(a):" class="regester-form-inputs">
+                    <input type="text" placeholder="(b):" class="regester-form-inputs">
+                    <input type="text" placeholder="(c):" class="regester-form-inputs">
+                    <input type="text" placeholder="(d):" class="regester-form-inputs">
+                </td>
+                <td class="register-table-td" >
+                    <label class="regester-form-labels">Nationality</label>
+                    <input type="text" placeholder="(a):" class="regester-form-inputs">
+                    <input type="text" placeholder="(b):" class="regester-form-inputs">
+                    <input type="text" placeholder="(c):" class="regester-form-inputs">
+                    <input type="text" placeholder="(d):" class="regester-form-inputs">
+                </td>
+        </tr>
+        <!-- ============================= End of row 5 ============================= -->
+        <tr class="register-table-tr" ><td></td></tr>
+        <tr class="register-table-tr" >
+            <td class="register-table-td" >
+                <label class="regester-form-labels">7. Referee(s) Name</label>
+                <input type="text" placeholder="(a):" class="regester-form-inputs">
+                <input type="text" placeholder="(b):" class="regester-form-inputs">
+                <input type="text" placeholder="(c):" class="regester-form-inputs">
+                <input type="text" placeholder="(d):" class="regester-form-inputs">
+            </td>
+            <td class="register-table-td" >
+                <label class="regester-form-labels">Contacts</label> 
+                <input type="text" placeholder="(a):" class="regester-form-inputs">
+                <input type="text" placeholder="(b):" class="regester-form-inputs">
+                <input type="text" placeholder="(c):" class="regester-form-inputs">
+                <input type="text" placeholder="(d):" class="regester-form-inputs">
+            </td>
+            <td class="register-table-td" >
+                <label class="regester-form-labels">Designation</label>
+                <input type="text" placeholder="(a):" class="regester-form-inputs">
+                <input type="text" placeholder="(b):" class="regester-form-inputs">
+                <input type="text" placeholder="(c):" class="regester-form-inputs">
+                <input type="text" placeholder="(d):" class="regester-form-inputs">
+            </td>
+            <td class="register-table-td" >
+                <label class="regester-form-labels">Nationality</label>
+                <input type="text" placeholder="(a):" class="regester-form-inputs">
+                <input type="text" placeholder="(b):" class="regester-form-inputs">
+                <input type="text" placeholder="(c):" class="regester-form-inputs">
+                <input type="text" placeholder="(d):" class="regester-form-inputs">
+            </td>
+        </tr>
+        <!-- ============================= End of  row 6 ============================= -->
+        <tr id="register-table-tr-spacing" ><td></td></tr>
+        <tfoot>
+            <tr class="register-table-tr">
+                <td colspan="4">
+                    <label class="regester-form-labels">8. Terms and conditions</label> <br>
+                    <p class="register-p-text">
+                    a.delivery / transfer of risk<br>
+                    Notwithstanding delivery to the Buyer of any Products ordered from Color Center-Freedom City, ownership
+                    shall not pass to the Buyer unless the invoice price is paid in full for the particular order to KanKan Builders
+                    Point Ltd.
+                    A receipt from the buyer his carrier or agent shall constitute proof of delivery.<br><br>
+                
+                    b. Offer and prices <br>
+                    All quotations are valid for thirty (30) days only.
+                    All prices are subject to change without notice and the prices charged are those ruling on the day of
+                    delivery/collection.<br><br>
+            
+                    c. Payments<br>
+                    Buyer shall pay these invoices within 30 days from the invoice date in the currency indicated on the
+                    invoice. <br>
+                    </p>    
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <button class="next-to-payment-btn">Next</button>
+
+</center>
+</body>
+</html>
+
