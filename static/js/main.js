@@ -15,6 +15,7 @@ function Load_developer () {window.location="developer.html"}
 function Load_Subdealer_Login () {window.location="subdlogin.html"}
 function Load_Subdealer_Register () {window.location="subdealerregister.html"}
 function Load_Painter_Login () {window.location="painterlogin.html"}
+function Load_Painter_Register () {window.location="painterregister.html"}
 
 
 // Plascon Types Navigetion Subs

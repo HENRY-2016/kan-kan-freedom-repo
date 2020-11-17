@@ -356,12 +356,12 @@ ul li.checked::before {
                                                ++++++++++++++++++++++++++++
                                                */
 /* .register-table,.register-table-tr,.register-table-td */
-.register-table,.register-table-tr
+.register-table,.register-table-painter,.register-table-tr
 {
  border: 2px solid black;
 }
 
-.register-table-td-long-text,.register-p-text
+.register-table-td-long-text,.register-table-painter,.register-p-text
 {
     /* overflow-wrap: normal; */
    text-overflow: ellipsis;
@@ -386,15 +386,20 @@ ul li.checked::before {
 }
 .register-table
 {
-    width: 80%;
+    width: 75%;
     border-collapse: collapse;
     border: 3px solid black;
     background: whitesmoke;
-    display: block;
-    overflow: auto;
-
-
 }
+
+.register-table-painter
+{
+    width: 600px;
+    border-collapse: collapse;
+    border: 3px solid black;
+    background: whitesmoke;
+}
+
 .subdealer-caption
 {
     color:blue;
@@ -408,7 +413,7 @@ ul li.checked::before {
 {
     margin-left: 3%;
     margin-right: 3%;
-    z-index: 20;
+    /* z-index: 20; */
 }
 .regester-form-labels
 {
@@ -440,6 +445,30 @@ ul li.checked::before {
     
 }
 .regester-form-inputs:hover{border-bottom: 4px dotted green;}
+
+.regester-form-inputs-painter
+{
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+    height: 35px;
+    
+
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: blue;
+    
+}
+.regester-form-inputs-painter:hover{border-bottom: 4px dotted green;}
+
 /*=======================================================================================================*/
                                             /*
                                                +++++++++++++++++++++++++ ++
