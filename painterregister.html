@@ -134,11 +134,11 @@
             <tr class="register-table-tr">
                 <td class="register-table-td">
                     <label class="regester-form-labels">Name</label>
-                    <input placeholder="Names" class="regester-form-inputs">
+                    <input id="name" placeholder="Names" class="regester-form-inputs">
                 </td>
                 <td class="register-table-td">
                     <label class="regester-form-labels">Date of registration</label>  
-                    <input type="date"  class="regester-form-inputs">            
+                    <input id="date" type="date"  class="regester-form-inputs">            
                 </td>
             </tr>
             <!-- ============================= End of  row 1 ============================= -->
@@ -146,12 +146,12 @@
             <tr class="register-table-tr" >
                 <td class="register-table-td">
                     <label class="regester-form-labels">Phone Number: </label>
-                    <input type="text" placeholder="Contant 1 " class="regester-form-inputs">
+                    <input id="contacts" type="text" placeholder="Contant 1 " class="regester-form-inputs">
                 </td>
 
                 <td class="register-table-td">
                     <label class="regester-form-labels">Address: </label>
-                    <input type="text" placeholder="Town or Area" class="regester-form-inputs">
+                    <input id="address" type="text" placeholder="Town or Area" class="regester-form-inputs">
                 </td>
             </tr>
             <!-- ============================= End of  row 2 ============================= -->
@@ -161,11 +161,11 @@
                 <tr class="register-table-tr">
                     <td colspan="2">
                         <label class="regester-form-labels">How did you get to know about the painter’s discounts?</label> <br>
-                        <input type="text" placeholder="response" class="register-p-text regester-form-inputs-painter"><br><br>
+                        <input id="qn1" type="text" placeholder="response" class="register-p-text regester-form-inputs-painter"><br><br>
 
                         <label class="regester-form-labels">What are your anticipated average purchases from our kankan in a month?</label> <br>
-                        <input type="text" placeholder="response" class="register-p-text regester-form-inputs-painter"><br><br>
-                        <p class="register-p-text">
+                        <input id="qn2" type="text" placeholder="response" class="register-p-text regester-form-inputs-painter"><br><br>
+                        <p id="terms" class="register-p-text">
                         <b>Terms & conditions:<br>
                         a) Eligibility for the painter’s discount</b>
                         The painter should be a regular customer of plascon products and should have purchased from kankan outlets at least three (3) times.<br>
@@ -175,12 +175,13 @@
                         The accumulated discount from all purchases by the painter will be calculated and will be sent to the painter every end of the week (Saturday) on the painter’s mobile money account. 
                         <br><br>
                         <b>c) </b>All discounts will be calculated by getting the difference between the product price on the painter’s price list and the retail price list
+                        
                         </p><br><br>
                     </td>
                 </tr>
             </tfoot>
         </table><br>
-        <button class="next-to-payment-btn">Next</button>
+        <button onclick="SubmiteRegistrationData ()" class="next-to-payment-btn">Submit</button>
     
     </center>
     </body>

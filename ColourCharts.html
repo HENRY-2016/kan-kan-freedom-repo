@@ -1,0 +1,1308 @@
+
+<!--
+	scp -r kankan-client-server-repo/* pi@192.168.43.140://var/www/html/kankan-client-server-repo 
+	sudo systemctl restart apache2.service 
+	sudo systemctl stop apache2.service
+	sudo systemctl start apache2.service
+-->
+
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>| Colour Charts |</title>
+<script src="static/js/jquery.min.js"> </script>
+<script src="static/js/main.js"></script>
+
+<link rel="stylesheet" type="text/css" href="static/css/main.css">
+<link rel="stylesheet" type="text/css" href="static/css/w3.css" >
+<!-- <link rel="stylesheet" type="text/css" href="static/css/em8j.css" > -->
+<link rel="stylesheet" type="text/css" href="static/css/colouchart.css" >
+</head>
+
+<body class="main_bod y">
+<div id="main-header">
+	<div  id= "Navigetion" class=" w3-light-grey header">
+		<!-- ======= CLOSE ====== -->
+	<span href="javascript:void(0)" class="closebtn" onclick="CloseNavigetion()"><label class="close-navi-span"> &times;</label></span><!-- closs the navi -->
+
+<div id="navigetion-links-div">
+	<label class="our-products-label" > Our Products</label>
+	<div id="Drop-Down-Id">
+		<a onclick="OpenDropDown ('Plascon-Types-Id')" >Plascon</a>
+		<div id="Plascon-Types-Id" class="Drop-Down-Content w3-white w3-card-4">
+			<label onclick="Load_Plascon_Pack_View ()" class="drop-down-content-label" >Pack</label>
+			<label onclick="Load_Plascon_Gloss_View ()" class="drop-down-content-label">Gloss</label>
+			<label  onclick="Load_Plascon_Sundry_View ()" class="drop-down-content-label" >Sundry </label>
+			<label onclick="Load_Plascon_Varnish_View ()"class="drop-down-content-label" >Varnish</label>
+			<label onclick="Load_Plascon_Primers_View ()" class="drop-down-content-label" >Primers</label>
+			<label onclick="Load_Plascon_Emulsion_View ()" class="drop-down-content-label">Emulsion</label>
+			<label onclick="Load_Plascon_Thinners_View ()" class="drop-down-content-label" >Thinners</label>
+			<label onclick="Load_Plascon_Undercoat_View ()" class="drop-down-content-label" >Undercoat</label>
+			<label onclick="Load_Plascon_Aluminium_View ()" class="drop-down-content-label" >Aluminium</label>
+			<!-- <label onclick="Load_Plascon_Industrial_View ()" class="drop-down-content-label" >Industrial</label> -->
+			<label onclick="Load_Plascon_Roof_Floor_View ()" class="drop-down-content-label" >Roof & Floor</label>
+			<label onclick="Load_Plascon_Roadmarking_View ()" class="drop-down-content-label" >Roadmarking</label>
+			<label onclick="Load_Plascon_waterproofing_View ()" class="drop-down-content-label" > Water proofing</label>
+			<label onclick="Load_Plascon_Architectural_finishes_View ()" class="drop-down-content-label" >Architectural  finishes</label>
+		</div>
+
+		<a onclick="OpenDropDown ('Plumbing-Id')" >Plumbing</a>
+		<div id="Plumbing-Id" class="Drop-Down-Content w3-white w3-card-4">
+			<label class="content-sub-title-labels" >Fittings</label>
+			<!--
+			<label class="drop-down-content-label">GI </label>
+			<label class="drop-down-content-label">PE </label>
+			<label class="drop-down-content-label">PPR </label>
+			<label class="drop-down-content-label">PVC </label> 
+			-->
+			<!-- <label class="content-sub-title-labels" >Ceremics</label> -->
+				<!-- <label onclick="Load_Donald_View ()" class="drop-down-content-label">Toilets</label> -->
+				<label class="drop-down-content-label">Kitchen </label>
+				<label class="drop-down-content-label">Bathroom</label>
+
+		</div>
+
+		<a onclick="OpenDropDown ('Electricals-Id')" >Electricals</a>
+		<div id="Electricals-Id" class="Drop-Down-Content w3-white w3-card-4">
+			<label class="drop-down-content-label">Chint</label>
+			<label  class="drop-down-content-label">Panasonic</label>
+			<!-- 
+				onclick="Load_Chint_View()"
+				onclick="Load_Panasonic_View ()"
+				-->
+		</div>
+
+		<a onclick="OpenDropDown ('Floor-Walls-Id')" > Floor Products </a>
+		<div id="Floor-Walls-Id" class="Drop-Down-Content w3-white w3-card-4">
+				<label class="content-sub-title-labels" >Italian Floors</label>
+					<!-- <label class="drop-down-content-label">Glamora</label> -->
+				<!-- <label class="content-sub-title-labels" >Floor</label> -->
+					<label class="drop-down-content-label">Veluti Veneti</label>
+				<label class="content-sub-title-labels" >Tiles</label>
+					<label class="drop-down-content-label">Twyford</label>
+					<label class="drop-down-content-label">Goodwill</label>
+		</div>
+		<a onclick="OpenDropDown ('Water-Proofing-Id')" >Water Proofing</a>
+		<div id="Water-Proofing-Id" class="Drop-Down-Content w3-white w3-card-4">
+			<label class="drop-down-content-label">Mapei</label>
+			<!-- <label class="drop-down-content-label">Dr. Fix it</label> -->
+			<!-- <label class="drop-down-content-label">Plascon</label> -->
+			<!-- <label class="drop-down-content-label">Sadolin</label> -->
+		</div>
+
+		<!-- <a onclick="OpenDropDown ('Building-Materials-Id')" >Building Materials</a>
+		<div id="Building-Materials-Id" class="Drop-Down-Content w3-white w3-card-4">
+			<label class="drop-down-content-label">Major</label>
+			<label class="drop-down-content-label">Minor</label>
+			<label class="drop-down-content-label" >Others</label>
+		</div> -->
+		<label class="our-products-label" > Others</label>
+
+		<a onclick="Load_Subdealer_Login ()" class="drop-down-content-label" >Sub dealer</a>
+		<a onclick="Load_Painter_Login ()" class="drop-down-content-label" >Painters</a>
+	</div>
+</div>
+
+</div>
+<div id="NaviDivHeader">
+	<label class="open-navigation-label" onclick="OpenNavigetion()">&#9776;</label>
+	<!-- <label class="title-label">Emulsion paint</label> -->
+</div>
+<script>
+function OpenNavigetion(){document.getElementById("Navigetion").style.width = "250px"}
+function CloseNavigetion (){document.getElementById("Navigetion").style.width = "0"}
+function OpenDropDown (DropDownId)
+{
+document.getElementById(DropDownId).classList.toggle("w3-show");
+document.getElementById(DropDownId).previousElementSibling.classList.toggle("w3-show");
+}
+</script>
+
+</div> <!-- main-header-->    
+		
+<div id="main-body" > <!-- Begin main-body div -->
+</div>
+<center>
+	<br><br>
+<div class="colour-chart-display-grid-container"> 
+
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name silver-birch"></div>
+			<div class="paint-code-and-name-div-class">
+				<p>
+					<span class="paint-code">00 A 01</span><br>
+					<span class="paint-name">SILVER BIRCH</span>
+				</p>
+			</div>
+	</div>
+
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  smoke-grey"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">00 A 05</span><br>
+				<span class="paint-name">SMOKE GREY</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  granite"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">00 A 09</span><br>
+				<span class="paint-name">GRANITE</span>
+			</p>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  carbon" ></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">00 A 13</span><br>
+				<span class="paint-name">CARBON</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  orchid"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">02 C 33</span><br>
+				<span class="paint-name">ORCHID</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  dusty-red"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">02 C 37</span><br>
+				<span class="paint-name">DUSTY RED</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  burgundy"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">02 C 39</span><br>
+				<span class="paint-name">BURGUNDY</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  deep-pulm"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">02 C 40</span><br>
+				<span class="paint-name">DEEP PLUM</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  lotus" ></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 B 15</span><br>
+				<span class="paint-name">LOTUS</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  blossom"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 B 17</span><br>
+				<span class="paint-name">BLOSSOM</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  rose-grey"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 B 21</span><br>
+				<span class="paint-name">ROSE GREY</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  flamingo"></div>
+		<div  class=" paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 C 33</span><br>
+				<span class="paint-name">FLAMINGO</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  roman-red" ></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 C 37</span><br>
+				<span class="paint-name">ROMAN RED</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  chestnut"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 C 39</span><br>
+				<span class="paint-name">CHESTNUT</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  paprika"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 D 44</span><br>
+				<span class="paint-name">PAPRIKA</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  cherry"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 D 45</span><br>
+				<span class="paint-name">CHERRY</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  coral-pink"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 E 47</span><br>
+				<span class="paint-name">CORAL PINK</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  fireball"></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 E 51</span><br>
+				<span class="paint-name">FIREBALL</span>
+			</p>
+		</div>
+	</div>
+					
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  signal"></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">04 E 53</span><br>
+				<span class="paint-name">SIGNAL</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  peanut"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">06 C 33</span><br>
+				<span class="paint-name">PEANUT</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  beettlenut" ></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">06 C 37</span><br>
+				<span class="paint-name">BEETLE NUT</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  tobacco"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">06 C 39</span><br>
+				<span class="paint-name">TOBACCO</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  seville-orange"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">06 D 43</span><br>
+				<span class="paint-name">SEVILLE ORANGE</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  nutmeg"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">06 D 43</span><br>
+				<span class="paint-name">NUTMEG</span>
+			</p>
+		</div>
+	</div>
+					
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  apricot"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">06 E 50</span><br>
+				<span class="paint-name">APRICOT</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  tangerine"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">06 E 51</span><br>
+				<span class="paint-name">TANGERINE</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  harvest-gold"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">06 E 56</span><br>
+				<span class="paint-name">HARVEST GOLD</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  magnolia" ></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">08 B 15</span><br>
+				<span class="paint-name">MAGNOLIA</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  sandstone" ></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>	
+				<span class="paint-code">08 B 17</span><br>
+				<span class="paint-name">SANDSTONE</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  mink"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">08 B 21</span><br>
+				<span class="paint-name">MINK</span>
+			</p>
+		</div>
+	</div>
+					
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  peat"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">08 B 25</span><br>
+				<span class="paint-name">PEAT</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  midnight"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">08 B 29</span><br>
+				<span class="paint-name">MIDNIGHT</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  honey-suckle" ></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">08 C 31</span><br>
+				<span class="paint-name">HONEYSUCKLE</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  cinnamon" ></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">08 C 35</span><br>
+				<span class="paint-name">CINNAMON</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  old-gold"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">08 C 37</span><br>
+				<span class="paint-name">OLD GOLD</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  suede"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">08 C 39</span><br>
+				<span class="paint-name">SUEDE</span>
+			</p>
+		</div>
+	</div>
+					
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  saffron" ></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">08 E 51</span><br>
+				<span class="paint-name">SAFFRON</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  pearl-grey"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 A 03</span><br>
+				<span class="paint-name">PEARL GREY</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  storm"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 A 07</span><br>
+				<span class="paint-name">STORM</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  tempest"></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 A 11</span><br>
+				<span class="paint-name">TEMPEST</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  soft-white"></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 B 15</span><br>
+				<span class="paint-name">SOFT WHITE</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  kraft-grey" ></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 B 17</span><br>
+				<span class="paint-name">KRAFT GREY</span>
+			</p>
+		</div>
+	</div>
+					
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  lava"></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 B 21</span><br>
+				<span class="paint-name">LAVA</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  prairie-dust"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 B 25</span><br>
+				<span class="paint-name">PRAIRIE DUST</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  nightfall"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 B 29</span><br>
+				<span class="paint-name">NIGHTFALL</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  ivory"></span></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 C 31</span><br>
+				<span class="paint-name">IVORY</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  mimosa" ></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 C 33</span><br>
+				<span class="paint-name">MIMOSA</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  spice"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 C 35</span><br>
+				<span class="paint-name">SPICE</span>
+			</p>
+		</div>
+	</div>
+					
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  havana"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 C 39</span><br>
+				<span class="paint-name">HAVANA</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  mustard"></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 D 43</span><br>
+				<span class="paint-name">MUSTARD</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  honeycomb"></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 D 45</span><br>
+				<span class="paint-name">HONEYCOMB</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  primrose"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 E 49</span><br>
+				<span class="paint-name">PRIMROSE</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  sweetcorn"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 E 50</span><br>
+				<span class="paint-name">SWEETCORN</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  valencia"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">10 E 53</span><br>
+				<span class="paint-name">VALENCIA</span>
+			</p>
+		</div>
+	</div>
+						
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  glacier-green"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">12 B 15</span><br>
+				<span class="paint-name">GLACIER GREEN</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  sage"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">12 B 17</span><br>
+				<span class="paint-name">SAGE</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  florida-green"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">12 B 21</span><br>
+				<span class="paint-name">FLORIDA GREEN</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  olive"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">12 B 25</span><br>
+				<span class="paint-name">OLIVE</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  cape-green"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">12 B 29</span><br>
+				<span class="paint-name">CAPE GREEN</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  fiesta"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">12 C 33</span><br>
+				<span class="paint-name">FIESTA</span>
+			</p>
+		</div>
+	</div>
+	
+					
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  evergreen"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>	
+				<span class="paint-code">12 C 39</span><br>
+				<span class="paint-name">EVERGREEN</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  citrus" ></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">12 D 43</span><br>
+				<span class="paint-name">CITRUS</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  conifer"></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">12 D 45</span><br>
+				<span class="paint-name">CONIFER</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  lollipop"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">12 E 51</span><br>
+				<span class="paint-name">LOLLIPOP</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  lime"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">12 E 53</span><br>
+				<span class="paint-name">LIME</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537483468876" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537483491954">
+	
+	<div id="text-block-138" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">12 C 31</span><br>
+	<span class="paint-name">SNOWBERRY</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+		</div>
+	<div class="vc_row-full-width vc_clearfix"></div>
+	<div data-mk-full-width="true" data-mk-full-width-init="true" data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid  mk-fullwidth-true  attched-false     js-master-row  mk-full-content-true mk-in-viewport" style="position: relative; box-sizing: border-box; width: 1291px; left: -95.5px;">
+					
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537483808250" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537483834925">
+	
+	<div id="text-block-140" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">14 C 35</span><br>
+	<span class="paint-name">ORBIT GREEN</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537483850150" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537483867012">
+	
+	<div id="text-block-142" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">14 C 39</span><br>
+	<span class="paint-name">MALLARD</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537483878079" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537483899240">
+	
+	<div id="text-block-144" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">14 C 40</span><br>
+	<span class="paint-name">VINTAGE GREEN</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537483916121" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537483936916">
+	
+	<div id="text-block-146" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">14 E 51</span><br>
+	<span class="paint-name">APPLE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537483952202" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537483971821">
+	
+	<div id="text-block-148" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">14 E 53</span><br>
+	<span class="paint-name">EMERALD GREEN</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537483984379" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537484019361">
+	
+	<div id="text-block-150" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">16 C 33</span><br>
+	<span class="paint-name">SKY BLUE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+		</div>
+	<div class="vc_row-full-width vc_clearfix"></div>
+	<div data-mk-full-width="true" data-mk-full-width-init="true" data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid  mk-fullwidth-true  attched-false     js-master-row  mk-full-content-true mk-in-viewport" style="position: relative; box-sizing: border-box; width: 1291px; left: -95.5px;">
+					
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537484072684" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537484099543">
+	
+	<div id="text-block-152" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">16 C 37</span><br>
+	<span class="paint-name">ORION</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537484114153" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537484136978">
+	
+	<div id="text-block-154" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">16 D 45</span><br>
+	<span class="paint-name">WINTER BLUE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537484148402" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537484174155">
+	
+	<div id="text-block-156" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">16 E 53</span><br>
+	<span class="paint-name">TURQUOISE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537484183818" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537484202474">
+	
+	<div id="text-block-158" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 B 17</span><br>
+	<span class="paint-name">ICE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537484213189" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537484233603">
+	
+	<div id="text-block-160" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 B 21</span><br>
+	<span class="paint-name">TYPHOON</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537484246305" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537484263903">
+	
+	<div id="text-block-162" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 B 25</span><br>
+	<span class="paint-name">CHARCOAL</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+		</div>
+	<div class="vc_row-full-width vc_clearfix"></div>
+	<div data-mk-full-width="true" data-mk-full-width-init="true" data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid  mk-fullwidth-true  attched-false     js-master-row  mk-full-content-true mk-in-viewport" style="position: relative; box-sizing: border-box; width: 1291px; left: -95.5px;">
+					
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537484376004" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537484368901">
+	
+	<div id="text-block-164" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 B 29</span><br>
+	<span class="paint-name">GUN METAL</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537484389485" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537484411765">
+	
+	<div id="text-block-166" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 C 31</span><br>
+	<span class="paint-name">ANGEL BLUE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485009350" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485030140">
+	
+	<div id="text-block-168" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 C 35</span><br>
+	<span class="paint-name">HORIZON BLUE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485045801" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485064358">
+	
+	<div id="text-block-170" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 C 39</span><br>
+	<span class="paint-name">DEEP BLUE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485076924" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485103479">
+	
+	<div id="text-block-172" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 D 43</span><br>
+	<span class="paint-name">DENIM</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485114493" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485134699">
+	
+	<div id="text-block-174" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 E 49</span><br>
+	<span class="paint-name">BABY BLUE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+		</div>
+	<div class="vc_row-full-width vc_clearfix"></div>
+	<div data-mk-full-width="true" data-mk-full-width-init="true" data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid  mk-fullwidth-true  attched-false     js-master-row  mk-full-content-true mk-in-viewport" style="position: relative; box-sizing: border-box; width: 1291px; left: -95.5px;">
+					
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485345446" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485371579">
+	
+	<div id="text-block-176" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 E 50</span><br>
+	<span class="paint-name">OASIS BLUE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485382424" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485399629">
+	
+	<div id="text-block-178" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 E 51</span><br>
+	<span class="paint-name">RICH BLUE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485416888" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485439315">
+	
+	<div id="text-block-180" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">18 E 53</span><br>
+	<span class="paint-name">CORNFLOWER</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485450600" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485482931">
+	
+	<div id="text-block-182" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">20 C 33</span><br>
+	<span class="paint-name">PALE LILAC</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485495112" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485517569">
+	
+	<div id="text-block-184" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">20 C 37</span><br>
+	<span class="paint-name">JACARANDA</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485528294" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485546752">
+	
+	<div id="text-block-186" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">20 C 40</span><br>
+	<span class="paint-name">ELECTRIC BLUE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+		</div>
+	<div class="vc_row-full-width vc_clearfix"></div>
+	<div data-mk-full-width="true" data-mk-full-width-init="true" data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid  mk-fullwidth-true  attched-false     js-master-row  mk-full-content-true mk-in-viewport" style="position: relative; box-sizing: border-box; width: 1291px; left: -95.5px;">
+					
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485594940" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485641772">
+	
+	<div id="text-block-188" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">20 D 45</span><br>
+	<span class="paint-name">SAPPHIRE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485660130" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485690003">
+	
+	<div id="text-block-190" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">20 E 51</span><br>
+	<span class="paint-name">CALYPSO BLUE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485700564" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485723522">
+	
+	<div id="text-block-192" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">22 B 15</span><br>
+	<span class="paint-name">GARDENIA</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div   _ height-full">
+		<div class="paint-colour-class-name  vc_custom_1537485734423" style="height: 120px"><span class="paint-colour-class-name_inner"></span></div>
+		<div class=" vc_custom_1537485761152">
+	
+	<div id="text-block-194" class="mk-text-block   paint-code-and-name-div-class">
+	
+		
+		<p><span class="paint-code">22 B 17</span><br>
+	<span class="paint-name">LILAC HAZE</span></p>
+	
+		<div class="clearboth"></div>
+	</div>
+	
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  tropical-violet"></div>
+		<div class="paint-code-and-name-div-class">
+		<p>
+			<span class="paint-code">22 C 37</span><br>
+			<span class="paint-name">TROPICAL VIOLET</span>
+		</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  spanish-violet"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">22 D 45</span><br>
+				<span class="paint-name">SPANISH VIOLET</span>
+			</p>
+		</div>
+	</div>
+						
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  purple-haze"></div>
+		<div class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">24 C 33</span><br>
+				<span class="paint-name">PURPLE HAZE</span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="paint-colour-and-name-class-div">
+		<div class="paint-colour-class-name  current" ></div>
+		<div  class="paint-code-and-name-div-class">
+			<p>
+				<span class="paint-code">24 C 39</span><br>
+				<span class="paint-name">CURRENT</span>
+			</p>
+		</div>
+	</div>
+	
+
+</div><!-- End colour-chart-display-grid-container -->
+
+</center>
+</body>
+</html>
+
+	
+

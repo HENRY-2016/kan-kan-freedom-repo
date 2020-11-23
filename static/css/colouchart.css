@@ -1,0 +1,212 @@
+
+.colour-chart-display-grid-container
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: white;
+}
+.paint-colour-class-name
+{
+    /* width: 200px; */
+    height: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.silver-birch{background-color: #e6e2d9 !important;}
+.smoke-grey{background-color: #bbb8b9 !important;}
+.granite{background-color: #87888d !important;}
+.carbon{background-color: #4e4e53 !important;}
+.orchid{background-color: #f2c3bc !important;}
+.dusty-red{background-color: #b5687a !important;}
+.burgundy{background-color: #863a55 !important;}
+.deep-pulm{background-color: #511c3a !important;}
+.lotus{background-color: #fcf3e4 !important;}
+.blossom{background-color: #e8c8b9 !important;}
+.rose-grey{background-color: #b39389 !important;}
+.flamingo{background-color: #f4b8a6 !important;}
+.roman-red{background-color: #b15e5b !important;}
+.chestnut{background-color: #833b3e !important;}
+.paprika{background-color: #b43740 !important;}
+.cherry{background-color: #931127 !important;}
+.coral-pink{background-color: #fcdbcd !important;}
+.fireball{background-color: #f15758 !important;}
+.signal{background-color: #d12339 !important;}
+.peanut{background-color: #f0c29c !important;}
+.beettlenut{background-color: #aa5744 !important;}
+.tobacco{background-color: #6b2712 !important;}
+.seville-orange{background-color: #c8663b !important;}
+.nutmeg{background-color: #8d362a !important;}
+.apricot{background-color: #faac6e !important;}
+.tangerine{background-color: #ed644e !important;}
+.harvest-gold{background-color: #ab3a24 !important;}
+.magnolia{background-color: #fff9e9 !important;}
+.sandstone{background-color: #e9d5bd !important;}
+.mink{background-color: #ad9686 !important;}
+.peat{background-color: #795c4d !important;}
+.midnight{background-color: #4c362b !important;}
+.honey-suckle{background-color: #ffedcb !important;}
+.cinnamon{background-color: #d99f69 !important;}
+.old-gold{background-color: #a06538 !important;}
+.suede{background-color: #6a3a1e !important;}
+.saffron{background-color: #f19a1d !important;}
+.pearl-grey{background-color: #d4d3ca !important;}
+.storm{background-color: #a4a39f !important;}
+.tempest{background-color: #6a6663 !important;}
+.soft-white{background-color: #fff8e0 !important;}
+.kraft-grey{background-color: #e4daba !important;}
+.lava{background-color: #766851 !important;}
+.prairie-dust{background-color: #aca28b !important;}
+.nightfall{background-color: #332c21 !important;}
+.ivory{background-color: #fff1cd !important;}
+.mimosa{background-color: #f3e2a2 !important;}
+.spice{background-color: #ccb36d !important;}
+.havana{background-color: #5c3f19 !important;}
+.mustard{background-color: #d0a334 !important;}
+.honeycomb{background-color: #9d7912 !important;}
+.primrose{background-color: #fbf1af !important;}
+.sweetcorn{background-color: #ffe06f !important;}
+.valencia{background-color: #f9d102 !important;}
+.glacier-green{background-color: #f3f1d7 !important;}
+.sage{background-color: #dcdab5 !important;}
+.florida-green{background-color: #a6a689 !important;}
+.olive{background-color: #716d51 !important;}
+.cape-green{background-color: #343209 !important;}
+.fiesta{background-color: #e3e0a2 !important;}
+.evergreen{background-color: #535525 !important;}
+.vc_custom_1537483325991{margin-bottom: 0px !important;}
+.citrus{background-color: #a3a53e !important;}
+.vc_custom_1537483357620{margin-bottom: 0px !important;}
+.conifer{background-color: #777730 !important;}
+.vc_custom_1537483388523{margin-bottom: 0px !important;}
+.lollipop{background-color: #dede48 !important;}
+.vc_custom_1537483431306{margin-bottom: 0px !important;}
+.lime{background-color: #a9bc43 !important;}
+.vc_custom_1537483457460{margin-bottom: 0px !important;}
+.vc_custom_1537483468876{background-color: #ecf4e1 !important;}
+.vc_custom_1537483491954{margin-bottom: 0px !important;}
+.vc_custom_1537483808250{background-color: #a2b69e !important;}
+.vc_custom_1537483834925{margin-bottom: 0px !important;}
+.vc_custom_1537483850150{background-color: #26452d !important;}
+.vc_custom_1537483867012{margin-bottom: 0px !important;}
+.vc_custom_1537483878079{background-color: #29332e !important;}
+.vc_custom_1537483899240{margin-bottom: 0px !important;}
+.vc_custom_1537483916121{background-color: #70ae69 !important;}
+.vc_custom_1537483936916{margin-bottom: 0px !important;}
+.vc_custom_1537483952202{background-color: #1e864d !important;}
+.vc_custom_1537483971821{margin-bottom: 0px !important;}
+.vc_custom_1537483984379{background-color: #bdd1c1 !important;}
+.vc_custom_1537484019361{margin-bottom: 0px !important;}
+.vc_custom_1537484072684{background-color: #bcd0c0 !important;}
+.vc_custom_1537484099543{margin-bottom: 0px !important;}
+.vc_custom_1537484114153{background-color: #004f3e !important;}
+.vc_custom_1537484136978{margin-bottom: 0px !important;}
+.vc_custom_1537484148402{background-color: #229479 !important;}
+.vc_custom_1537484174155{margin-bottom: 0px !important;}
+.vc_custom_1537484183818{background-color: #d3dad5 !important;}
+.vc_custom_1537484202474{margin-bottom: 0px !important;}
+.vc_custom_1537484213189{background-color: #989f9f !important;}
+.vc_custom_1537484233603{margin-bottom: 0px !important;}
+.vc_custom_1537484246305{background-color: #697277 !important;}
+.vc_custom_1537484263903{margin-bottom: 0px !important;}
+.vc_custom_1537484376004{background-color: #183432 !important;}
+.vc_custom_1537484368901{margin-bottom: 0px !important;}
+.vc_custom_1537484389485{background-color: #f5faef !important;}
+.vc_custom_1537484411765{margin-bottom: 0px !important;}
+.vc_custom_1537485009350{background-color: #a2bcc5 !important;}
+.vc_custom_1537485030140{margin-bottom: 0px !important;}
+.vc_custom_1537485045801{background-color: #00546a !important;}
+.vc_custom_1537485064358{margin-bottom: 0px !important;}
+.vc_custom_1537485076924{background-color: #398b9f !important;}
+.vc_custom_1537485103479{margin-bottom: 0px !important;}
+.vc_custom_1537485114493{background-color: #dcebdf !important;}
+.vc_custom_1537485134699{margin-bottom: 0px !important;}
+.vc_custom_1537485345446{background-color: #a9dde4 !important;}
+.vc_custom_1537485371579{margin-bottom: 0px !important;}
+.vc_custom_1537485382424{background-color: #20aac9 !important;}
+.vc_custom_1537485399629{margin-bottom: 0px !important;}
+.vc_custom_1537485416888{background-color: #0078aa !important;}
+.vc_custom_1537485439315{margin-bottom: 0px !important;}
+.vc_custom_1537485450600{background-color: #c9e0ec !important;}
+.vc_custom_1537485482931{margin-bottom: 0px !important;}
+.vc_custom_1537485495112{background-color: #5d89a9 !important;}
+.vc_custom_1537485517569{margin-bottom: 0px !important;}
+.vc_custom_1537485528294{background-color: #002c47 !important;}
+.vc_custom_1537485546752{margin-bottom: 0px !important;}
+.vc_custom_1537485594940{background-color: #005488 !important;}
+.vc_custom_1537485641772{margin-bottom: 0px !important;}
+.vc_custom_1537485660130{background-color: #56aadc !important;}
+.vc_custom_1537485690003{margin-bottom: 0px !important;}
+.vc_custom_1537485700564{background-color: #f7f3ea !important;}
+.vc_custom_1537485723522{margin-bottom: 0px !important;}
+.vc_custom_1537485734423{background-color: #e3ccd4 !important;}
+.vc_custom_1537485761152{margin-bottom: 0px !important;}
+.tropical-violet{background-color: #7d78a4 !important;}
+.vc_custom_1537485803113{margin-bottom: 0px !important;}
+.spanish-violet{background-color: #424a8c !important;}
+.vc_custom_1537485856605{margin-bottom: 0px !important;}
+.purple-haze{background-color: #e3ccd4 !important;}
+.vc_custom_1537485970891{margin-bottom: 0px !important;}
+.current{background-color: #61396f !important;}
+.vc_custom_1537486002164{margin-bottom: 0px !important;}

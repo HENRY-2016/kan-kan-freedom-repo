@@ -203,6 +203,40 @@ function CreateDynamicDropdownListWithArrayLengthOfNine  (listoflists,id,OuterHt
     HtmlDiv.appendChild(DivContainer);
 }
 
+/*
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @
+    @           POSTING REGISTRATION DATA
+    @
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+function SubmiteRegistrationData ()
+{
+    // let terms =  $('#terms').innerText
+    console.log(terms)
+
+    $.ajax({
+            data :
+                {
+                    name : $('#name').val(),
+                    date : $('#date').val(),
+                    contacts : $('#contacts').val(),
+                    address : $('#address').val(),
+                    qn1 : $('#qn1').val(),
+                    qn2 : $('#qn2').val(),
+                    // terms : $('#terms').innerText
+                },
+                url : ordersreceived_url + 'register_painter_registration_post',
+                type : 'POST'
+
+
+    });
+}
+
+
+
+
 
 /*
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
