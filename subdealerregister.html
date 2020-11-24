@@ -6,9 +6,9 @@
 <meta charset="utf-8" >
 <script src="static/js/jquery.min.js" ></script>
 <script src="static/js/main.js" ></script>
-<script src="static/js/subdealer.js" ></script>
+<script src="static/js/register.js" ></script>
 <link rel="stylesheet" type="text/css" href="static/css/main.css" >
-<link rel="stylesheet" type="text/css" href="static/css/w3.css">
+<!-- <link rel="stylesheet" type="text/css" href="static/css/w3.css"> -->
 </head>
 <body class="main_body">
 <div id="main-header">
@@ -120,9 +120,9 @@
             <tr class="register-table-tr">
                 <td colspan="1">
                     <label class="regester-form-labels"> 1. Attach Photos</label><br><br>
-                    <label class="regester-form-labels"> Select Option ::</label>
+                    <label class="regester-form-labels"> Using ::</label>
 
-                    <select class="paint-name order-inputs">
+                    <select class="paint-name order-inputs" id="method">
                         <option value="National Id"> National Id </option>
                         <option value="Driving Permit"> Driving Permit </option>
                     </select>
@@ -154,19 +154,19 @@
         <tr class="register-table-tr">
             <td class="register-table-td">
                 <label class="regester-form-labels">2. Company's / hardware</label>
-                <input placeholder="Name" class="regester-form-inputs">
+                <input id="name" placeholder="Name" class="regester-form-inputs">
             </td>
             <td class="register-table-td">
                 <label class="regester-form-labels">Town / Area</label>  
-                <input type="text" placeholder="Town / Area " class="regester-form-inputs">            
+                <input id="town" type="text" placeholder="Town / Area " class="regester-form-inputs">            
             </td>
             <td class="register-table-td">
                 <label class="regester-form-labels">Phone Number: </label>
-                <input type="text" placeholder="Contant 2" class="regester-form-inputs">
+                <input id="contacts" type="text" placeholder="Contant 2" class="regester-form-inputs">
             </td>
             <td class="register-table-td">
                 <label class="regester-form-labels">Email address: </label>
-                <input type="text" placeholder="Email address" class="regester-form-inputs">
+                <input id="email" type="text" placeholder="Email address" class="regester-form-inputs">
             </td>
         </tr>
         <!-- ============================= End of  row 2 ============================= -->
@@ -174,18 +174,18 @@
         <tr class="register-table-tr" >
             <td class="register-table-td">
                 <label class="regester-form-labels">3. Company Number:</label>
-                <input type="text" placeholder="Registation Number:" class="regester-form-inputs"></td>
+                <input id="company_num" type="text" placeholder="Registation Number:" class="regester-form-inputs"></td>
             <td class="register-table-td" >
                 <label class="regester-form-labels">Date of Registration:</label> 
-                <input type="text" placeholder="date/month/year" class="regester-form-inputs">
+                <input id="date" type="text" placeholder="date/month/year" class="regester-form-inputs">
             </td>
             <td class="register-table-td" >
                 <label class="regester-form-labels">Location of Business </label>
-                <input type="text" placeholder="Road" class="regester-form-inputs">
+                <input id="location" type="text" placeholder="Road" class="regester-form-inputs">
             </td>
             <td class="register-table-td" >
                 <label class="regester-form-labels">Nature of business:</label> 
-                <input type="text" placeholder="Retail / Wholesaler" class="regester-form-inputs">
+                <input id="nature" type="text" placeholder="Retail / Wholesaler" class="regester-form-inputs">
             </td>
         </tr>
             <!-- ============================= End of  row 3 ============================= -->
@@ -193,18 +193,18 @@
         <tr class="register-table-tr" >
             <td class="register-table-td" >
                 <label class="regester-form-labels">4. Paid up capital</label>
-                <input type="text" placeholder="Registation Number:" class="regester-form-inputs"></td>
+                <input id="capital" type="text" placeholder="Registation Number:" class="regester-form-inputs"></td>
             <td class="register-table-td" >
                 <label class="regester-form-labels">Approximent stock</label> 
-                <input type="text" placeholder="value of stock held" class="regester-form-inputs">
+                <input id="stock" type="text" placeholder="value of stock held" class="regester-form-inputs">
             </td>
             <td class="register-table-td" >
                 <label class="regester-form-labels">Annual Turnover </label>
-                <input type="text" placeholder="..." class="regester-form-inputs">
+                <input id="turnover" type="text" placeholder="..." class="regester-form-inputs">
             </td>
             <td class="register-table-td" >
                 <label class="regester-form-labels">Years in business:</label> 
-                <input type="text" placeholder="Number of months or years" class="regester-form-inputs">
+                <input id="years" type="text" placeholder="Number of months or years" class="regester-form-inputs">
             </td>
         </tr>
         <!-- ============================= End of row 4 ============================= -->
@@ -212,12 +212,12 @@
             <tr class="register-table-tr">
                 <td class="register-table-td" >
                     <label class="regester-form-labels">5. Banker's Name</label>
-                    <input type="text" placeholder="Name 1:" class="regester-form-inputs">
+                    <input id="bank_name" type="text" placeholder="Name 1:" class="regester-form-inputs">
                     <input type="text" placeholder="Name 2:" class="regester-form-inputs">
                 </td>
                 <td class="register-table-td" >
                     <label class="regester-form-labels">Account No(s)</label> 
-                    <input type="text" placeholder="Number 1:" class="regester-form-inputs">
+                    <input id="bank_ac" type="text" placeholder="Number 1:" class="regester-form-inputs">
                     <input type="text" placeholder="Number 2:" class="regester-form-inputs"></td>
                 </td>
                 <td class="register-table-td" >
@@ -229,28 +229,28 @@
             <tr class="register-table-tr" >
                 <td class="register-table-td" >
                     <label class="regester-form-labels">6. Directors's Name</label>
-                    <input type="text" placeholder="(a):" class="regester-form-inputs">
+                    <input id="director_name" type="text" placeholder="(a):" class="regester-form-inputs">
                     <input type="text" placeholder="(b):" class="regester-form-inputs">
                     <input type="text" placeholder="(c):" class="regester-form-inputs">
                     <input type="text" placeholder="(d):" class="regester-form-inputs">
                 </td>
                 <td class="register-table-td" >
                     <label class="regester-form-labels">Contacts</label> 
-                    <input type="text" placeholder="(a):" class="regester-form-inputs">
+                    <input id="director_contact" type="text" placeholder="(a):" class="regester-form-inputs">
                     <input type="text" placeholder="(b):" class="regester-form-inputs">
                     <input type="text" placeholder="(c):" class="regester-form-inputs">
                     <input type="text" placeholder="(d):" class="regester-form-inputs">
                 </td>
                 <td class="register-table-td" >
                     <label class="regester-form-labels">Designation</label>
-                    <input type="text" placeholder="(a):" class="regester-form-inputs">
+                    <input id="director_designation" type="text" placeholder="(a):" class="regester-form-inputs">
                     <input type="text" placeholder="(b):" class="regester-form-inputs">
                     <input type="text" placeholder="(c):" class="regester-form-inputs">
                     <input type="text" placeholder="(d):" class="regester-form-inputs">
                 </td>
                 <td class="register-table-td" >
                     <label class="regester-form-labels">Nationality</label>
-                    <input type="text" placeholder="(a):" class="regester-form-inputs">
+                    <input id="director_nationality" type="text" placeholder="(a):" class="regester-form-inputs">
                     <input type="text" placeholder="(b):" class="regester-form-inputs">
                     <input type="text" placeholder="(c):" class="regester-form-inputs">
                     <input type="text" placeholder="(d):" class="regester-form-inputs">
@@ -261,28 +261,28 @@
         <tr class="register-table-tr" >
             <td class="register-table-td" >
                 <label class="regester-form-labels">7. Referee(s) Name</label>
-                <input type="text" placeholder="(a):" class="regester-form-inputs">
+                <input id="referee_name" type="text" placeholder="(a):" class="regester-form-inputs">
                 <input type="text" placeholder="(b):" class="regester-form-inputs">
                 <input type="text" placeholder="(c):" class="regester-form-inputs">
                 <input type="text" placeholder="(d):" class="regester-form-inputs">
             </td>
             <td class="register-table-td" >
                 <label class="regester-form-labels">Contacts</label> 
-                <input type="text" placeholder="(a):" class="regester-form-inputs">
+                <input id="referee_contact" type="text" placeholder="(a):" class="regester-form-inputs">
                 <input type="text" placeholder="(b):" class="regester-form-inputs">
                 <input type="text" placeholder="(c):" class="regester-form-inputs">
                 <input type="text" placeholder="(d):" class="regester-form-inputs">
             </td>
             <td class="register-table-td" >
                 <label class="regester-form-labels">Designation</label>
-                <input type="text" placeholder="(a):" class="regester-form-inputs">
+                <input id="referee_designation" type="text" placeholder="(a):" class="regester-form-inputs">
                 <input type="text" placeholder="(b):" class="regester-form-inputs">
                 <input type="text" placeholder="(c):" class="regester-form-inputs">
                 <input type="text" placeholder="(d):" class="regester-form-inputs">
             </td>
             <td class="register-table-td" >
                 <label class="regester-form-labels">Nationality</label>
-                <input type="text" placeholder="(a):" class="regester-form-inputs">
+                <input id="referee_nationality" type="text" placeholder="(a):" class="regester-form-inputs">
                 <input type="text" placeholder="(b):" class="regester-form-inputs">
                 <input type="text" placeholder="(c):" class="regester-form-inputs">
                 <input type="text" placeholder="(d):" class="regester-form-inputs">
@@ -314,7 +314,7 @@
             </tr>
         </tfoot>
     </table>
-    <button class="next-to-payment-btn">Next</button>
+    <button class="next-to-payment-btn" onclick="SubmiteSubdealerRegistrationData ()" >Next</button>
 
 </center>
 </body>
