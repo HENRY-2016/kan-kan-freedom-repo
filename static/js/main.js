@@ -11,6 +11,8 @@ function LoadMakeOrderGui () { window.location="subdmakepaintorder.html"}
 function LoadSubdealerGui () {window.location="subdealer.html"}
 function LoadPainterGui () {window.location="painter.html"}
 function Load_developer () {window.location="developer.html"}
+function Load_ColourCharts () {window.location="ColourCharts.html"}
+
 
 function Load_Subdealer_Login () {window.location="subdlogin.html"}
 function Load_Subdealer_Register () {window.location="subdealerregister.html"}
